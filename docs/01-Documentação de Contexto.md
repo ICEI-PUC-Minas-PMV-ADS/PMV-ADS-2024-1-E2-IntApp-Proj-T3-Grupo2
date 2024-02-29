@@ -12,17 +12,18 @@ Para compreendermos se este estatuto está sendo aplicado corretamente, e se tod
 O censo demográfico do Instituto Brasileiro de geografia e estatística (IBGE) tem como objetivo monitorar e mapear as principais condições sócio-econômicas da população brasileira, bem como estratificar suas principais características, como grupos de idade, sexo, raça, renda, emprego, educação e condições de moradia, entre outros. Na amostragem de 2022, o Brasil alcançou a marca de 50,4 milhões de crianças e adolescentes entre 0 e 19 anos de idade, representando 37% da população total do país. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2/assets/110932147/4966a10c-a058-48d4-9671-ccd66109f16c)
+Fonte: Panorama do Censo 2022 - IBGE (2024)
 
 
 Para apoiar e promover políticas em defesa dos direitos da criança e do adolescente, temos inúmeros atuantes, como institutos, fundações, organizações não governamentais e associações. Entre elas, há a fundação ABRINQ (Associação Brasileira dos Fabricantes de Brinquedos), que tem como missão “Promover a defesa dos direitos e o exercício da cidadania de crianças e adolescentes” e visa “Uma sociedade justa e responsável pela proteção e pleno desenvolvimento de suas crianças e adolescentes.”
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2/assets/110932147/33c4dc53-0b77-40d4-bc00-9e7e09c57973)
-
+Fonte: Fundação ABRINQ (2024)
 
 A cada ano, ela realiza o seu “Cenário da Infância e Adolescência no Brasil”, com o intuito de traçar um panorama geral da infância e adolescência no país a partir da análise e exposição dos principais indicadores sociais do Brasil e suas regiões. Ela traz informações e vários dados sociais da infância e da adolescência no país, como educação, mortalidade, alfabetização, violência, saúde e nutrição. De acordo com seu levantamento, o Brasil alcançou, em 2023, a marca de 11,7 milhões de crianças e adolescentes em situação de pobreza e 10,6 milhões em situação de extrema pobreza. Ao todo, temos 22,3 milhões de crianças, ou seja, metade da população infanto-juvenil estão vivendo em condição de baixa renda.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2/assets/110932147/f75d7fba-97c5-4ba5-9f1d-8e2ca3239bae)
-
+Fonte: Cenário da Infância e Adolescência no Brasil - 1° Edição. Pág. 17 (2024)
 
 ## Problema
 
