@@ -42,7 +42,7 @@ Porém, mesmo com apoios e auxílios existentes, nem sempre eles são suficiente
 
 ## Objetivos
 
-O objetivo deste trabalho é criar uma ferramenta online que permite as pessoas apadrinharem crianças em situações carentes. Para que a criança esteja disponível a receber ajuda, ela deverá estar matriculada em uma escola parceira da ferramenta.
+O objetivo deste trabalho é desenvolver uma aplicação interativa que permite as pessoas apadrinharem crianças em situações carentes. Para que a criança esteja disponível a receber ajuda, ela deverá estar matriculada em uma escola parceira da ferramenta.
 
 Haverá duas redes de pessoas: as que precisam de ajuda e as que estão dispostas a ajudar. 
 
