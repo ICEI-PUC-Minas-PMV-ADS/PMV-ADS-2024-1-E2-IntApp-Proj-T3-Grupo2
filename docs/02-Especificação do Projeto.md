@@ -28,7 +28,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-| Pais e Alunos      |  <br />Cadastro do usuário com a solicitação do documento para validação do cadastro.<br /> Interação entre os usuários da plataforma |<br />Para que seja permitido o acesso a plataforma com segurança.<br /> Para que haja comunicação entre as partes.|
+| Pais e Alunos      |  <br />Cadastro do usuário com verificação documental.<br /> Interação entre os usuários da plataforma |<br />Para que seja permitido o acesso a plataforma com segurança.<br /> Para que haja comunicação entre as partes.|
 |Empreendedor Social | <br /> Cadastro do usuário podendo ser feito para pessoa física ou jurídica <br /> Interação entre os usuários da plataforma |<br /> Para que seja permitido o acesso a plataforma. <br /> Para que haja comunicação entre as partes.  |
 |Professores da instituição|<br /> Cadastro do usuário com o numero da matricula do professor.<br /> Gerenciar dados do aluno <br /> Interação entre os usuários da plataforma   | <br /> Para que seja permitido o acesso a plataforma.<br /> Para que haja comunicação entre as partes. Para que seja monitorado a frequência do aluno nas aulas, tanto como notas e participação. <br /> Para que haja comunicação entre as partes. |
 > **Links Úteis**:
