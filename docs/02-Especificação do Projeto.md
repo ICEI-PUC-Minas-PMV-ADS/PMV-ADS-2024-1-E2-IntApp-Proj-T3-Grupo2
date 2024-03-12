@@ -53,8 +53,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Identidade Anônima por Padrão para Usuários Pessoa: Os usuários "pessoa" devem ser anônimos por padrão até que assinem os termos de responsabilidade e possam interagir com o apadrinhado. 
-| MÉDIA | 
+|RNF-001| Identidade Anônima por Padrão para Usuários Pessoa. | MÉDIA | 
 |RNF-002| Identificação dos Usuários Após Aceitação dos Termos. | MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
