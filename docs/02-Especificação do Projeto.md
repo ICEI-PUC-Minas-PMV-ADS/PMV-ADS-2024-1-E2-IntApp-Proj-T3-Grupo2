@@ -57,8 +57,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Identidade Anônima por Padrão para Usuários Pessoa. | MÉDIA | 
-|RNF-002| Identificação dos Usuários Após Aceitação dos Termos. | MÉDIA | 
+|RNF-001| Os usuários "pessoa" devem ser anônimos por padrão até que assinem os termos de responsabilidade e possam interagir com o apadrinhado. | ALTA | 
+|RNF-002| Garantir que o sistema seja rápido e responsivo, mesmo durante períodos de alto tráfego ou carga intensiva de dados. | ALTA | 
+|RNF-003| Certificar-se de que o sistema funcione corretamente em uma variedade de navegadores web e dispositivos, incluindo desktops, tablets e smartphones. | MÉDIA | 
+|RNF-004| Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço. | BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
