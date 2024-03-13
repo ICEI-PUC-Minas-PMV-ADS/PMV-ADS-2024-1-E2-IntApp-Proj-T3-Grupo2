@@ -52,6 +52,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-004| O usuário conseguirá publicar textos e imagens em seu mural   | MÉDIA |
 |RF-005| Os usuários irão interagir uns com os outros através do envio de mensagens   | MÉDIA |
 |RF-006| Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema   | ALTA |
+|RF-007| O usuário irá efetuar login no site    | ALTA |
 
 ### Requisitos não Funcionais
 
