@@ -46,8 +46,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA | 
-|RF-002| A aplicação deve emitir um relatório de tarefas realizadas no mês   | MÉDIA |
+|RF-001| Os usuários devem poder cadastrar como Instituição (pessoa juridica), apadrinhador (pessoa fisica) e aluno (pessoa fisica) | ALTA | 
+|RF-002| As instituições cadastradas devem ter a capacidade de adicionar e gerenciar alunos vinculados a elas  | ALTA |
+|RF-003| O administrador do site deve ter acesso para visualizar todas as instituições cadastradas e seus afiliados   | ALTA |
+|RF-004| O usuário conseguirá publicar textos e imagens em seu mural   | MÉDIA |
+|RF-005| Os usuários irão interagir uns com os outros através do envio de mensagens   | MÉDIA |
+|RF-006| Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema   | ALTA |
 
 ### Requisitos não Funcionais
 
