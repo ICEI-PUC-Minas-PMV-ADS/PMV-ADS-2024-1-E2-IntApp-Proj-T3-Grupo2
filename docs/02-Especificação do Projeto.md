@@ -46,13 +46,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Os usuários devem poder cadastrar como Instituição (pessoa juridica), apadrinhador (pessoa fisica) e aluno (pessoa fisica) | ALTA | 
-|RF-002| As instituições cadastradas devem ter a capacidade de adicionar e gerenciar alunos vinculados a elas  | ALTA |
-|RF-003| O administrador do site deve ter acesso para visualizar todas as instituições cadastradas e seus afiliados   | ALTA |
-|RF-004| O usuário conseguirá publicar textos e imagens em seu mural   | MÉDIA |
-|RF-005| Os usuários irão interagir uns com os outros através do envio de mensagens   | MÉDIA |
-|RF-006| Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema   | ALTA |
-|RF-007| O usuário irá efetuar login no site    | ALTA |
+|RF-001| O usuário Administrador cadastrará Instituição (pessoa juridica) | ALTA | 
+|RF-002| O usuário Instituição cadastrará seus alunos (pessoa fisica)  | ALTA |
+|RF-003| O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site  | ALTA |
+|RF-004| O usuário irá efetuar login no site  | ALTA |
+|RF-005| As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas  | ALTA |
+|RF-006| O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas | ALTA |
+|RF-007| O usuário aluno ira publicar textos e/ou imagens em seu mural   | MÉDIA |
+|RF-007| O usuário aluno poderá fixar postagens em seu mural  | BAIXA |
+|RF-008| Os usuários irão interagir uns com os outros através do envio de mensagens   | BAIXA |
+|RF-009| Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema   | ALTA |
+
 
 ### Requisitos não Funcionais
 
@@ -63,21 +67,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| Certificar-se de que o sistema funcione corretamente em uma variedade de navegadores web e dispositivos, incluindo desktops, tablets e smartphones. | MÉDIA | 
 |RNF-004| Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço. | BAIXA | 
 
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
