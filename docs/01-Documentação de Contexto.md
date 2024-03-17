@@ -1,6 +1,8 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+No Brasil, metade da população infanto-juvenil estão vivendo em condição de baixa renda. Viver nessas condições dificulta a garantia dos direitos fundamentais para o desenvolvimento adequado das crianças, direitos esses previstos no Estatuto da Criança e do Adolescente (ECA). 
+
+Para contorcionar esta realidade, famílias com crianças e adolescentes em comunidades carentes frequentemente recorrem a ajudas e donativos derivados de projetos sociais e voluntários, além das próprias instituições e associações, e os programas governamentais. Porém, mesmo com apoios e auxílios existentes, nem sempre eles são suficientes, ou ainda não conseguem chegar a todos que precisam. O objetivo deste trabalho é desenvolver uma aplicação interativa que permite as pessoas apadrinharem crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
 
 ## Contexto
 
@@ -56,8 +58,6 @@ A família que receberá ajuda deverá fazer atualizações sobre o desempenho e
 O padrinho não precisará ter contato pessoal com a família/criança (a menos que ambos queiram), mas haverá um espaço para acompanhar a criança pela ferramenta além das informações obrigatórias. Como uma espécie de mural, a família e o padrinho podem se interagir e estar presente em diversos momentos, aniversário, datas comemorativas etc.
 
 Dessa forma, haverá um espaço para uma conexão afetiva entre afilhados e apadrinhados, caso seja consentimento de ambos.
-
-A ajuda em questão deverá ser a princípio pecuniária (em dinheiro), porém o espaço estará aberto para outros formas, como roupas, alimentos e brinquedos.
 
 Assim, podemos definir como objetivo específico:
 - Desenvolver uma ferramenta que conecte uma família em situação de vulnerabilidade com um padrinho que esteja disposto a ajudá-la;
