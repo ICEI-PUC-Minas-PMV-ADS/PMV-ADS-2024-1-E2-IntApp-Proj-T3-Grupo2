@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# PADRINHO.LY
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2° semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo deste trabalho é desenvolver uma aplicação interativa que permite as pessoas apadrinharem crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Felipe Van Oorschot Gamarra
+* Germanio Laudiene Diniz Corrêa
+* José Henrique da Costa Resende
+* Kelveng Carlisson Petuba Magalhães
+* Lidia Viana Goulart De Almeida
+* Phelipe Rodrigues Gomes
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson da Costa
 
 ## Instruções de utilização
 
