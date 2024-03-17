@@ -4,7 +4,7 @@ No Brasil, metade da população infanto-juvenil estão vivendo em condição de
 
 Para contorcionar esta realidade, famílias com crianças e adolescentes em comunidades carentes frequentemente recorrem a ajudas e donativos derivados de projetos sociais e voluntários, além das próprias instituições e associações, e os programas governamentais. Porém, mesmo com apoios e auxílios existentes, nem sempre eles são suficientes, ou ainda não conseguem chegar a todos que precisam.
 
-O objetivo deste trabalho é desenvolver uma aplicação interativa que permite as pessoas apadrinharem crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
+O objetivo deste trabalho é desenvolver uma aplicação interativa para apadrinhamento de crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
 
 ## Contexto
 
