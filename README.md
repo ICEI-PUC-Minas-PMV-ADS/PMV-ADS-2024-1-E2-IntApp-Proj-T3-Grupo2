@@ -6,7 +6,7 @@
 
 `2° semestre`
 
-O objetivo deste trabalho é desenvolver uma aplicação interativa que permite as pessoas apadrinharem crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
+O objetivo deste trabalho é desenvolver uma aplicação interativa para apadrinhamento de crianças em situações carentes, permitindo uma conexão entre pessoas que estão dispostas a ajudar e famílias em situação de vulnerabilidade social, tendo como aliadas organizações não governamentais (ONGs) e escolas participantes.
 
 ## Integrantes
 
