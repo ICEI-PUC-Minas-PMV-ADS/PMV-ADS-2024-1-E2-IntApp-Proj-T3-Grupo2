@@ -7,13 +7,74 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
+Nome: Ana Silva  
+Idade: 35 anos  
+Profissão: Dona de casa, ocasionalmente trabalha como diarista  
+Estado Civil: Viúva  
+Localização: Moradora de uma comunidade carente em uma grande cidade brasileira  
+Educação: Ensino fundamental completo  
+Renda: Baixa, dependente de trabalhos temporários e eventual auxílio social  
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+#### Objetivos:
+1.Garantir que seus filhos tenham acesso à educação e oportunidades que ela não teve.  
+2.Prover um ambiente seguro e saudável para o desenvolvimento de seus filhos.  
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+#### Desafios:
+1.Dificuldade em prover todas as necessidades básicas para seus filhos, como alimentação, vestuário, material escolar.  
+2.Receio de que seus filhos não tenham as mesmas oportunidades que outras crianças de famílias mais abastadas.  
+3.Falta de suporte emocional e financeiro após a morte do esposo, que era o principal provedor da família.  
+
+#### Motivações:
+1.Busca por auxílio para garantir o bem-estar e futuro promissor de seus filhos.  
+2.Interesse em oportunidades de ajuda financeira e material para suprir as necessidades da família.  
+3.Desejo de oferecer uma melhor qualidade de vida e perspectivas para seus filhos, mesmo diante das dificuldades financeiras.  
+
+#### Comportamento:
+1.Procura por programas sociais e iniciativas comunitárias que ofereçam suporte para famílias em situação de vulnerabilidade.  
+2.Prioriza o bem-estar e a educação de seus filhos, buscando maneiras de melhorar sua condição de vida.  
+3.Aberta a receber ajuda externa, desde que seja confiável e verdadeiramente benéfica para sua família.  
+4.Valoriza a possibilidade de conexão emocional e apoio mútuo entre os membros da comunidade.  
+
+#### Objetivos com a Ferramenta:
+1.Encontrar um padrinho disposto a ajudar sua família oferecendo auxílio educação e material para seus filhos.  
+2.Acompanhar o progresso escolar e desenvolvimento das crianças por meio da plataforma.  
+3.Estabelecer uma relação de confiança e gratidão com o padrinho, valorizando a troca de apoio e afeto.  
+4.Utilizar os recursos disponíveis na ferramenta para suprir as necessidades emergenciais da família e proporcionar melhores condições de vida para seus filhos.  
 
 
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Nome: Lucas Oliveira  
+Idade: 45 anos  
+Profissão: Empresário, proprietário de uma pequena empresa  
+Estado Civil: Casado, sem filhos  
+Localização: Morador de um bairro de classe média em uma grande cidade brasileira  
+Educação: Ensino superior completo  
+Renda: Média a alta, com estabilidade financeira  
+#### Objetivos:  
+1.Contribuir para causas sociais e fazer diferença na vida de outras pessoas.  
+2.Buscar maneiras de retribuir sua sorte e privilégios através do voluntariado e doação.  
+#### Desafios:  
+1.Encontrar formas eficazes de direcionar seus recursos e tempo para projetos que realmente impactem positivamente a vida das pessoas.  
+2.Conciliar suas responsabilidades profissionais e pessoais com atividades de voluntariado e apoio social.  
+3.Garantir que suas contribuições sejam bem aplicadas e tenham um impacto tangível na vida dos beneficiários.  
+#### Motivações:  
+1.Sentimento de gratidão e desejo de compartilhar seus recursos com aqueles que estão em situação de vulnerabilidade.  
+2.Busca por oportunidades de se envolver ativamente em causas sociais e fazer parte de uma rede de apoio e solidariedade.  
+3.Interesse em estabelecer uma conexão significativa com indivíduos ou famílias que possam se beneficiar de sua ajuda.  
+#### Comportamento:  
+1.Procura por organizações e iniciativas sociais que ofereçam oportunidades de voluntariado e apadrinhamento de crianças em situação de vulnerabilidade.  
+2.Demonstra interesse em estabelecer uma relação pessoal e duradoura com os beneficiários de suas doações e apoio.  
+3.Valoriza a transparência e eficiência das instituições e projetos sociais em que se envolve, buscando informações claras sobre o impacto de suas contribuições.  
+4.Compromete-se a acompanhar o progresso e desenvolvimento das crianças que apadrinha, oferecendo suporte contínuo e incentivo.  
+
+#### Objetivos com a Ferramenta:  
+
+1.Encontrar uma família em situação de vulnerabilidade para apadrinhar e oferecer suporte financeiro e emocional.  
+2.Acompanhar o progresso e desenvolvimento da criança beneficiada por meio da plataforma, recebendo atualizações regulares sobre seu desempenho escolar e bem-estar.  
+3.Estabelecer uma relação de confiança e respeito com a família beneficiada, proporcionando suporte contínuo e incentivando o crescimento e desenvolvimento da criança.  
+4.Utilizar a ferramenta como meio para conectar-se com outras pessoas e compartilhar experiências e recursos relacionados ao apadrinhamento e apoio social.  
+
+
+
 
 ## Histórias de Usuários
 
