@@ -57,9 +57,7 @@ As pessoas que querem contribuir (As que estão dispostas a ajudar) e ajudar par
 
 A família que receberá ajuda deverá fazer atualizações sobre o desempenho escolar do jovem, (caso já esteja em idade) e de seu cartão de vacina, como regra, a fim de que seja garantida a ela o acesso à educação, sujeito a perda do benefício (semelhante ao que ocorre com programas sociais, como o Bolsa-família, por exemplo). 
 
-O padrinho não precisará ter contato pessoal com a família/criança (a menos que ambos queiram), mas haverá um espaço para acompanhar a criança pela ferramenta além das informações obrigatórias. Como uma espécie de mural, a família e o padrinho podem se interagir e estar presente em diversos momentos, aniversário, datas comemorativas etc.
-
-Dessa forma, haverá um espaço para uma conexão afetiva entre afilhados e apadrinhados, caso seja consentimento de ambos.
+O padrinho não precisará ter contato pessoal com a família/criança (a menos que ambos queiram), mas haverá um espaço para acompanhar a criança pela ferramenta além das informações obrigatórias. Como uma espécie de mural, a família e o padrinho podem se interagir e estar presente em diversos momentos, aniversário, datas comemorativas etc. Dessa forma, haverá um espaço para uma conexão afetiva entre afilhados e apadrinhados, caso seja consentimento de ambos.
 
 Assim, podemos definir como objetivo específico:
 - Desenvolver uma ferramenta que conecte uma família em situação de vulnerabilidade com um padrinho que esteja disposto a ajudá-la;
