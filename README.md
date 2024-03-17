@@ -55,4 +55,6 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 
 # Apresentação
 
+https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/3f5db6f8-7ab2-4705-98d5-09e14825424b
+
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
