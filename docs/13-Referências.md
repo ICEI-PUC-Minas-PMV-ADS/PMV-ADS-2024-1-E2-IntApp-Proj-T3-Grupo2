@@ -6,7 +6,7 @@ BRASIL. Lei N° 8.069, de 13 de julho de 1990. Dispõe sobre o Estatuto da Crian
 
 Fundação ABRINQ. Disponível em: <https://www.fadc.org.br>. Acesso em 28 fev. 2024.
 
-Fundação Abrinq (org.). Cenário da Infância e Adolescência no Brasil 2023. 1° edição. 2023. 98 p. Disponível em <https://www.fadc.org.br/sites/default/files/2023-05/Cenario-da-infancia-2023.pdf>. Acesso em 28 fev 2024.
+Fundação ABRINQ (org.). Cenário da Infância e Adolescência no Brasil 2023. 1° edição. 2023. 98 p. Disponível em <https://www.fadc.org.br/sites/default/files/2023-05/Cenario-da-infancia-2023.pdf>. Acesso em 28 fev 2024.
 
 
 
