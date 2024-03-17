@@ -75,6 +75,35 @@ Renda: Média a alta, com estabilidade financeira
 
 
 
+Nome: Instituto Vida Nova  
+Tipo de Instituição: Organização Não Governamental (ONG)  
+Missão: Promover o desenvolvimento humano e social de comunidades em situação de vulnerabilidade, com foco no apoio à infância e adolescência.  
+Localização: Sede localizada em uma região urbana de baixa renda em uma grande cidade brasileira, com atuação em diversas comunidades carentes.  
+
+#### Objetivos:
+
+1.Oferecer apoio e assistência integral para crianças e adolescentes em situação de vulnerabilidade, visando garantir seus direitos fundamentais e promover seu pleno desenvolvimento.  
+2.Desenvolver e implementar projetos e programas socioeducativos que contribuam para a melhoria das condições de vida e oportunidades de crianças e adolescentes em comunidades carentes.  
+
+#### Desafios:
+1.Captar recursos financeiros e materiais para manter e expandir os projetos e programas da instituição, considerando a constante demanda e necessidades das comunidades atendidas.  
+2.Estabelecer parcerias estratégicas com outras organizações, empresas e instituições governamentais para potencializar o impacto e alcance de suas iniciativas.  
+3.Garantir a eficácia e qualidade dos serviços prestados, adaptando-se às especificidades e desafios de cada comunidade atendida.  
+#### Motivações:
+1.Compromisso com a promoção dos direitos humanos e a construção de uma sociedade mais justa e igualitária.  
+2.Visão de que o investimento na infância e adolescência é fundamental para o desenvolvimento sustentável e o enfrentamento das desigualdades sociais.  
+3.Satisfação em ver o impacto positivo das ações da instituição na vida das crianças, adolescentes e suas famílias, promovendo transformações reais nas comunidades atendidas.  
+#### Comportamento:
+1.Busca por oportunidades de financiamento e parcerias para viabilizar seus projetos e programas, participando de editais, campanhas de doação e eventos de captação de recursos.  
+2.Estabelece um diálogo aberto e participativo com as comunidades atendidas, envolvendo os beneficiários na elaboração e implementação das atividades desenvolvidas pela instituição.  
+3.Valoriza a transparência e prestação de contas, mantendo canais de comunicação abertos com doadores, parceiros e a sociedade em geral.  
+4.Busca constantemente por inovação e aprimoramento em suas práticas, buscando novas formas de impactar positivamente a vida das pessoas atendidas.  
+#### Objetivos com a Ferramenta:  
+1.Utilizar a ferramenta como uma plataforma para identificar famílias e crianças em situação de vulnerabilidade que possam se beneficiar dos programas e serviços oferecidos pela instituição.  
+2.Estabelecer parcerias com potenciais padrinhos e doadores interessados em apoiar financeiramente as iniciativas da instituição, contribuindo para a sustentabilidade e expansão de seus projetos.  
+3.Utilizar os recursos da ferramenta para acompanhar e monitorar o progresso e impacto das ações da instituição, coletando dados e feedbacks dos beneficiários e parceiros para aprimorar continuamente suas práticas e intervenções.  
+4.Promover a visibilidade e conscientização sobre as questões relacionadas à infância e adolescência em situação de vulnerabilidade, sensibilizando a sociedade e mobilizando recursos e apoio para enfrentar esses desafios.  
+
 
 ## Histórias de Usuários
 
