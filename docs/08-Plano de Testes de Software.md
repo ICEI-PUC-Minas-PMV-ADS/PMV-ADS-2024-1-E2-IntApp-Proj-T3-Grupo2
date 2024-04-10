@@ -9,16 +9,15 @@ Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o
 Por exemplo:
  
 | **Caso de Teste** 	| CT-01 – Cadastro de Instituição (Pessoa jurídica) 	|
-|	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de instituições para que essas consigam criar e gerenciar seu perfil. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de instituições para que essas consigam criar e gerenciar seus perfis. |
+| Objetivo do Teste 	| Verificar se o usuário (instituição) consegue se cadastrar na aplicação. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome da instituição, sobrenome, celular, CNPJ, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|Critério de Êxito | - O cadastro foi efetuado com sucesso. |
 |  	|  	|
-| **Caso de Teste** 	| CT-02 – Cadastro de Alunos (Pessoa física)	|
-|Requisito Associado | RF-002	- O usuário Instituição cadastrará seus alunos (pessoa fisica) |
-| Objetivo do Teste 	| Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar em "Registro de alunos" <br> Preencher os campos obrigatórios (e-mail, nome, sobrenome e CPF) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar aluno" |
-|Critério de Êxito | - O cadastro foi efetuado com sucesso. | 
+| Caso de Teste 	| Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar em "Registro de alunos" <br> Preencher os campos obrigatórios (e-mail, nome, sobrenome e CPF) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar aluno" <br> |
+|Critério de Êxito |- O cadastro foi efetuado com sucesso. |
 
  | **Caso de Teste** 	| CT-03 – Cadastro de Apadrinhadores (Pessoa física) 	|
 |:---:	|:---:	|
