@@ -20,6 +20,7 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar em "Registro de alunos" <br> Preencher os campos obrigatórios (e-mail, nome, sobrenome e CPF) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar aluno" |
 |Critério de Êxito | - O cadastro foi efetuado com sucesso. | 
 | **Caso de Teste** 	| CT-03 – Cadastro de Apadrinhadores (Pessoa física) 	|
+
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-003 - O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site. |
 | Objetivo do Teste 	| Verificar se apdrinhadores conseguem efetuar o cadastro no site. |
