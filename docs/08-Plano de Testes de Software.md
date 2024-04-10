@@ -9,7 +9,6 @@ Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o
 Por exemplo:
  
 | **Caso de Teste** 	| CT-01 – Cadastro de Instituição (Pessoa jurídica) 	|
-|:---:	|:---:	|
 |	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de instituições para que essas consigam criar e gerenciar seu perfil. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome da instituição, sobrenome, celular, CNPJ, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
