@@ -20,7 +20,18 @@ Por exemplo:
 | Objetivo do Teste 	| Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar em "Registro de alunos" <br> Preencher os campos obrigatórios (e-mail, nome, sobrenome e CPF) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar aluno" |
 |Critério de Êxito | - O cadastro foi efetuado com sucesso. |
-
+| **Caso de Teste** 	| CT-03 – Cadastro de Apadrinhadores (Pessoa física) 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-003 - O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site. |
+| Objetivo do Teste 	| Verificar se apdrinhadores conseguem efetuar o cadastro no site. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome da instituição, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
+|Critério de Êxito | - O cadastro foi efetuado com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| CT-04 – Efetuar Login	|
+|Requisito Associado | RF-004	- O usuário irá efetuar login no site. |
+| Objetivo do Teste 	| Verificar se usuários conseguem efetuar login. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> |
+|Critério de Êxito | - O login foi efetuado com sucesso. |
  
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
