@@ -36,7 +36,6 @@ Por exemplo:
 | **Caso de Teste** 	| CT-05 – Gerenciar Alunos Vinculados 	|
 |	Requisito Associado 	| RF-005 - As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas |
 | Objetivo do Teste 	| Verificar se o usuário (instituição) consegue gerenciar alunos vinculados. |
-| Passos 	| - RF-006 - Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos.|
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Gerenciar alunos" <br> |
 |Critério de Êxito | - Foi possível gerenciar os dados do aluno |
 
