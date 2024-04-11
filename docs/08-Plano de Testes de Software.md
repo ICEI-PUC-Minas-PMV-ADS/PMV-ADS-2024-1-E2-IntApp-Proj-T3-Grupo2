@@ -38,7 +38,36 @@ Por exemplo:
 | Objetivo do Teste 	| Verificar se o usuário (instituição) consegue gerenciar alunos vinculados. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Gerenciar alunos" <br> |
 |Critério de Êxito | - Foi possível gerenciar os dados do aluno |
-
+|  	|  	|
+| **Caso de Teste** 	| CT-06 – Administrador do site deve conseguir gerenciar as Insituições 	|
+|	Requisito Associado 	| RF-006 - O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas |
+| Objetivo do Teste 	| Garantir que o administrador do site possa gerenciar efetivamente as instituições vinculadas, incluindo adição, remoção e edição. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Gerenciar insituições" <br> |
+|Critério de Êxito | - Foi possível gerenciar os dados das instituições. |
+|  	|  	|
+| **Caso de Teste** 	| CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma. 	|
+|	Requisito Associado 	| RF-007 - O usuário aluno irá publicar textos e/ou imagens em seu mural |
+| Objetivo do Teste 	| Assegurar que o usuário aluno consiga publicar textos e/ou imagens no seu mural de forma correta e eficiente. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Publicar texto" <br> - Clicar no botão "Publicar uma imagem" <br> |
+|Critério de Êxito | - Foi possível publicar um texto ou imagem. |
+|  	|  	|
+| **Caso de Teste** 	| CT-08 – Fixar postagem dos alunos no mural. 	|
+|	Requisito Associado 	| RF-008 - O usuário aluno poderá fixar postagens em seu mural |
+| Objetivo do Teste 	| Assegurar que o usuário aluno consiga fixar e desafixar postagens no seu mural de forma correta e eficiente. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Publicar texto" <br> - Clicar no botão "Publicar uma imagem" <br> - Clicar em no botão "Fixar essa postagem" <br> |
+|Critério de Êxito | - Foi possível fixar uma postagem |
+|  	|  	|
+| **Caso de Teste** 	| CT-09 – Envio de mensagens entre os usuários dentro da plataforma. 	|
+|	Requisito Associado 	| RF-009 - Os usuários irão interagir uns com os outros através do envio de mensagens |
+| Objetivo do Teste 	| Garantir que os usuários possam interagir uns com os outros de forma eficaz e segura por meio do envio de mensagens. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Visualizar perfil do usuário" <br> - Clicar no botão "Enviar mensagem" <br> |
+|Critério de Êxito | - Foi possível enviar uma mensagem ao usuário. 
+|  	|  	|
+| **Caso de Teste** 	| CT-10 – Aceitar os termos de compromisso e responsabilidade	|
+|	Requisito Associado 	| RF-010 - Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema |
+| Objetivo do Teste 	| Assegurar que os usuários possam aceitar os termos de compromisso e responsabilidades de forma correta e eficiente antes de interagir no sistema. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Aceitar os termos" <br> - Clicar no botão "Sim" <br> |
+|Critério de Êxito | - Foi possível aceitar os termos. |
 
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
