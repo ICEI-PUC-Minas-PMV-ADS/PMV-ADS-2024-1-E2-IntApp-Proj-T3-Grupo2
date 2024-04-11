@@ -31,5 +31,14 @@ Por exemplo:
 |Requisito Associado | RF-004	- O usuário irá efetuar login no site. |
 | Objetivo do Teste 	| Verificar se usuários conseguem efetuar login. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> |
-|Critério de Êxito | - O login foi efetuado com sucesso. |ara Java Script](https://geekflare.com/javascript-unit-testing/)
+|Critério de Êxito | - O login foi efetuado com sucesso. 
+| **Caso de Teste** 	| CT-05 – Gerenciar Alunos Vinculados 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-005 - As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas |
+| Objetivo do Teste 	| Verificar se o usuário (instituição) consegue gerenciar alunos vinculados. |
+| Passos 	| - RF-006 - Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos.|
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Gerenciar alunos" <br> |
+|Critério de Êxito | - Foi possível gerenciar os dados do aluno |
+
+|ara Java Script](https://geekflare.com/javascript-unit-testing/)
 > - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
