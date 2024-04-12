@@ -5,32 +5,68 @@
 
 Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+O Site Padrin.Ly permitirá que pessoas possam apadrinhar crianças em situações de vulnerabilidade, através das instituições cadastradas, que farão o intermédo entre padrinho e afilhado através da plataforma.
+A diagramação utilizada foi pensada para ser um projeto simples, de fácil utilização e entendimento para todos os usuários. As fontes e cores remetem a um tom mais lúdico e intimista para as crianças, sendo um visual do tipo "clean" e em tons suaves, para denotar calma e sutileza.
+
+cores utilizadas:
+background-color: #F5BBE2 (rodapé)
+background-color: #85EDF3 (cabeçalho)
+background-color: #DCAA2A (botões)
+
+Fonte: 
+Font-family: Montserrat
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/e0e38294-d794-4946-b047-6f5704c563ed)
+
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/bfeb43bc-3524-4f2a-8ed9-dca72f4ae160)
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
-
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+este link permite realizar o fluxo interativo do projeto:
+https://www.figma.com/proto/6KFwQmp77bnaUegzJPCF0F/Padrin.Ly?type=design&node-id=1-4&t=IWX13RbqIK57VqrU-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A4&mode=design
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+## Apresentação
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/860ba798-8a65-49a9-92c2-36086c10cc69)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+## Cadastros
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/a6559238-b37b-40d5-8f31-f97c268b486f)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/288a8c69-5385-413f-9c68-026c28b3fa9c)
+
+## Telas de login para Padrinho, Afilhado e Instituição, respectivamente
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/555ce7d3-225a-4f43-a0ba-b829905797db)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/cecd10da-1a64-48f7-b90d-4ebf73407481)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/1f3d5227-c3b5-4807-ad02-9b55039babe1)
+
+## Telas principais dos usuários
+
+As opções de interação serão as mesmas para o padrinho e afilhado. Ambos poderão se comunicar via chat e também por uma espécie de mural, para fazer postagens marcantes. É possível também ver informações de cada um e postar fotos.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/7714a035-ca78-4ac0-970e-21ea886f739f)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/d43da8a5-1408-4f63-9dba-932291b17860)
+
+O padrinho terá uma tela de perfil para colocar suas informações de apresentação. Caso queira apadrinhar mais de uma criança, também terá essa opção.
+
+Para o afilhado, ele terá uma tela de informações a ser preenchida, falando sobre si e sua família. Esta mesma tela exibirá a carteira de vacinação e o boletim escolar.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/f110bfef-dc62-49b2-a617-b4812fb5d564)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/92aa56f0-cfae-4cbd-9fd8-f1acd14cf617)
+
+
+Para a instituição, a tela principal permitirá a manutenção de seus afilhados (cadastro/exclusão) e a possibilidade de contatar diretamente o time de desenvolvimento do site, caso precise.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/3245fa9d-1720-4593-a2de-080fda9cbc6f)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/20761359-1ade-413c-9971-0e5e9f499eb1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/9356a1fd-d7a1-4fcb-8452-c7c27d17ce12)
+
+
+
+
+
+
+
+
+
