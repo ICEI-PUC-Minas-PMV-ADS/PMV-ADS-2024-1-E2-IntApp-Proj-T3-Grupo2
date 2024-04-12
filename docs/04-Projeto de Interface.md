@@ -9,12 +9,12 @@ O Site Padrin.Ly permitirá que pessoas possam apadrinhar crianças em situaçõ
 A diagramação utilizada foi pensada para ser um projeto simples, de fácil utilização e entendimento para todos os usuários. As fontes e cores remetem a um tom mais lúdico e intimista para as crianças, sendo um visual do tipo "clean" e em tons suaves, para denotar calma e sutileza.
 
 cores utilizadas:
-background-color: #F5BBE2 (rodapé)
-background-color: #85EDF3 (cabeçalho)
-background-color: #DCAA2A (botões)
+- background-color: #F5BBE2 (rodapé);
+- background-color: #85EDF3 (cabeçalho);
+- background-color: #DCAA2A (botões);
 
 Fonte: 
-Font-family: Montserrat
+- Font-family: Montserrat
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/e0e38294-d794-4946-b047-6f5704c563ed)
 
@@ -54,13 +54,34 @@ O padrinho terá uma tela de perfil para colocar suas informações de apresenta
 Para o afilhado, ele terá uma tela de informações a ser preenchida, falando sobre si e sua família. Esta mesma tela exibirá a carteira de vacinação e o boletim escolar.
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/f110bfef-dc62-49b2-a617-b4812fb5d564)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/92aa56f0-cfae-4cbd-9fd8-f1acd14cf617)
-
+Observação: Toda documentação como carteira de vacinação, documentos da criança e boletim escolar ficarão a cargo da instituição atualizar no sistema, permitindo que ela possa acompanhar o desenvolvimento da criança.
 
 Para a instituição, a tela principal permitirá a manutenção de seus afilhados (cadastro/exclusão) e a possibilidade de contatar diretamente o time de desenvolvimento do site, caso precise.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/3245fa9d-1720-4593-a2de-080fda9cbc6f)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/20761359-1ade-413c-9971-0e5e9f499eb1)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/9356a1fd-d7a1-4fcb-8452-c7c27d17ce12)
+
+
+## Funcionalidades
+
+Tanto padrinho quanto afilhado poderão conversar entre si através do chat e do mural, onde poderão realizar posts relevantes e de destaque. uma galeria de fotos também está inclusa para afinizar a relação. As informações destacadas são importantes para se fazer a apresentação de um e outro, além de permitir o acompanhamento do afilhado por sua carteira de vacinação e pelo seu boletim escolar.
+
+Funcionalidades na visão do padrinho:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/8744617b-b90e-46f6-bf2d-3cd0a0293fd2)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/de59b5a0-1f2a-4b2c-b3c4-c1b871138583)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/94aefd50-11d6-406d-9654-97d7d6f93bef)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/8ad77c63-811f-4199-8ea5-996be6e4c4f7)
+
+Funcionalidades na visão do afilhado:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/85cf683c-94b4-4b42-bdec-b8705a98d8d3)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/d9ae43a4-0e4c-4e4c-8143-985992297895)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/ed9daecc-4bae-4f3a-82b0-9978d3910a60)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/fa99ebd0-0713-40ad-be75-bf179d017e06)
+
+
+
+
 
 
 
