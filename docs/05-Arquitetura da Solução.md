@@ -23,9 +23,17 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para realização desse projeto usaremos:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+ - C#
+ - Arquitetura MVC
+ - Razor
+ - Biblioteca Identity
+ - PostqgreSQL
+ - ASP.NET Core
+ - Biblioteca BootStrap-Table
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/blob/main/docs/img/MVCArchitecture.png)
 
 ## Hospedagem
 
