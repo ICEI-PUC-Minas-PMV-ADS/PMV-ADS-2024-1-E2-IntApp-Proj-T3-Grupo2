@@ -47,21 +47,25 @@ Lidia Viana Goulart De Almeida.<br>
 Phelipe Rodrigues Gomes.<br>
 
 
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+#### Planejamento:
+Para a realização deste projeto, teremos reuniões semanais lideradas por nosso orientador para compartilhar ideias, discutir estratégias e sanar dúvidas sobre o processo. Cada membro do grupo contribuirá com sua força de trabalho, opiniões e experiências. Nestes encontros, serão estabelecidas metas, aprimoramento de requisitos e refinamento de entregas, além de monitorar o progresso de tarefas e o andamento do projeto.
+
+#### Desenvolvimento:
+Para melhor gerenciamento, cada etapa/fase do projeto será divididas em sprints, e a cada nova etapa, atribuiremos tarefas e responsabilidades para cada membro do grupo, considerando as priorizações previamente definidas. Cada sprint será acompanhada por meio das reuniões semanais, informando o status das entregas.
+
+#### Fluxo Kanban
+Utilizaremos o quadro kanban para acompanhamento visual. O Kanban é composto por linhas e colunas, em que cada linha representa as tarefas propostas e cada coluna representa o status atualizado, sendo elas:
+
+- Backlog: Tarefas em planejamento;
+- ready: Tarefa pronta para ser desenvolvida;
+- In progress: Tarefas em desenvolvimento;
+- In review: tarefas a ser finalizada em revisão final;
+- Done: Tarefa concluída pronta entrar em produção;
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/ccf9e724-8741-4346-bc80-350c0458b268)
+
 
 ### Ferramentas
 
