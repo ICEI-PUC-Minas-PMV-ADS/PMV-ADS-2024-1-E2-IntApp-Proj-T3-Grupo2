@@ -1,7 +1,9 @@
 # Plano de Testes de Usabilidade
-Plano de teste de usabilidade
+
 Como os testes serão feitos presencial ou remotos? serão feitos remotamente.
+
 O método será observação direta, meditação ou avaliação?
+
 Serão feitos por avaliações.
 Os testes serão feitos pelo computador ou por celular?
 Serão feitos pelo computador.
