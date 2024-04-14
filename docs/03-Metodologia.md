@@ -71,9 +71,9 @@ Utilizaremos o quadro kanban para acompanhamento visual. O Kanban é composto po
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código:VS Code, Visual Studio, MySql Workbench e DBeaver
+- Ferramentas de comunicação:Teams
+- Ferramentas de desenho de tela (_wireframing_): Figma
 
 O editor de código foi escolhido porque ele possui uma integração com o
 sistema de versão. As ferramentas de comunicação utilizadas possuem
