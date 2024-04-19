@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Padrinly", "Padrinly.csproj", "{470C980E-DE3E-4015-B7BE-0A327060BEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Padrinly.Domain", "..\Padrinly.Domain\Padrinly.Domain.csproj", "{F635CEE2-CCDB-400C-BB1A-62FC88D9A232}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{470C980E-DE3E-4015-B7BE-0A327060BEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470C980E-DE3E-4015-B7BE-0A327060BEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470C980E-DE3E-4015-B7BE-0A327060BEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470C980E-DE3E-4015-B7BE-0A327060BEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F635CEE2-CCDB-400C-BB1A-62FC88D9A232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F635CEE2-CCDB-400C-BB1A-62FC88D9A232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F635CEE2-CCDB-400C-BB1A-62FC88D9A232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F635CEE2-CCDB-400C-BB1A-62FC88D9A232}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C1C184A-9830-4C4C-B270-47D9422E7249}
+	EndGlobalSection
+EndGlobal

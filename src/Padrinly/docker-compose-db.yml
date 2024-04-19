@@ -1,0 +1,16 @@
+﻿version: "3.8"
+services:
+  padrinly_devdb:
+    image: postgres
+    container_name: padrinly_devdb
+    networks:
+      - padrinly-network
+    environment:
+      POSTGRES_PASSWORD: padrinly_devdb
+      POSTGRES_USER: padrinly_devdb
+      POSTGRES_DB: padrinly_devdb
+    ports:
+      - 5433:5432
+networks:
+  padrinly-network:
+    name: padrinly-network
