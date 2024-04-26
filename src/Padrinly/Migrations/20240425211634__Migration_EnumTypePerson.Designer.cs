@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Padrinly.Data;
@@ -11,9 +12,11 @@ using Padrinly.Data;
 namespace Padrinly.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240425211634__Migration_EnumTypePerson")]
+    partial class _Migration_EnumTypePerson
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -261,7 +264,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdPerson");
 
-                    b.ToTable("Documents", (string)null);
+                    b.ToTable("Documents");
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Mensage", b =>
@@ -303,7 +306,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdSender");
 
-                    b.ToTable("Mensages", (string)null);
+                    b.ToTable("Mensages");
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Person", b =>
@@ -403,7 +406,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdUser");
 
-                    b.ToTable("Persons", (string)null);
+                    b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.PersonPatron", b =>
@@ -443,7 +446,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("PersonPatrons", (string)null);
+                    b.ToTable("PersonPatrons");
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Post", b =>
@@ -480,7 +483,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdUser");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
