@@ -28,7 +28,7 @@ namespace Padrinly.Domain.Entities
 
         [Required]
         [DisplayName("Data de Nascimento")]
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         public bool IsAnonimous { get; set; } = true;
 

@@ -66,7 +66,6 @@ namespace Padrinly.Controllers
         {
             if (ModelState.IsValid)
             {
-                person.BirthDate = person.BirthDate.ToUniversalTime();
                 _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -108,7 +107,7 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+             if (ModelState.IsValid)
             {
                 try
                 {
