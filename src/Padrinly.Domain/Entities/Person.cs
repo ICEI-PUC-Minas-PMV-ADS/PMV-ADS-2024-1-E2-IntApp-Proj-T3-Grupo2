@@ -23,8 +23,9 @@ namespace Padrinly.Domain.Entities
         public string Email { get; set; }
 
         [Required]
+        [Phone]
         [DisplayName("Número de Telefone")]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [Required]
         [DisplayName("Data de Nascimento")]

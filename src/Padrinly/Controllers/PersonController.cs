@@ -71,6 +71,7 @@ namespace Padrinly.Controllers
                 {
                     UserName = person.Name,
                     Email = person.Email,
+                    PhoneNumber = person.PhoneNumber
                 };
                 _context.Add(user);
                 await _context.SaveChangesAsync();
