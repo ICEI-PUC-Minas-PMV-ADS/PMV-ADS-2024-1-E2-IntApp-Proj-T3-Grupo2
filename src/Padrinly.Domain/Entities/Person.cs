@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Padrinly.Domain.Enums;
 using Padrinly.Domain.Shared;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,6 @@ namespace Padrinly.Domain.Entities
         public string Email { get; set; }
 
         [Required]
-        [Phone]
         [DisplayName("Número de Telefone")]
         public int PhoneNumber { get; set; }
 
@@ -38,15 +38,15 @@ namespace Padrinly.Domain.Entities
 
         [Required]
         [DisplayName("Tipo de Pessoa")]
-        public int TypePerson { get; set; }
+        public TypePerson Type { get; set; }
 
         [ForeignKey(nameof(IdResponsible))]
-        public Person Responsible { get; set; }
+        public virtual Person? Responsible { get; set; }
 
         public int? IdResponsible { get; set; }
 
         [ForeignKey(nameof(IdInstitution))]
-        public Person Institution { get; set; }
+        public virtual Person? Institution { get; set; }
 
         public int? IdInstitution { get; set; }
 
@@ -55,12 +55,12 @@ namespace Padrinly.Domain.Entities
 
         public int? SecondDocument { get; set; }
 
-        public ICollection<PersonPatron> Patrons { get; set; }
+        public ICollection<PersonPatron>? Patrons { get; set; }
 
-        public ICollection<Document> Documents { get; set; }
+        public ICollection<Document>? Documents { get; set; }
 
         [ForeignKey(nameof(IdUser))]
-        public IdentityUser<int> User { get; set; }
+        public virtual IdentityUser<int>? User { get; set; }
 
         public int? IdUser { get; set; }
 
@@ -88,6 +88,7 @@ namespace Padrinly.Domain.Entities
         [DisplayName("Número")]
         public string Number { get; set; }
 
+        [DisplayName("Complemento")]
         public string Complement { get; set; }
     }
 }

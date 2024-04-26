@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Padrinly.Data;
 using Padrinly.Domain.Entities;
 
@@ -61,10 +62,11 @@ namespace Padrinly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Email,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,TypePerson,IdResponsible,IdInstitution,FirstDocument,SecondDocument,IdUser,Address,Neighborhood,City,State,PostalCode,Number,Complement,Id,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
+        public async Task<IActionResult> Create([Bind("Name,Email,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
         {
             if (ModelState.IsValid)
             {
+                person.BirthDate = person.BirthDate.ToUniversalTime();
                 _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
