@@ -66,6 +66,17 @@ namespace Padrinly.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Cria usuário antes de criar pessoa
+                var user = new User
+                {
+                    UserName = person.Name,
+                    Email = person.Email,
+                };
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+
+                person.IdUser = user.Id;
+
                 _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

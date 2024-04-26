@@ -20,12 +20,12 @@ namespace Padrinly.Domain.Entities
         public DateTime SendedAt { get; set; }
 
         [ForeignKey(nameof(IdSender))]
-        public IdentityUser<int> Sender { get; set; }
+        public User Sender { get; set; }
 
         public int IdSender { get; set; }
 
         [ForeignKey(nameof(IdReceiver))]
-        public IdentityUser<int> Receiver { get; set; }
+        public User Receiver { get; set; }
 
         public int IdReceiver { get; set; }
     }

@@ -60,7 +60,7 @@ namespace Padrinly.Domain.Entities
         public ICollection<Document>? Documents { get; set; }
 
         [ForeignKey(nameof(IdUser))]
-        public virtual IdentityUser<int>? User { get; set; }
+        public virtual User? User { get; set; }
 
         public int? IdUser { get; set; }
 

@@ -12,12 +12,12 @@ namespace Padrinly.Domain.Entities
     public class PersonPatron : BaseEntity
     {
         [ForeignKey(nameof(IdPatron))]
-        public IdentityUser<int> Patron { get; set; }
+        public User Patron { get; set; }
 
         public int IdPatron { get; set; }
 
         [ForeignKey(nameof(IdStudent))]
-        public IdentityUser<int> Student { get; set; }
+        public User Student { get; set; }
 
         public int IdStudent { get; set; }
     }

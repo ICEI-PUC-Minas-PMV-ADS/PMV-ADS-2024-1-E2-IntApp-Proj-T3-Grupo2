@@ -20,7 +20,7 @@ namespace Padrinly.Domain.Entities
         public bool IsFixed { get; set; } = false;
 
         [ForeignKey(nameof(IdUser))]
-        public IdentityUser<int> User { get; set; }
+        public User User { get; set; }
 
         public int IdUser { get; set; }
     }
