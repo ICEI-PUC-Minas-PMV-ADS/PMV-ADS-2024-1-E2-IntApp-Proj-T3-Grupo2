@@ -18,6 +18,16 @@
                 <span asp-validation-for="StudentName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="StudentFirstDocument" class="control-label"></label>
+                <input asp-for="StudentFirstDocument" class="form-control" type="number"/>
+                <span asp-validation-for="StudentFirstDocument" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentSecondtDocument" class="control-label"></label>
+                <input asp-for="StudentSecondtDocument" class="form-control" type="number" />
+                <span asp-validation-for="StudentSecondtDocument" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="StudentBirthDate" class="control-label"></label>
                 <input asp-for="StudentBirthDate" class="form-control" type="date"/>
                 <span asp-validation-for="StudentBirthDate" class="text-danger"></span>
@@ -27,57 +37,70 @@
                     <input class="form-check-input" asp-for="IsNewResponsible" /> @Html.DisplayNameFor(model => model.IsNewResponsible)
                 </label>
             </div>
-            <div id="responsibleDetails" class="form-group">
+            <div class="form-group selectedResponsible">
+                @Html.DropDownListFor(model => model.SelectedPersonId, ViewBag.ResponsibleList as List<SelectListItem>, "Selecione...", new { @class = "form-control" })
+            </div>
+            <div class="form-group responsibleDetails">
                 <label asp-for="ResponsibleName" class="control-label"></label>
                 <input asp-for="ResponsibleName" class="form-control" />
                 <span asp-validation-for="ResponsibleName" class="text-danger"></span>
             </div>
-            <div id="responsibleDetails" class="form-group">
+            <div class="form-group responsibleDetails">
+                <label asp-for="ResponsibleFirstDocument" class="control-label"></label>
+                <input asp-for="ResponsibleFirstDocument" class="form-control" type="number" />
+                <span asp-validation-for="ResponsibleFirstDocument" class="text-danger"></span>
+            </div>
+            <div class="form-group responsibleDetails">
+                <label asp-for="ResponsibleSecondtDocument" class="control-label"></label>
+                <input asp-for="ResponsibleSecondtDocument" class="form-control" type="number" />
+                <span asp-validation-for="ResponsibleSecondtDocument" class="text-danger"></span>
+            </div>
+            <div class="form-group responsibleDetails">
                 <label asp-for="ResponsibleBirthDate" class="control-label"></label>
                 <input asp-for="ResponsibleBirthDate" class="form-control" type="date" />
                 <span asp-validation-for="ResponsibleBirthDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="ResponsibleEmail" class="control-label"></label>
                 <input asp-for="ResponsibleEmail" class="form-control" />
                 <span asp-validation-for="ResponsibleEmail" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="ResponsiblePhoneNumber" class="control-label"></label>
                 <input asp-for="ResponsiblePhoneNumber" class="form-control" />
                 <span asp-validation-for="ResponsiblePhoneNumber" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="Address" class="control-label"></label>
                 <input asp-for="Address" class="form-control" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="Neighborhood" class="control-label"></label>
                 <input asp-for="Neighborhood" class="form-control" />
                 <span asp-validation-for="Neighborhood" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="City" class="control-label"></label>
                 <input asp-for="City" class="form-control" />
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="State" class="control-label"></label>
                 <input asp-for="State" class="form-control" />
                 <span asp-validation-for="State" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="PostalCode" class="control-label"></label>
                 <input asp-for="PostalCode" class="form-control" />
                 <span asp-validation-for="PostalCode" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="Number" class="control-label"></label>
                 <input asp-for="Number" class="form-control" />
                 <span asp-validation-for="Number" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group responsibleDetails">
                 <label asp-for="Complement" class="control-label"></label>
                 <input asp-for="Complement" class="form-control" />
                 <span asp-validation-for="Complement" class="text-danger"></span>
@@ -96,14 +119,22 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
-        $(document).ready(function () {
-            $('#responsibleDetails').hide();
+        $(document).ready(function () 
+        {
+            $('.responsibleDetails').hide();
+            $('.selectedResponsible').show();
 
-            $('#IsNewResponsible').change(function () {
-                if ($('#IsNewResponsible').is(':checked')) {
-                    $('#responsibleDetails').show();
-                } else {
-                    $('#responsibleDetails').hide();
+            $('#IsNewResponsible').change(function () 
+            {
+                if ($('#IsNewResponsible').is(':checked')) 
+                {
+                    $('.responsibleDetails').show();
+                    $('.selectedResponsible').hide();
+                }
+                else 
+                {
+                    $('.responsibleDetails').hide();
+                    $('.selectedResponsible').show();
                 }
             });
         });

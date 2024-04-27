@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Padrinly.Data;
 using Padrinly.Domain.Entities;
+using Padrinly.Domain.Enums;
 using Padrinly.Models;
 
 namespace Padrinly.Controllers
@@ -94,6 +95,18 @@ namespace Padrinly.Controllers
         //[Authorize(Roles = "Institution")]
         public async Task<IActionResult> CreateStudent()
         {
+            var persons = await _context.Persons
+                .Where(p => p.Type == TypePerson.Responsabile)
+                .ToListAsync();
+
+            ViewBag.ResponsibleList = persons
+                .Select(p => new SelectListItem
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Name
+                })
+                .ToList();
+
             return View();
         }
 
@@ -102,69 +115,99 @@ namespace Padrinly.Controllers
         //[Authorize(Roles = "Institution")]
         public async Task<IActionResult> CreateStudent(StudentResponsibleViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid && model.IsNewResponsible)
             {
-                var studentUser = new User
-                {
-                    UserName = model.StudentName,
-                    Email = model.ResponsibleEmail,
-                    PhoneNumber = model.ResponsiblePhoneNumber,
-                };
-                _context.Add(studentUser);
-                await _context.SaveChangesAsync();
-
-                if (model.IsNewResponsible)
-                {
-                    var responsible = new Person
-                    {
-                        Name = model.ResponsibleName,
-                        BirthDate = model.ResponsibleBirthDate,
-                        Email = model.ResponsibleEmail,
-                        PhoneNumber = model.ResponsiblePhoneNumber,
-                        Address = model.Address,
-                        Neighborhood = model.Neighborhood,
-                        City = model.City,
-                        State = model.State,
-                        PostalCode = model.PostalCode,
-                        Number = model.Number,
-                        Complement = model.Complement,
-                        Type = Domain.Enums.TypePerson.Responsabile,
-                        FirstDocument = model.ResponsibleFirstDocument,
-                        SecondDocument = model.ResponsibleSecondtDocument,
-                    };
-
-                    _context.Add(responsible);
-                    await _context.SaveChangesAsync();
-
-                    model.IdResponsible = responsible.Id;
-                }
-
-                var student = new Person
-                {
-                    Name = model.StudentName,
-                    BirthDate = model.StudentBirthDate,
-                    IdResponsible = model.IdResponsible,
-                    Email = model.ResponsibleEmail,
-                    PhoneNumber = model.ResponsiblePhoneNumber,
-                    Address = model.Address,
-                    Neighborhood = model.Neighborhood,
-                    City = model.City,
-                    State = model.State,
-                    PostalCode = model.PostalCode,
-                    Number = model.Number,
-                    Complement = model.Complement,
-                    Type = Domain.Enums.TypePerson.Student,
-                    FirstDocument = model.StudentFirstDocument,
-                    SecondDocument = model.StudentSecondtDocument,
-                    //IdInstitution = ?
-                };
-                _context.Add(student);
-                await _context.SaveChangesAsync();
+                return View(model);
             }
+
+            if (model.IsNewResponsible)
+            {
+                await CreateNewResponsible(model);
+            }
+            else
+            {
+                var selectedResponsible = await _context.Persons.FindAsync(model.SelectedPersonId);
+                ViewSelectedResponsible(model, selectedResponsible);
+            }
+
+            var studentUser = new User
+            {
+                UserName = model.StudentName,
+                Email = model.ResponsibleEmail,
+                PhoneNumber = model.ResponsiblePhoneNumber,
+            };
+
+            _context.Add(studentUser);
+            await _context.SaveChangesAsync();
+
+            var student = new Person
+            {
+                Name = model.StudentName,
+                BirthDate = model.StudentBirthDate,
+                IdResponsible = model.IdResponsible,
+                Email = model.ResponsibleEmail,
+                PhoneNumber = model.ResponsiblePhoneNumber,
+                Address = model.Address,
+                Neighborhood = model.Neighborhood,
+                City = model.City,
+                State = model.State,
+                PostalCode = model.PostalCode,
+                Number = model.Number,
+                Complement = model.Complement,
+                Type = TypePerson.Student,
+                FirstDocument = model.StudentFirstDocument,
+                SecondDocument = model.StudentSecondtDocument,
+                //IdInstitution = ?
+            };
+
+            student.IdUser = studentUser.Id;
+            _context.Add(student);
+            await _context.SaveChangesAsync();
 
             return View(model);
         }
 
+        private async Task CreateNewResponsible(StudentResponsibleViewModel model)
+        {
+            var responsible = new Person
+            {
+                Name = model.ResponsibleName,
+                BirthDate = model.ResponsibleBirthDate,
+                Email = model.ResponsibleEmail,
+                PhoneNumber = model.ResponsiblePhoneNumber,
+                Address = model.Address,
+                Neighborhood = model.Neighborhood,
+                City = model.City,
+                State = model.State,
+                PostalCode = model.PostalCode,
+                Number = model.Number,
+                Complement = model.Complement,
+                Type = TypePerson.Responsabile,
+                FirstDocument = model.ResponsibleFirstDocument,
+                SecondDocument = model.ResponsibleSecondtDocument,
+            };
+
+            _context.Add(responsible);
+            await _context.SaveChangesAsync();
+
+            model.IdResponsible = responsible.Id;
+        }
+
+        private void ViewSelectedResponsible(StudentResponsibleViewModel model, Person selectedResponsible)
+        {
+            model.ResponsibleName = selectedResponsible.Name;
+            model.ResponsibleEmail = selectedResponsible.Email;
+            model.ResponsiblePhoneNumber = selectedResponsible.PhoneNumber;
+            model.Address = selectedResponsible.Address;
+            model.Neighborhood = selectedResponsible.Neighborhood;
+            model.City = selectedResponsible.City;
+            model.State = selectedResponsible.State;
+            model.PostalCode = selectedResponsible.PostalCode;
+            model.Number = selectedResponsible.Number;
+            model.Complement = selectedResponsible.Complement;
+            model.ResponsibleBirthDate = selectedResponsible.BirthDate;
+            model.IdResponsible = selectedResponsible.Id;
+        }
 
         // GET: Person/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -197,7 +240,7 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
-             if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 try
                 {

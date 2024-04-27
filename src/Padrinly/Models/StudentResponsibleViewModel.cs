@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Padrinly.Domain.Enums;
+using System.ComponentModel;
 
 namespace Padrinly.Models
 {
@@ -61,5 +63,7 @@ namespace Padrinly.Models
 
         [DisplayName("Complemento")]
         public string Complement { get; set; }
+
+        public int? SelectedPersonId { get; set; }
     }
 }
