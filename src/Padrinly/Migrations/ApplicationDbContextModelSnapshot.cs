@@ -165,7 +165,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdPerson");
 
-                    b.ToTable("Documents");
+                    b.ToTable("Documents", (string)null);
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Mensage", b =>
@@ -207,7 +207,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdSender");
 
-                    b.ToTable("Mensages");
+                    b.ToTable("Mensages", (string)null);
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Person", b =>
@@ -308,7 +308,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdUser");
 
-                    b.ToTable("Persons");
+                    b.ToTable("Persons", (string)null);
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.PersonPatron", b =>
@@ -348,7 +348,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("PersonPatrons");
+                    b.ToTable("PersonPatrons", (string)null);
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Post", b =>
@@ -385,7 +385,7 @@ namespace Padrinly.Migrations
 
                     b.HasIndex("IdUser");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("Padrinly.Domain.Entities.Role", b =>

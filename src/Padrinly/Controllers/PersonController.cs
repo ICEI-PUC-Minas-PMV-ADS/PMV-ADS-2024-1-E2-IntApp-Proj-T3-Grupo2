@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Padrinly.Data;
 using Padrinly.Domain.Entities;
+using Padrinly.Models;
 
 namespace Padrinly.Controllers
 {
@@ -87,6 +89,82 @@ namespace Padrinly.Controllers
             ViewData["IdUser"] = new SelectList(_context.Users, "Id", "Id", person.IdUser);
             return View(person);
         }
+
+        [HttpGet]
+        //[Authorize(Roles = "Institution")]
+        public async Task<IActionResult> CreateStudent()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "Institution")]
+        public async Task<IActionResult> CreateStudent(StudentResponsibleViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var studentUser = new User
+                {
+                    UserName = model.StudentName,
+                    Email = model.ResponsibleEmail,
+                    PhoneNumber = model.ResponsiblePhoneNumber,
+                };
+                _context.Add(studentUser);
+                await _context.SaveChangesAsync();
+
+                if (model.IsNewResponsible)
+                {
+                    var responsible = new Person
+                    {
+                        Name = model.ResponsibleName,
+                        BirthDate = model.ResponsibleBirthDate,
+                        Email = model.ResponsibleEmail,
+                        PhoneNumber = model.ResponsiblePhoneNumber,
+                        Address = model.Address,
+                        Neighborhood = model.Neighborhood,
+                        City = model.City,
+                        State = model.State,
+                        PostalCode = model.PostalCode,
+                        Number = model.Number,
+                        Complement = model.Complement,
+                        Type = Domain.Enums.TypePerson.Responsabile,
+                        FirstDocument = model.ResponsibleFirstDocument,
+                        SecondDocument = model.ResponsibleSecondtDocument,
+                    };
+
+                    _context.Add(responsible);
+                    await _context.SaveChangesAsync();
+
+                    model.IdResponsible = responsible.Id;
+                }
+
+                var student = new Person
+                {
+                    Name = model.StudentName,
+                    BirthDate = model.StudentBirthDate,
+                    IdResponsible = model.IdResponsible,
+                    Email = model.ResponsibleEmail,
+                    PhoneNumber = model.ResponsiblePhoneNumber,
+                    Address = model.Address,
+                    Neighborhood = model.Neighborhood,
+                    City = model.City,
+                    State = model.State,
+                    PostalCode = model.PostalCode,
+                    Number = model.Number,
+                    Complement = model.Complement,
+                    Type = Domain.Enums.TypePerson.Student,
+                    FirstDocument = model.StudentFirstDocument,
+                    SecondDocument = model.StudentSecondtDocument,
+                    //IdInstitution = ?
+                };
+                _context.Add(student);
+                await _context.SaveChangesAsync();
+            }
+
+            return View(model);
+        }
+
 
         // GET: Person/Edit/5
         public async Task<IActionResult> Edit(int? id)

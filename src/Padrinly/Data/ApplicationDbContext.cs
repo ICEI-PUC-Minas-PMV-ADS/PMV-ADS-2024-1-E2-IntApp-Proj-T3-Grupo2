@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Padrinly.Domain.Entities;
+using Padrinly.Models;
 
 namespace Padrinly.Data
 {
@@ -38,5 +39,6 @@ namespace Padrinly.Data
             builder.Entity<IdentityRoleClaim<int>>().ToTable("RoleClaims");
             builder.Entity<IdentityUserToken<int>>().ToTable("UserTokens");
         }
+        public DbSet<Padrinly.Models.StudentResponsibleViewModel> StudentResponsibleViewModel { get; set; } = default!;
     }
 }

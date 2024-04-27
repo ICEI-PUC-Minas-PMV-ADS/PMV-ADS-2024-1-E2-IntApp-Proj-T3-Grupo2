@@ -1,0 +1,111 @@
+﻿@model Padrinly.Models.StudentResponsibleViewModel
+
+@{
+    ViewData["Title"] = "CreateStudent";
+}
+
+<h1>CreateStudent</h1>
+
+<h4>StudentResponsibleViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateStudent">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" class="form-control" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentBirthDate" class="control-label"></label>
+                <input asp-for="StudentBirthDate" class="form-control" type="date"/>
+                <span asp-validation-for="StudentBirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsNewResponsible" /> @Html.DisplayNameFor(model => model.IsNewResponsible)
+                </label>
+            </div>
+            <div id="responsibleDetails" class="form-group">
+                <label asp-for="ResponsibleName" class="control-label"></label>
+                <input asp-for="ResponsibleName" class="form-control" />
+                <span asp-validation-for="ResponsibleName" class="text-danger"></span>
+            </div>
+            <div id="responsibleDetails" class="form-group">
+                <label asp-for="ResponsibleBirthDate" class="control-label"></label>
+                <input asp-for="ResponsibleBirthDate" class="form-control" type="date" />
+                <span asp-validation-for="ResponsibleBirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResponsibleEmail" class="control-label"></label>
+                <input asp-for="ResponsibleEmail" class="form-control" />
+                <span asp-validation-for="ResponsibleEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResponsiblePhoneNumber" class="control-label"></label>
+                <input asp-for="ResponsiblePhoneNumber" class="form-control" />
+                <span asp-validation-for="ResponsiblePhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Neighborhood" class="control-label"></label>
+                <input asp-for="Neighborhood" class="form-control" />
+                <span asp-validation-for="Neighborhood" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Complement" class="control-label"></label>
+                <input asp-for="Complement" class="form-control" />
+                <span asp-validation-for="Complement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            $('#responsibleDetails').hide();
+
+            $('#IsNewResponsible').change(function () {
+                if ($('#IsNewResponsible').is(':checked')) {
+                    $('#responsibleDetails').show();
+                } else {
+                    $('#responsibleDetails').hide();
+                }
+            });
+        });
+    </script>
+}
