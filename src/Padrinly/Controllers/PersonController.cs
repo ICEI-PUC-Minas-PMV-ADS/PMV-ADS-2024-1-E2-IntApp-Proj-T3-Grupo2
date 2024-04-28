@@ -69,7 +69,7 @@ namespace Padrinly.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Cria usuário antes de criar pessoa
+                // Cria usuário antes de criar Instituição
                 var user = new User
                 {
                     UserName = person.Name,
@@ -80,6 +80,7 @@ namespace Padrinly.Controllers
                 await _context.SaveChangesAsync();
 
                 person.IdUser = user.Id;
+                person.Type = TypePerson.Institution;
 
                 _context.Add(person);
                 await _context.SaveChangesAsync();
@@ -157,14 +158,14 @@ namespace Padrinly.Controllers
                 Type = TypePerson.Student,
                 FirstDocument = model.StudentFirstDocument,
                 SecondDocument = model.StudentSecondtDocument,
+                IdUser = studentUser.Id
                 //IdInstitution = ?
             };
 
-            student.IdUser = studentUser.Id;
             _context.Add(student);
             await _context.SaveChangesAsync();
 
-            return View(model);
+            return RedirectToAction(nameof(Index));
         }
 
         private async Task CreateNewResponsible(StudentResponsibleViewModel model)
