@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -17,10 +18,12 @@ namespace Padrinly.Controllers
     public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public PersonController(ApplicationDbContext context)
+        public PersonController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Person
@@ -65,25 +68,32 @@ namespace Padrinly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Email,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
+        public async Task<IActionResult> Create([Bind("Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
         {
             if (ModelState.IsValid)
             {
                 // Cria usuário antes de criar Instituição
                 var user = new User
                 {
-                    UserName = person.Name,
+                    UserName = person.Email,
+                    NormalizedUserName = person.Email.ToUpper(),
                     Email = person.Email,
+                    NormalizedEmail = person.Email.ToUpper(),
                     PhoneNumber = person.PhoneNumber
                 };
-                _context.Add(user);
-                await _context.SaveChangesAsync();
+
+                var result =  await _userManager.CreateAsync(user, person.Password);
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, person.Type.ToString().ToUpper());
+                }
 
                 person.IdUser = user.Id;
                 person.Type = TypePerson.Institution;
 
                 _context.Add(person);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
@@ -133,8 +143,10 @@ namespace Padrinly.Controllers
 
             var studentUser = new User
             {
-                UserName = model.StudentName,
+                UserName = model.ResponsibleName,
+                NormalizedUserName = model.ResponsibleEmail.ToUpper(),
                 Email = model.ResponsibleEmail,
+                NormalizedEmail = model.ResponsibleEmail.ToUpper(),
                 PhoneNumber = model.ResponsiblePhoneNumber,
             };
 
@@ -223,6 +235,7 @@ namespace Padrinly.Controllers
             {
                 return NotFound();
             }
+
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);
             ViewData["IdUser"] = new SelectList(_context.Users, "Id", "Id", person.IdUser);
@@ -234,7 +247,7 @@ namespace Padrinly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Name,Email,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,TypePerson,IdResponsible,IdInstitution,FirstDocument,SecondDocument,IdUser,Address,Neighborhood,City,State,PostalCode,Number,Complement,Id,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdUser,Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
         {
             if (id != person.Id)
             {
@@ -245,6 +258,16 @@ namespace Padrinly.Controllers
             {
                 try
                 {
+                    var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == person.IdUser);
+
+                    if(person.Password != "")
+                    {
+                        await _userManager.RemovePasswordAsync(user);
+                        await _userManager.AddPasswordAsync(user, person.Password);
+                    }
+
+                    await _context.SaveChangesAsync();
+
                     _context.Update(person);
                     await _context.SaveChangesAsync();
                 }

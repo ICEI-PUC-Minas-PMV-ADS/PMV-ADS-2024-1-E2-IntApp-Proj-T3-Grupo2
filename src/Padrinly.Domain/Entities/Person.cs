@@ -23,14 +23,20 @@ namespace Padrinly.Domain.Entities
         public string Email { get; set; }
 
         [Required]
+        [DisplayName("Senha")]
+        [PasswordPropertyText]
+        public string Password { get; set; }
+
+        [Required]
         [Phone]
         [DisplayName("Número de Telefone")]
         public string PhoneNumber { get; set; }
 
         [Required]
-        [DisplayName("Data de Nascimento")]
+        [DisplayName("Data da Fundação")]
         public DateOnly BirthDate { get; set; }
 
+        [DisplayName("É anônimo")]
         public bool IsAnonimous { get; set; } = true;
 
         public string? AvatarFileName { get; set; }
@@ -52,8 +58,10 @@ namespace Padrinly.Domain.Entities
         public int? IdInstitution { get; set; }
 
         [Required]
+        [DisplayName("CNPJ")]
         public int FirstDocument { get; set; }
 
+        [DisplayName("Inscrição Estadual")]
         public int? SecondDocument { get; set; }
 
         public ICollection<PersonPatron>? Patrons { get; set; }
