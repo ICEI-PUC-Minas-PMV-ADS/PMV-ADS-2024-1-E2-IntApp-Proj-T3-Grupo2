@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using NuGet.Protocol;
 using Padrinly.Data;
 using Padrinly.Domain.Entities;
 using Padrinly.Domain.Enums;
@@ -82,7 +84,7 @@ namespace Padrinly.Controllers
                     PhoneNumber = person.PhoneNumber
                 };
 
-                var result =  await _userManager.CreateAsync(user, person.Password);
+                var result = await _userManager.CreateAsync(user, person.Password);
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, person.Type.ToString().ToUpper());
@@ -143,12 +145,14 @@ namespace Padrinly.Controllers
 
             var studentUser = new User
             {
-                UserName = model.ResponsibleName,
-                NormalizedUserName = model.ResponsibleEmail.ToUpper(),
-                Email = model.ResponsibleEmail,
-                NormalizedEmail = model.ResponsibleEmail.ToUpper(),
+                UserName = model.StudentEmail,
+                NormalizedUserName = model.StudentEmail.ToUpper(),
+                Email = model.StudentEmail,
+                NormalizedEmail = model.StudentEmail.ToUpper(),
                 PhoneNumber = model.ResponsiblePhoneNumber,
             };
+
+            var result = _userManager.CreateAsync(studentUser, model.Password);
 
             _context.Add(studentUser);
             await _context.SaveChangesAsync();
@@ -158,7 +162,7 @@ namespace Padrinly.Controllers
                 Name = model.StudentName,
                 BirthDate = model.StudentBirthDate,
                 IdResponsible = model.IdResponsible,
-                Email = model.ResponsibleEmail,
+                Email = model.StudentEmail,
                 PhoneNumber = model.ResponsiblePhoneNumber,
                 Address = model.Address,
                 Neighborhood = model.Neighborhood,
@@ -170,9 +174,12 @@ namespace Padrinly.Controllers
                 Type = TypePerson.Student,
                 FirstDocument = model.StudentFirstDocument,
                 SecondDocument = model.StudentSecondtDocument,
-                IdUser = studentUser.Id
+                IdUser = studentUser.Id,
+                Password = model.Password,
                 //IdInstitution = ?
             };
+
+            await _userManager.AddToRoleAsync(studentUser, student.Type.ToString().ToUpper());
 
             _context.Add(student);
             await _context.SaveChangesAsync();
@@ -198,6 +205,7 @@ namespace Padrinly.Controllers
                 Type = TypePerson.Responsabile,
                 FirstDocument = model.ResponsibleFirstDocument,
                 SecondDocument = model.ResponsibleSecondtDocument,
+                Password = model.Password
             };
 
             _context.Add(responsible);
@@ -209,7 +217,7 @@ namespace Padrinly.Controllers
         private void ViewSelectedResponsible(StudentResponsibleViewModel model, Person selectedResponsible)
         {
             model.ResponsibleName = selectedResponsible.Name;
-            model.ResponsibleEmail = selectedResponsible.Email;
+            model.StudentEmail = selectedResponsible.Email;
             model.ResponsiblePhoneNumber = selectedResponsible.PhoneNumber;
             model.Address = selectedResponsible.Address;
             model.Neighborhood = selectedResponsible.Neighborhood;
@@ -247,7 +255,8 @@ namespace Padrinly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdUser,Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Edit(int id, Person person)
         {
             if (id != person.Id)
             {
@@ -260,16 +269,43 @@ namespace Padrinly.Controllers
                 {
                     var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == person.IdUser);
 
-                    if(person.Password != "")
+                    if (user != null)
                     {
-                        await _userManager.RemovePasswordAsync(user);
-                        await _userManager.AddPasswordAsync(user, person.Password);
-                    }
+                        user.UserName = person.Email;
+                        user.NormalizedUserName = person.Email.ToUpper();
+                        user.Email = person.Email;
+                        user.NormalizedEmail = person.Email.ToUpper();
+                        await _userManager.UpdateAsync(user);
+                        if (person.Password != "")
+                        {
+                            await _userManager.RemovePasswordAsync(user);
+                            await _userManager.AddPasswordAsync(user, person.Password);
+                        }
 
-                    await _context.SaveChangesAsync();
+                        await _context.SaveChangesAsync();
+                    }
 
                     _context.Update(person);
                     await _context.SaveChangesAsync();
+
+                    if (person.IdResponsible == null)
+                    {
+                        var students = await _context.Persons.Where(p => p.IdResponsible == person.Id).ToListAsync();
+                        foreach (var student in students)
+                        {
+                            student.PhoneNumber = person.PhoneNumber;
+                            student.Address = person.Address;
+                            student.Neighborhood = person.Neighborhood;
+                            student.City = person.City;
+                            student.State = person.State;
+                            student.PostalCode = person.PostalCode;
+                            student.Number = person.Number;
+                            student.Complement = person.Complement;
+                            _context.Update(student);
+                        }
+                    }
+                    await _context.SaveChangesAsync();
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {

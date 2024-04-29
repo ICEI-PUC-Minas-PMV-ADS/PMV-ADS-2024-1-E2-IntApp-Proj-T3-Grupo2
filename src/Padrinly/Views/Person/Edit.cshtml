@@ -37,21 +37,42 @@
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="BirthDate" class="control-label"></label>
-                <input asp-for="BirthDate" class="form-control" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FirstDocument" class="control-label"></label>
-                <input asp-for="FirstDocument" class="form-control" />
-                <span asp-validation-for="FirstDocument" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SecondDocument" class="control-label"></label>
-                <input asp-for="SecondDocument" class="form-control" />
-                <span asp-validation-for="SecondDocument" class="text-danger"></span>
-            </div>
+            @if(Model.Type == Padrinly.Domain.Enums.TypePerson.Institution)
+            {
+                <div class="form-group">
+                    <label class="control-label">Data da Fundação</label>
+                    <input asp-for="BirthDate" class="form-control" type="date"/>
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstDocument" class="control-label"></label>
+                    <input asp-for="FirstDocument" class="form-control" />
+                    <span asp-validation-for="FirstDocument" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SecondDocument" class="control-label"></label>
+                    <input asp-for="SecondDocument" class="form-control" />
+                    <span asp-validation-for="SecondDocument" class="text-danger"></span>
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <label class="control-label">Data de Nascimento</label>
+                    <input asp-for="BirthDate" class="form-control" type="date"/>
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">CPF</label>
+                    <input asp-for="FirstDocument" class="form-control" />
+                    <span asp-validation-for="FirstDocument" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">RG Opcional</label>
+                    <input asp-for="SecondDocument" class="form-control" />
+                    <span asp-validation-for="SecondDocument" class="text-danger"></span>
+                </div>
+            }
             @*             <div class="form-group">
             <label asp-for="AvatarFileName" class="control-label"></label>
             <input asp-for="AvatarFileName" class="form-control" />
@@ -95,6 +116,9 @@
             </div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="IdUser" />
+            <input type="hidden" asp-for="Type" />
+            <input type="hidden" asp-for="IdInstitution" />
+            <input type="hidden" asp-for="IdResponsible" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

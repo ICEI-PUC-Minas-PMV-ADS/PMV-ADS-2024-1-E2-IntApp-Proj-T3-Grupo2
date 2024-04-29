@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Padrinly.Domain.Entities;
 using Padrinly.Domain.Enums;
 using System.ComponentModel;
 
@@ -11,11 +12,15 @@ namespace Padrinly.Models
         [DisplayName("Nome do Aluno")]
         public string StudentName { get; set; }
 
+        [DisplayName("Senha")]
+        [PasswordPropertyText]
+        public string Password { get; set; }
+
         [DisplayName("CPF do aluno")]
-        public int StudentFirstDocument { get; set; }
+        public string StudentFirstDocument { get; set; }
 
         [DisplayName("RG opcional")]
-        public int? StudentSecondtDocument { get; set; }
+        public string? StudentSecondtDocument { get; set; }
 
         [DisplayName("Data de Nascimento do Estudante")]
         public DateOnly StudentBirthDate { get; set; }
@@ -29,15 +34,18 @@ namespace Padrinly.Models
         public string ResponsibleName { get; set; }
 
         [DisplayName("CPF do responsável")]
-        public int ResponsibleFirstDocument { get; set; }
+        public string ResponsibleFirstDocument { get; set; }
 
         [DisplayName("RG opcional")]
-        public int? ResponsibleSecondtDocument { get; set; }
+        public string? ResponsibleSecondtDocument { get; set; }
 
         [DisplayName("Data de Nascimento do responsável")]
         public DateOnly ResponsibleBirthDate { get; set; }
 
-        [DisplayName("Email")]
+        [DisplayName("Email do aluno")]
+        public string StudentEmail { get; set; }
+
+        [DisplayName("Email do Responsável")]
         public string ResponsibleEmail { get; set; }
 
         [DisplayName("Número de telefone")]

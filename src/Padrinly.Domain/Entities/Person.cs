@@ -59,10 +59,10 @@ namespace Padrinly.Domain.Entities
 
         [Required]
         [DisplayName("CNPJ")]
-        public int FirstDocument { get; set; }
+        public string FirstDocument { get; set; }
 
         [DisplayName("Inscrição Estadual")]
-        public int? SecondDocument { get; set; }
+        public string? SecondDocument { get; set; }
 
         public ICollection<PersonPatron>? Patrons { get; set; }
 
