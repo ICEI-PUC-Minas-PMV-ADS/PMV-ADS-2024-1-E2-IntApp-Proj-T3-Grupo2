@@ -22,7 +22,7 @@ namespace Padrinly.Models
         [DisplayName("RG opcional")]
         public string? StudentSecondtDocument { get; set; }
 
-        [DisplayName("Data de Nascimento do Estudante")]
+        [DisplayName("Nascimento (estudante)")]
         public DateOnly StudentBirthDate { get; set; }
 
         [DisplayName("Novo Responsável")]
@@ -39,7 +39,7 @@ namespace Padrinly.Models
         [DisplayName("RG opcional")]
         public string? ResponsibleSecondtDocument { get; set; }
 
-        [DisplayName("Data de Nascimento do responsável")]
+        [DisplayName("Nascimento (responsável)")]
         public DateOnly ResponsibleBirthDate { get; set; }
 
         [DisplayName("Email do aluno")]

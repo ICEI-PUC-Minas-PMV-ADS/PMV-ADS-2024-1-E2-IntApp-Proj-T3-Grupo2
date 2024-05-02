@@ -20,3 +20,67 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+header {
+    height: 167px;
+    width: 100%;
+    background: rgb(133,237,243);
+    background: linear-gradient(90deg, rgba(133,237,243,1) 0%, rgba(76,166,172,1) 50%, rgba(2,69,73,1) 100%);
+}
+
+.LogotipoPadrinly {
+    font-family: 'Montserrat Alternates', 'italic';
+    font-size: 48px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #2B479A;
+    display: flex;
+    margin-left: 17%;
+    height: 90%;
+    align-items: center;
+}
+
+#TituloPagina {
+    text-align: center;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.btnsettings {
+    margin-top: 20px;
+    margin-left: 35%;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 13px;
+    color: white;
+    width: 97px;
+    height: 25px;
+    background-color: #DCAA2A;
+}
+
+footer {
+    height: 145px;
+    background-color: #F5BBE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape {
+    text-align: center;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center
+}
