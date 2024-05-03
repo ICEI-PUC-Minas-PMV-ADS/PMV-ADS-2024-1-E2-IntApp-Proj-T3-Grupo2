@@ -29,10 +29,28 @@ namespace Padrinly.Controllers
         }
 
         // GET: Person
+        //[Authorize(Roles = "Institution")]
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Persons.Include(p => p.Institution).Include(p => p.Responsible).Include(p => p.User);
-            return View(await applicationDbContext.ToListAsync());
+            var students = _context.Persons.Include(p => p.User)
+                                .Where(p => p.Type == TypePerson.Student);
+
+            var responsibles = _context.Persons.Include(p => p.User)
+                                .Where(p => p.Type == TypePerson.Responsabile);
+
+            var combinedPersons = await students.Union(responsibles).ToListAsync();
+
+            return View(combinedPersons);
+        }
+
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> InstitutionIndex()
+        {
+            var allUsers = _context.Persons.Include(p => p.User)
+                .Where(u => u.Type == TypePerson.Institution)
+                .ToList();
+
+            return View(allUsers);
         }
 
         // GET: Person/Details/5

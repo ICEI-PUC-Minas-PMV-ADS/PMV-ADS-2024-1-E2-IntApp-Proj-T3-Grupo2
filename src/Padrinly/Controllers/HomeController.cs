@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Padrinly.Models;
 using System.Diagnostics;
@@ -13,6 +14,7 @@ namespace Padrinly.Controllers
             _logger = logger;
         }
 
+        [Authorize(Roles = "Institution,Admin,Person,Student,Patron")]
         public IActionResult Index()
         {
             return View();

@@ -25,14 +25,23 @@
 </head>
 
 
-
-<div class="junbotron" style="margin-bottom: 100px;">
-    <h1 class="display-2">Padrinly</h1>
-</div>
-
-<div class="row">
-    <div class="col-md-2">
-        <h2>Bem vindo</h2>
-        <p>nvfwuioebhnfgiwehnf</p>
+@if (User.IsInRole("Patron"))
+{
+    <button>
+        Finalize seu Registro
+    </button>
+}
+else
+{
+    <div class="junbotron" style="margin-bottom: 100px;">
+        <h1 class="display-2">Padrinly</h1>
     </div>
-</div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <h2>Bem vindo</h2>
+            <p>nvfwuioebhnfgiwehnf</p>
+        </div>
+    </div>
+
+}
