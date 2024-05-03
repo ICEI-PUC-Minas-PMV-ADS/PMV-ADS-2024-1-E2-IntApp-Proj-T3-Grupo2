@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NuGet.Protocol;
+using Padrinly.Common.Extensions;
 using Padrinly.Data;
 using Padrinly.Domain.Entities;
 using Padrinly.Domain.Enums;
@@ -116,7 +117,7 @@ namespace Padrinly.Controllers
                 _context.Add(person);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(InstitutionIndex));
             }
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);
@@ -177,6 +178,9 @@ namespace Padrinly.Controllers
             _context.Add(studentUser);
             await _context.SaveChangesAsync();
 
+            int userIdLoged = User.GetUserId();
+            var personIDLoged = await _context.Persons.FirstOrDefaultAsync(pi => pi.IdUser == userIdLoged);
+
             var student = new Person
             {
                 Name = model.StudentName,
@@ -196,7 +200,7 @@ namespace Padrinly.Controllers
                 SecondDocument = model.StudentSecondtDocument,
                 IdUser = studentUser.Id,
                 Password = model.Password,
-                //IdInstitution = ?
+                IdInstitution = personIDLoged.Id,
             };
 
             await _userManager.AddToRoleAsync(studentUser, student.Type.ToString().ToUpper());
@@ -237,7 +241,7 @@ namespace Padrinly.Controllers
         private void ViewSelectedResponsible(StudentResponsibleViewModel model, Person selectedResponsible)
         {
             model.ResponsibleName = selectedResponsible.Name;
-            model.StudentEmail = selectedResponsible.Email;
+            model.ResponsibleEmail = selectedResponsible.Email;
             model.ResponsiblePhoneNumber = selectedResponsible.PhoneNumber;
             model.Address = selectedResponsible.Address;
             model.Neighborhood = selectedResponsible.Neighborhood;
