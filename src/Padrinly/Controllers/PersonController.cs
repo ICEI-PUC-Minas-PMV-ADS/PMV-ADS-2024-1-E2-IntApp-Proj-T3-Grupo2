@@ -29,7 +29,7 @@ namespace Padrinly.Controllers
         }
 
         // GET: Person
-        //[Authorize(Roles = "Institution")]
+        [Authorize(Roles = "Institution")]
         public async Task<IActionResult> Index()
         {
             var students = _context.Persons.Include(p => p.User)
@@ -43,7 +43,7 @@ namespace Padrinly.Controllers
             return View(combinedPersons);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> InstitutionIndex()
         {
             var allUsers = _context.Persons.Include(p => p.User)
@@ -75,6 +75,7 @@ namespace Padrinly.Controllers
         }
 
         // GET: Person/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address");
@@ -88,6 +89,7 @@ namespace Padrinly.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
         {
             if (ModelState.IsValid)
@@ -123,7 +125,7 @@ namespace Padrinly.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = "Institution")]
+        [Authorize(Roles = "Institution")]
         public async Task<IActionResult> CreateStudent()
         {
             var persons = await _context.Persons
@@ -143,7 +145,7 @@ namespace Padrinly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Authorize(Roles = "Institution")]
+        [Authorize(Roles = "Institution")]
         public async Task<IActionResult> CreateStudent(StudentResponsibleViewModel model)
         {
             if (!ModelState.IsValid && model.IsNewResponsible)
