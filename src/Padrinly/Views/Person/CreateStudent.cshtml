@@ -23,139 +23,227 @@
 
     <!--formulário em duas colunas-->
 
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-md-6" id="ColunaFormularioEsquerda">
 
-    <div class="row">
-        
-            <form asp-action="CreateStudent">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container" id="FormularioAfilhado">
 
-                <div class="form-group">
-                    <label asp-for="StudentName" class="control-label"></label>
-                    <input asp-for="StudentName" class="form-control" />
-                    <span asp-validation-for="StudentName" class="text-danger"></span>
-                </div>
+        <form asp-action="CreateStudent">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <!-- Data nascimento -->
+            <div class="row justify-content-between">
 
-                        <div class="row justify-content-between">
-                            <div class="col-5">
+            <!--1 de 2-->
 
-                                <div class="form-group">
-                                    <label asp-for="StudentBirthDate" class="control-label"></label>
-                                    <input asp-for="StudentBirthDate" class="form-control" type="date" />
-                                    <span asp-validation-for="StudentBirthDate" class="text-danger"></span>
-                                </div>
+            <div class="col-5">
 
-                <!--CPF-->
+                    <!-- Foto da criança-->
 
+                    <div class="box">
+                        <label class="avatar" for="btn">
+                            <img src="###" alt="">
+                        </label>
+                        <input type="checkbox" id="btn">
+                        <div class="menu">
+                            <a href="#"><i class="upload"> <span>upload</span></i></a>
+                            <br>
+                            <a href="#"><i class="edit"> <span>edite</span></i></a>
+                        </div>
+                    </div>
+
+
+                    <!-- Nome do estudante-->
+
+                    <div class="form-group">
+                        <label asp-for="StudentName" class="control-label"></label>
+                        <input asp-for="StudentName" class="form-control" />
+                        <span asp-validation-for="StudentName" class="text-danger"></span>
+                    </div>
+
+                    <!-- Data nascimento -->
+
+                    <div class="row justify-content-between">
+                        <div class="col-5">
+
+                            <div class="form-group">
+                                <label asp-for="StudentBirthDate" class="control-label"></label>
+                                <input asp-for="StudentBirthDate" class="form-control" type="date" />
+                                <span asp-validation-for="StudentBirthDate" class="text-danger"></span>
                             </div>
-                            <div class="col-7">
-                                <div class="form-group">
-                                    <label asp-for="StudentFirstDocument" class="control-label"></label>
-                                    <input asp-for="StudentFirstDocument" class="form-control" type="number" />
-                                    <span asp-validation-for="StudentFirstDocument" class="text-danger"></span>
-                                </div>
+
+                            <!--CPF-->
+
+                        </div>
+                        <div class="col-7">
+                            <div class="form-group">
+                                <label asp-for="StudentFirstDocument" class="control-label"></label>
+                                <input asp-for="StudentFirstDocument" class="form-control" type="number" />
+                                <span asp-validation-for="StudentFirstDocument" class="text-danger"></span>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- email estudante-->
+
+                    <div class="form-group">
+                        <label asp-for="StudentEmail" class="control-label"></label>
+                        <input asp-for="StudentEmail" class="form-control" />
+                        <span asp-validation-for="StudentEmail" class="text-danger"></span>
+                    </div>
+
+                    <!-- senha estudante -->
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- RG opcional-->
+
+                    <div class="form-group">
+                        <label asp-for="StudentSecondtDocument" class="control-label"></label>
+                        <input asp-for="StudentSecondtDocument" class="form-control" type="number" />
+                        <span asp-validation-for="StudentSecondtDocument" class="text-danger"></span>
+                    </div>
 
 
-                <div class="form-group">
-                    <label asp-for="StudentEmail" class="control-label"></label>
-                    <input asp-for="StudentEmail" class="form-control" />
-                    <span asp-validation-for="StudentEmail" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Password" class="control-label"></label>
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Documentação da criança</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Carteira de vacinação da criança</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Boletim escolar da criança</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
 
-                <div class="form-group">
-                    <label asp-for="StudentSecondtDocument" class="control-label"></label>
-                    <input asp-for="StudentSecondtDocument" class="form-control" type="number" />
-                    <span asp-validation-for="StudentSecondtDocument" class="text-danger"></span>
-                </div>
+            </div>
 
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" asp-for="IsNewResponsible" /> @Html.DisplayNameFor(model => model.IsNewResponsible)
-                    </label>
-                </div>
-                <div class="form-group selectedResponsible">
-                    @Html.DropDownListFor(model => model.SelectedPersonId, ViewBag.ResponsibleList as List<SelectListItem>, "Selecione...", new { @class = "form-control" })
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsibleName" class="control-label"></label>
-                    <input asp-for="ResponsibleName" class="form-control" />
-                    <span asp-validation-for="ResponsibleName" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsibleFirstDocument" class="control-label"></label>
-                    <input asp-for="ResponsibleFirstDocument" class="form-control" type="number" />
-                    <span asp-validation-for="ResponsibleFirstDocument" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsibleSecondtDocument" class="control-label"></label>
-                    <input asp-for="ResponsibleSecondtDocument" class="form-control" type="number" />
-                    <span asp-validation-for="ResponsibleSecondtDocument" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsibleBirthDate" class="control-label"></label>
-                    <input asp-for="ResponsibleBirthDate" class="form-control" type="date" />
-                    <span asp-validation-for="ResponsibleBirthDate" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsibleEmail" class="control-label"></label>
-                    <input asp-for="ResponsibleEmail" class="form-control" />
-                    <span asp-validation-for="ResponsibleEmail" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="ResponsiblePhoneNumber" class="control-label"></label>
-                    <input asp-for="ResponsiblePhoneNumber" class="form-control" />
-                    <span asp-validation-for="ResponsiblePhoneNumber" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="Address" class="control-label"></label>
-                    <input asp-for="Address" class="form-control" />
-                    <span asp-validation-for="Address" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="Neighborhood" class="control-label"></label>
-                    <input asp-for="Neighborhood" class="form-control" />
-                    <span asp-validation-for="Neighborhood" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="City" class="control-label"></label>
-                    <input asp-for="City" class="form-control" />
-                    <span asp-validation-for="City" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="State" class="control-label"></label>
-                    <input asp-for="State" class="form-control" />
-                    <span asp-validation-for="State" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="PostalCode" class="control-label"></label>
-                    <input asp-for="PostalCode" class="form-control" />
-                    <span asp-validation-for="PostalCode" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="Number" class="control-label"></label>
-                    <input asp-for="Number" class="form-control" />
-                    <span asp-validation-for="Number" class="text-danger"></span>
-                </div>
-                <div class="form-group responsibleDetails">
-                    <label asp-for="Complement" class="control-label"></label>
-                    <input asp-for="Complement" class="form-control" />
-                    <span asp-validation-for="Complement" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
+
+            <!-- 2 de 2 -->
+
+            <div class="col-5">
+
+                    <!--Novo responsável ou existente-->
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsNewResponsible" /> @Html.DisplayNameFor(model => model.IsNewResponsible)
+                        </label>
+                    </div>
+
+                    <div class="form-group selectedResponsible">
+                        @Html.DropDownListFor(model => model.SelectedPersonId, ViewBag.ResponsibleList as List<SelectListItem>, "Selecione...", new { @class = "form-control" })
+                    </div>
+
+                    <!--Se novo responsável, seus detalhes-->
+
+                    <!--Nome do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsibleName" class="control-label"></label>
+                        <input asp-for="ResponsibleName" class="form-control" />
+                        <span asp-validation-for="ResponsibleName" class="text-danger"></span>
+                    </div>
+
+                    <!--CPF do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsibleFirstDocument" class="control-label"></label>
+                        <input asp-for="ResponsibleFirstDocument" class="form-control" type="number" />
+                        <span asp-validation-for="ResponsibleFirstDocument" class="text-danger"></span>
+                    </div>
+
+                    <!--RG do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsibleSecondtDocument" class="control-label"></label>
+                        <input asp-for="ResponsibleSecondtDocument" class="form-control" type="number" />
+                        <span asp-validation-for="ResponsibleSecondtDocument" class="text-danger"></span>
+                    </div>
+
+                    <!--Data de nascimento do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsibleBirthDate" class="control-label"></label>
+                        <input asp-for="ResponsibleBirthDate" class="form-control" type="date" />
+                        <span asp-validation-for="ResponsibleBirthDate" class="text-danger"></span>
+                    </div>
+
+                    <!--Email do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsibleEmail" class="control-label"></label>
+                        <input asp-for="ResponsibleEmail" class="form-control" />
+                        <span asp-validation-for="ResponsibleEmail" class="text-danger"></span>
+                    </div>
+
+                    <!--telefone do responsável-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="ResponsiblePhoneNumber" class="control-label"></label>
+                        <input asp-for="ResponsiblePhoneNumber" class="form-control" />
+                        <span asp-validation-for="ResponsiblePhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <!--Endereço completo-->
+
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="Neighborhood" class="control-label"></label>
+                        <input asp-for="Neighborhood" class="form-control" />
+                        <span asp-validation-for="Neighborhood" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="State" class="control-label"></label>
+                        <input asp-for="State" class="form-control" />
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="PostalCode" class="control-label"></label>
+                        <input asp-for="PostalCode" class="form-control" />
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="Number" class="control-label"></label>
+                        <input asp-for="Number" class="form-control" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <div class="form-group responsibleDetails">
+                        <label asp-for="Complement" class="control-label"></label>
+                        <input asp-for="Complement" class="form-control" />
+                        <span asp-validation-for="Complement" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group responsibleDetails">
+                        <label for="exampleFormControlFile1">Documentação do responsável</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    <div class="form-group responsibleDetails">
+                        <label for="exampleFormControlFile1">Termo de consentimento pelo responsável</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    <!--Salvar-->
+
+                    <div class="form-group">
+                        <input type="submit" value="Cadastrar" class="btn PrincipalButton" />
+                    </div>
+
+        </form>
+    </div>
     </div>
 
     <div>
