@@ -15,6 +15,7 @@ using Padrinly.Data;
 using Padrinly.Domain.Entities;
 using Padrinly.Domain.Enums;
 using Padrinly.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Padrinly.Controllers
 {
@@ -252,6 +253,51 @@ namespace Padrinly.Controllers
             model.Complement = selectedResponsible.Complement;
             model.ResponsibleBirthDate = selectedResponsible.BirthDate;
             model.IdResponsible = selectedResponsible.Id;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CreatePatron()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreatePatron(Person person)
+        {
+            int userIdLoged = User.GetUserId();
+            var getUser = await _context.Users.FindAsync(userIdLoged);
+            var isPatron = await _context.Persons.FirstOrDefaultAsync(p => p.IdUser == userIdLoged);
+
+            if(isPatron == null)
+            {
+                var patron = new Person
+                {
+                    Name = person.Name,
+                    BirthDate = person.BirthDate,
+                    Email = getUser.Email,
+                    PhoneNumber = person.PhoneNumber,
+                    Password = getUser.PasswordHash,
+                    Address = person.Address,
+                    Neighborhood = person.Neighborhood,
+                    City = person.City,
+                    State = person.State,
+                    PostalCode = person.PostalCode,
+                    Number = person.Number,
+                    Complement = person.Complement,
+                    Type = TypePerson.Patron,
+                    FirstDocument = person.FirstDocument,
+                    SecondDocument = person.SecondDocument,
+                    IdUser = userIdLoged,
+                };
+
+                _context.Add(patron);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(person);
         }
 
         // GET: Person/Edit/5

@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Padrinly.Common.Extensions
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -24,12 +25,9 @@
 
 </head>
 
-
-@if (User.IsInRole("Patron"))
+@if (User.IsInRole("Patron") && ViewBag.IsPatron != true)
 {
-    <button>
-        Finalize seu Registro
-    </button>
+    <a asp-controller="Person" asp-action="CreatePatron" class="btn btn-secondary">Finalize seu Registro</a>
 }
 else
 {
@@ -43,5 +41,4 @@ else
             <p>nvfwuioebhnfgiwehnf</p>
         </div>
     </div>
-
 }
