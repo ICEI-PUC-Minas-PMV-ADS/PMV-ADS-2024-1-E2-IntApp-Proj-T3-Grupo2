@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Padrinly.Common.Extensions;
 using Padrinly.Data;
 using Padrinly.Models;
@@ -25,8 +26,11 @@ namespace Padrinly.Controllers
             var isPatron = _context.Persons.Any(p => p.IdUser == userId);
             if (isPatron)
             {
+                var person = _context.Persons.FirstOrDefault(p => p.IdUser == userId);
                 ViewBag.IsPatron = true;
+                ViewBag.PersonId = person.Id;
             }
+
 
             return View();
         }

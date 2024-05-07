@@ -313,10 +313,12 @@ namespace Padrinly.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Password = person.Password.ToString().DefaultIfEmpty();
 
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);
             ViewData["IdUser"] = new SelectList(_context.Users, "Id", "Id", person.IdUser);
+            ViewData["Password"] = "";
             return View(person);
         }
 
@@ -333,7 +335,7 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid && person.Password == null || ModelState.IsValid)
             {
                 try
                 {
@@ -346,7 +348,7 @@ namespace Padrinly.Controllers
                         user.Email = person.Email;
                         user.NormalizedEmail = person.Email.ToUpper();
                         await _userManager.UpdateAsync(user);
-                        if (person.Password != "")
+                        if (person.Password != " ")
                         {
                             await _userManager.RemovePasswordAsync(user);
                             await _userManager.AddPasswordAsync(user, person.Password);
@@ -358,7 +360,7 @@ namespace Padrinly.Controllers
                     _context.Update(person);
                     await _context.SaveChangesAsync();
 
-                    if (person.IdResponsible == null)
+                    if (person.Type == TypePerson.Responsabile)
                     {
                         var students = await _context.Persons.Where(p => p.IdResponsible == person.Id).ToListAsync();
                         foreach (var student in students)
@@ -388,7 +390,10 @@ namespace Padrinly.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                if(person.Type == TypePerson.Patron)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);

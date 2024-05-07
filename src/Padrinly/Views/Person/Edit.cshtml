@@ -28,20 +28,15 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            @if(Model.Type == Padrinly.Domain.Enums.TypePerson.Institution)
+            @if (Model.Type == Padrinly.Domain.Enums.TypePerson.Institution)
             {
                 <div class="form-group">
                     <label class="control-label">Data da Fundação</label>
-                    <input asp-for="BirthDate" class="form-control" type="date"/>
+                    <input asp-for="BirthDate" class="form-control" type="date" />
                     <span asp-validation-for="BirthDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -59,7 +54,7 @@
             {
                 <div class="form-group">
                     <label class="control-label">Data de Nascimento</label>
-                    <input asp-for="BirthDate" class="form-control" type="date"/>
+                    <input asp-for="BirthDate" class="form-control" type="date" />
                     <span asp-validation-for="BirthDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -119,6 +114,7 @@
             <input type="hidden" asp-for="Type" />
             <input type="hidden" asp-for="IdInstitution" />
             <input type="hidden" asp-for="IdResponsible" />
+            <input type="hidden" asp-for="Password" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -127,7 +123,14 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @if (User.IsInRole("Patron"))
+    {
+        <a asp-controller="Home" asp-action="Index">Back to list</a>
+    }
+    else
+    {
+        <a asp-action="Index">Back to List</a>
+    }
 </div>
 
 @section Scripts {
