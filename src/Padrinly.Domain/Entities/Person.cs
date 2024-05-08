@@ -25,6 +25,7 @@ namespace Padrinly.Domain.Entities
         [Required]
         [DisplayName("Senha")]
         [PasswordPropertyText]
+        [NotMapped]
         public string Password { get; set; }
 
         [Required]

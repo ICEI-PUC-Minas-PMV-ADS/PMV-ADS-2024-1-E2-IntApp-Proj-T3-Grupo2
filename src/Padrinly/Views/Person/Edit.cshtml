@@ -28,6 +28,11 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
@@ -114,9 +119,8 @@
             <input type="hidden" asp-for="Type" />
             <input type="hidden" asp-for="IdInstitution" />
             <input type="hidden" asp-for="IdResponsible" />
-            <input type="hidden" asp-for="Password" />
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" formnovalidate class="btn btn-primary" />
             </div>
         </form>
     </div>

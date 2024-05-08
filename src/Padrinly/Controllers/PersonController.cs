@@ -313,12 +313,10 @@ namespace Padrinly.Controllers
             {
                 return NotFound();
             }
-            ViewBag.Password = person.Password.ToString().DefaultIfEmpty();
 
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);
             ViewData["IdUser"] = new SelectList(_context.Users, "Id", "Id", person.IdUser);
-            ViewData["Password"] = "";
             return View(person);
         }
 
@@ -348,7 +346,7 @@ namespace Padrinly.Controllers
                         user.Email = person.Email;
                         user.NormalizedEmail = person.Email.ToUpper();
                         await _userManager.UpdateAsync(user);
-                        if (person.Password != " ")
+                        if (person.Password != null)
                         {
                             await _userManager.RemovePasswordAsync(user);
                             await _userManager.AddPasswordAsync(user, person.Password);
