@@ -333,7 +333,13 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
-            if (!ModelState.IsValid && person.Password == null || ModelState.IsValid)
+            if (person.Password == null)
+            {
+                ModelState.ClearValidationState("Password");
+                ModelState.MarkFieldValid("Password");
+            }
+
+            if (ModelState.IsValid)
             {
                 try
                 {
