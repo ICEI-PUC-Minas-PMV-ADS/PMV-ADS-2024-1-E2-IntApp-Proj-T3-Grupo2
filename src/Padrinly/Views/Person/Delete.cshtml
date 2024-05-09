@@ -10,6 +10,25 @@
 <div>
     <h4>Person</h4>
     <hr />
+    @if (ViewBag.StudentList != null && ((List<Person>)ViewBag.StudentList).Count > 0)
+    {
+        <div class="alert alert-warning" role="alert">
+            This person cannot be deleted because they are responsible for the following students:
+            <ul>
+                @foreach (var student in (List<Person>)ViewBag.StudentList)
+                {
+                    <li>@student.Name</li>
+                }
+            </ul>
+        </div>
+    }
+    @if (ViewBag.ConfirmInstitution != null)
+    {
+        <div class="alert alert-warning" role="alert">
+            @ViewBag.ConfirmInstitution
+        </div>
+
+    }
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Name)

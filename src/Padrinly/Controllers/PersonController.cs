@@ -425,6 +425,11 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
+            if(person.Type == TypePerson.Institution)
+            {
+                ViewBag.ConfirmInstitution = "Voce deseja exlcuir todos os registro filiados a essa instituição";
+            }
+
             return View(person);
         }
 
@@ -435,6 +440,42 @@ namespace Padrinly.Controllers
         {
             var person = await _context.Persons.FindAsync(id);
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == person.IdUser);
+
+            var studentList = await _context.Persons.Where(p => p.IdResponsible == person.Id)
+                .ToListAsync();
+
+            var personsList = await _context.Persons.Where(p => p.IdInstitution == person.Id)
+                .ToListAsync();
+
+            if(personsList.Any())
+            {
+                foreach(var persons in personsList)
+                {
+                    var responsibles = await _context.Persons.Where(r => r.Id == persons.IdResponsible)
+                        .ToListAsync();
+
+                    var studentUser = await _context.Users.FirstOrDefaultAsync(su => su.Id == persons.IdUser);
+
+                    foreach(var responsible in responsibles)
+                    {
+                        _context.Persons.Remove(responsible);
+                    }
+                    _context.Persons.Remove(persons);
+                    _context.Users.Remove(studentUser);
+                }
+                _context.Persons.Remove(person);
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            if (studentList.Any())
+            {
+                ViewBag.StudentList = studentList;
+                return View(person);
+            }
+
             if (user != null)
             {
                 _context.Persons.Remove(person);
