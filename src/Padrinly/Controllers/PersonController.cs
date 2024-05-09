@@ -23,11 +23,13 @@ namespace Padrinly.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public PersonController(ApplicationDbContext context, UserManager<User> userManager)
+        public PersonController(ApplicationDbContext context, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _context = context;
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // GET: Person
@@ -432,12 +434,29 @@ namespace Padrinly.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var person = await _context.Persons.FindAsync(id);
-            if (person != null)
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == person.IdUser);
+            if (user != null)
+            {
+                _context.Persons.Remove(person);
+                _context.Users.Remove(user);
+            }
+            else
             {
                 _context.Persons.Remove(person);
             }
 
             await _context.SaveChangesAsync();
+
+            if (User.IsInRole("Patron"))
+            {
+                var userId = User.GetUserId();
+
+                var verifyUser = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+                if (verifyUser == null)
+                {
+                    await _signInManager.SignOutAsync();
+                }
+            }
             return RedirectToAction(nameof(Index));
         }
 

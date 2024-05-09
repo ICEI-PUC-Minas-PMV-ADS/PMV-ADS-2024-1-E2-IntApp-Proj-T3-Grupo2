@@ -44,5 +44,6 @@ else
     if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
     {
         <a asp-controller="Person" asp-action="Edit" asp-route-id="@ViewBag.PersonId" class="btn btn-secondary">Editar Perfil</a>
+        <a asp-controller="Person" asp-action="Delete" asp-route-id="@ViewBag.PersonId" class="btn btn-danger">Excluir conta</a>
     }
 }
