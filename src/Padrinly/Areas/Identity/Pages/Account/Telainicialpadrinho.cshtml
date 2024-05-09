@@ -1,0 +1,35 @@
+﻿@page
+@model LoginModel
+
+
+<div class="row">
+    <div style="margin: 20px;">
+        <div style="display: flex; justify-content: flex-end;">
+            <div id="session" style="display: flex;">
+                <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Perfil</button>
+                <button style="background-color: #DCAA2A;border-radius: 50px;width: 200px !important;margin-left: 10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Sair</button>
+            </div>
+        </div>
+        <h2>Olá, Padrinho(a)!</h2>
+        <div style="display: flex; justify-content: flex-end;">
+            <div id="addAfilhado" style="display: flex;margin-right:120px;">
+                <button style="background-color: #DCAA2A; border-radius: 50px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Novo Afilhado</button>                    
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="justify-content: flex-end;height:300px;display: flex;">
+            <div id="addAfilhado" style="display: flex;flex-direction: column;">
+                <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;margin:10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Informações</button>
+                <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;margin:10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Fotos</button>
+                <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;margin:10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Mural</button>
+                <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;margin:10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Chat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
