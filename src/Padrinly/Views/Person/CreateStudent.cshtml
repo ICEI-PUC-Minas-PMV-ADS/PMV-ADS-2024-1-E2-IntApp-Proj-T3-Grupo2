@@ -26,7 +26,7 @@
 
     <div class="container" id="FormularioAfilhado">
 
-        <form asp-action="CreateStudent">
+        <form asp-action="CreateStudent" enctype="multipart/form-data">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="row justify-content-between">
@@ -36,6 +36,7 @@
             <div class="col-5">
 
                     <!-- Foto da criança-->
+
 
                     <div class="box">
                         <label class="avatar" for="btn">
@@ -107,16 +108,9 @@
 
 
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Documentação da criança</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">Carteira de vacinação da criança</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">Boletim escolar da criança</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <label asp-for="AvatarFileName" class="control-label"></label>
+                        <input type="file" name="avatarFileName" class="form-control" />
+                        <span asp-validation-for="AvatarFileName" class="text-danger"></span>
                     </div>
 
             </div>

@@ -72,6 +72,9 @@ namespace Padrinly.Models
         [DisplayName("Complemento")]
         public string Complement { get; set; }
 
+        [DisplayName("Foto de perfil")]
+        public string? AvatarFileName { get; set; }
+
         public int? SelectedPersonId { get; set; }
     }
 }

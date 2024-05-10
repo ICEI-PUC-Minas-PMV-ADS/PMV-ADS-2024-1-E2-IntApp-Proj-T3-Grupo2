@@ -157,7 +157,7 @@ namespace Padrinly.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Institution")]
-        public async Task<IActionResult> CreateStudent(StudentResponsibleViewModel model)
+        public async Task<IActionResult> CreateStudent(StudentResponsibleViewModel model, IFormFile? avatarFileName)
         {
             if (!ModelState.IsValid && model.IsNewResponsible)
             {
@@ -182,11 +182,15 @@ namespace Padrinly.Controllers
                 NormalizedEmail = model.StudentEmail.ToUpper(),
                 PhoneNumber = model.ResponsiblePhoneNumber,
             };
+            
+            var result = await _userManager.CreateAsync(studentUser, model.Password);
 
-            var result = _userManager.CreateAsync(studentUser, model.Password);
+            if (avatarFileName != null)
+            {
+                var name = SaveFile(avatarFileName);
+                model.AvatarFileName = name;
+            }
 
-            _context.Add(studentUser);
-            await _context.SaveChangesAsync();
 
             int userIdLoged = User.GetUserId();
             var personIDLoged = await _context.Persons.FirstOrDefaultAsync(pi => pi.IdUser == userIdLoged);
@@ -211,6 +215,7 @@ namespace Padrinly.Controllers
                 IdUser = studentUser.Id,
                 Password = model.Password,
                 IdInstitution = personIDLoged.Id,
+                AvatarFileName = model.AvatarFileName
             };
 
             await _userManager.AddToRoleAsync(studentUser, student.Type.ToString().ToUpper());
