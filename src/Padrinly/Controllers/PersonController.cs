@@ -277,7 +277,7 @@ namespace Padrinly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreatePatron(Person person, IFormFile? avatarFile)
+        public async Task<IActionResult> CreatePatron(Person person)
         {
             int userIdLoged = User.GetUserId();
             var getUser = await _context.Users.FindAsync(userIdLoged);
@@ -285,12 +285,6 @@ namespace Padrinly.Controllers
 
             if(isPatron == null)
             {
-                if (avatarFile != null)
-                {
-                    var name = SaveFile(avatarFile);
-                    person.AvatarFileName = name;
-                }
-
                 var patron = new Person
                 {
                     Name = person.Name,
@@ -309,7 +303,6 @@ namespace Padrinly.Controllers
                     FirstDocument = person.FirstDocument,
                     SecondDocument = person.SecondDocument,
                     IdUser = userIdLoged,
-                    AvatarFileName = person.AvatarFileName
                 };
 
                 _context.Add(patron);
@@ -492,18 +485,9 @@ namespace Padrinly.Controllers
                     {
                         _context.Persons.Remove(responsible);
                     }
-
-                    string filePathStudent = _filePath + "\\images\\" + persons.AvatarFileName;
-                    System.IO.File.Exists(filePathStudent);
-                    System.IO.File.Delete(filePathStudent);
-
                     _context.Persons.Remove(persons);
                     _context.Users.Remove(studentUser);
                 }
-                string filePathInstitution = _filePath + "\\images\\" + person.AvatarFileName;
-                System.IO.File.Exists(filePathInstitution);
-                System.IO.File.Delete(filePathInstitution);
-
                 _context.Persons.Remove(person);
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
