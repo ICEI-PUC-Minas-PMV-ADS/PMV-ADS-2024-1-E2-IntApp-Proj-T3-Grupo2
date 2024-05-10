@@ -40,4 +40,5 @@ Serão crianças.
 ■ Número de comentários negativos ou positivos: 3
 
 ■ Satisfação – como a pessoa se sentiu a respeito das tarefas concluídas? Estava confiante, estressada, desconfiada?
-Será analisado através de feedback.
+estava confiante.
+
