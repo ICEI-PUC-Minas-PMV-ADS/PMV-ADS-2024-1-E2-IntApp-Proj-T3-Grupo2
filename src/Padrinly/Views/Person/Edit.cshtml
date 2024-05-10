@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="IsAnonimous" /> @Html.DisplayNameFor(model => model.IsAnonimous)
@@ -114,11 +114,18 @@
                 <input asp-for="Complement" class="form-control" />
                 <span asp-validation-for="Complement" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="AvatarFileName" class="control-label"></label>
+                <img src="/images/@{@Model.AvatarFileName}" width="500" />
+                <input type="file" name="avatarFile" class="form-control" />
+                <span asp-validation-for="AvatarFileName" class="text-danger"></span>
+            </div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="IdUser" />
             <input type="hidden" asp-for="Type" />
             <input type="hidden" asp-for="IdInstitution" />
             <input type="hidden" asp-for="IdResponsible" />
+            <input type="hidden" asp-for="AvatarFileName" />
             <div class="form-group">
                 <input type="submit" value="Save" formnovalidate class="btn btn-primary" />
             </div>

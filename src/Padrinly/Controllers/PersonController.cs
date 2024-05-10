@@ -24,12 +24,14 @@ namespace Padrinly.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private string _filePath;
 
-        public PersonController(ApplicationDbContext context, UserManager<User> userManager, SignInManager<User> signInManager)
+        public PersonController(ApplicationDbContext context, UserManager<User> userManager, SignInManager<User> signInManager, IWebHostEnvironment env)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _filePath = env.WebRootPath;
         }
 
         // GET: Person
@@ -94,7 +96,7 @@ namespace Padrinly.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create([Bind("Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person)
+        public async Task<IActionResult> Create([Bind("Name,Email,Password,PhoneNumber,BirthDate,IsAnonimous,AvatarFileName,AvatarInternalName,Type,FirstDocument,SecondDocument,Address,Neighborhood,City,State,PostalCode,Number,Complement,CreatedBy,UpdatedBy,CreatedAt,UpdatedAt")] Person person, IFormFile? avatarFile)
         {
             if (ModelState.IsValid)
             {
@@ -114,6 +116,11 @@ namespace Padrinly.Controllers
                     await _userManager.AddToRoleAsync(user, person.Type.ToString().ToUpper());
                 }
 
+                if(avatarFile != null)
+                {
+                    var name = SaveFile(avatarFile);
+                    person.AvatarFileName = name;
+                }
                 person.IdUser = user.Id;
                 person.Type = TypePerson.Institution;
 
@@ -328,7 +335,7 @@ namespace Padrinly.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //[Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int id, Person person)
+        public async Task<IActionResult> Edit(int id, Person person, IFormFile? avatarFile)
         {
             if (id != person.Id)
             {
@@ -341,7 +348,7 @@ namespace Padrinly.Controllers
                 ModelState.MarkFieldValid("Password");
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid && avatarFile == null || ModelState.IsValid)
             {
                 try
                 {
@@ -362,7 +369,19 @@ namespace Padrinly.Controllers
 
                         await _context.SaveChangesAsync();
                     }
+                    if(avatarFile != null)
+                    {
+                        string filePathName = _filePath + "\\images\\" + person.AvatarFileName;
 
+                        if(avatarFile.ToString() != person.AvatarFileName)
+                        {
+                            System.IO.File.Exists(filePathName);
+                            System.IO.File.Delete(filePathName);
+                        }
+
+                        var name = SaveFile(avatarFile);
+                        person.AvatarFileName = name;
+                    }
                     _context.Update(person);
                     await _context.SaveChangesAsync();
 
@@ -383,7 +402,6 @@ namespace Padrinly.Controllers
                         }
                     }
                     await _context.SaveChangesAsync();
-
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -400,6 +418,8 @@ namespace Padrinly.Controllers
                 {
                     return RedirectToAction("Index", "Home");
                 }
+
+                return RedirectToAction(nameof(Index));
             }
             ViewData["IdInstitution"] = new SelectList(_context.Persons, "Id", "Address", person.IdInstitution);
             ViewData["IdResponsible"] = new SelectList(_context.Persons, "Id", "Address", person.IdResponsible);
@@ -499,6 +519,26 @@ namespace Padrinly.Controllers
                 }
             }
             return RedirectToAction(nameof(Index));
+        }
+
+        public string SaveFile(IFormFile avatarFile)
+        {
+            var extension = Path.GetExtension(avatarFile.FileName);
+            var name = $"{Guid.NewGuid()}{extension}";
+
+
+            var filePath = _filePath + "\\images";
+            if(!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
+
+            using (var stream = System.IO.File.Create(filePath + "\\" + name))
+            {
+                avatarFile.CopyToAsync(stream);
+            }
+
+            return name;
         }
 
         private bool PersonExists(int id)
