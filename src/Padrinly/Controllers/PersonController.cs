@@ -116,7 +116,7 @@ namespace Padrinly.Controllers
                     await _userManager.AddToRoleAsync(user, person.Type.ToString().ToUpper());
                 }
 
-                if(avatarFile != null)
+                if (avatarFile != null)
                 {
                     var name = SaveFile(avatarFile);
                     person.AvatarFileName = name;
@@ -182,8 +182,8 @@ namespace Padrinly.Controllers
                 NormalizedEmail = model.StudentEmail.ToUpper(),
                 PhoneNumber = model.ResponsiblePhoneNumber,
             };
-            
-            var result = await _userManager.CreateAsync(studentUser, model.Password);
+
+            await _userManager.CreateAsync(studentUser, model.Password);
 
             if (avatarFileName != null)
             {
@@ -277,14 +277,20 @@ namespace Padrinly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreatePatron(Person person)
+        public async Task<IActionResult> CreatePatron(Person person, IFormFile avatarFile)
         {
             int userIdLoged = User.GetUserId();
             var getUser = await _context.Users.FindAsync(userIdLoged);
             var isPatron = await _context.Persons.FirstOrDefaultAsync(p => p.IdUser == userIdLoged);
 
-            if(isPatron == null)
+            if (isPatron == null)
             {
+                if (avatarFile != null)
+                {
+                    var name = SaveFile(avatarFile);
+                    person.AvatarFileName = name;
+                }
+
                 var patron = new Person
                 {
                     Name = person.Name,
@@ -303,6 +309,7 @@ namespace Padrinly.Controllers
                     FirstDocument = person.FirstDocument,
                     SecondDocument = person.SecondDocument,
                     IdUser = userIdLoged,
+                    AvatarFileName = person.AvatarFileName
                 };
 
                 _context.Add(patron);
@@ -374,11 +381,11 @@ namespace Padrinly.Controllers
 
                         await _context.SaveChangesAsync();
                     }
-                    if(avatarFile != null)
+                    if (avatarFile != null)
                     {
                         string filePathName = _filePath + "\\images\\" + person.AvatarFileName;
 
-                        if(avatarFile.ToString() != person.AvatarFileName)
+                        if (avatarFile.ToString() != person.AvatarFileName)
                         {
                             System.IO.File.Exists(filePathName);
                             System.IO.File.Delete(filePathName);
@@ -419,7 +426,7 @@ namespace Padrinly.Controllers
                         throw;
                     }
                 }
-                if(person.Type == TypePerson.Patron)
+                if (person.Type == TypePerson.Patron)
                 {
                     return RedirectToAction("Index", "Home");
                 }
@@ -450,7 +457,7 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
-            if(person.Type == TypePerson.Institution)
+            if (person.Type == TypePerson.Institution)
             {
                 ViewBag.ConfirmInstitution = "Voce deseja exlcuir todos os registro filiados a essa instituição";
             }
@@ -472,22 +479,32 @@ namespace Padrinly.Controllers
             var personsList = await _context.Persons.Where(p => p.IdInstitution == person.Id)
                 .ToListAsync();
 
-            if(personsList.Any())
+            if (personsList.Any())
             {
-                foreach(var persons in personsList)
+                foreach (var persons in personsList)
                 {
                     var responsibles = await _context.Persons.Where(r => r.Id == persons.IdResponsible)
                         .ToListAsync();
 
                     var studentUser = await _context.Users.FirstOrDefaultAsync(su => su.Id == persons.IdUser);
 
-                    foreach(var responsible in responsibles)
+                    foreach (var responsible in responsibles)
                     {
                         _context.Persons.Remove(responsible);
                     }
+
+                    string filePathStudent = _filePath + "\\images\\" + persons.AvatarFileName;
+                    if (System.IO.File.Exists(filePathStudent))
+                        System.IO.File.Delete(filePathStudent);
+
                     _context.Persons.Remove(persons);
                     _context.Users.Remove(studentUser);
                 }
+
+                string filePathInstitution = _filePath + "\\images\\" + person.AvatarFileName;
+                if (System.IO.File.Exists(filePathInstitution))
+                    System.IO.File.Delete(filePathInstitution);
+
                 _context.Persons.Remove(person);
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
@@ -508,6 +525,10 @@ namespace Padrinly.Controllers
             }
             else
             {
+                string filePath = _filePath + "\\images\\" + person.AvatarFileName;
+                if (System.IO.File.Exists(filePath))
+                    System.IO.File.Delete(filePath);
+
                 _context.Persons.Remove(person);
             }
 
@@ -533,7 +554,7 @@ namespace Padrinly.Controllers
 
 
             var filePath = _filePath + "\\images";
-            if(!Directory.Exists(filePath))
+            if (!Directory.Exists(filePath))
             {
                 Directory.CreateDirectory(filePath);
             }
