@@ -93,12 +93,5 @@ senha: _123@Mudar_ <br>
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/d8e91d12-18c1-46fe-8bbc-da39f35ef8a0)
 
 
-### Nota
-
-A aplicação, suas funcionalidades e o seu layout gráfico ainda estão em desenvolvimento. Registramos os requisitos funcionais atendidos até o momento, cujos aperfeiçoamentos serão realizados ao longo do processo.
-
-
-
-
 
 
