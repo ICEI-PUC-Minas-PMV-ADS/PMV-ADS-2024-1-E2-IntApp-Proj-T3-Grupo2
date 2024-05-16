@@ -1,6 +1,17 @@
 ﻿@page
 @model LoginModel
 
+<style>
+    .image {
+        max-width: 30%;
+    }
+
+    .padrin {
+        display: flex;
+        align-items: center;
+    }
+
+</style>
 
 <div class="row">
     <div style="margin: 20px;">
@@ -18,7 +29,20 @@
         </div>
     </div>
 
-    <div>
+    <div style="display: flex;">
+        <div class="padrin">
+            <div style="margin-right:-500px" >
+                <img class="image" src="/image/profile_icon.png">
+            </div>
+            <div class="text">
+                <p>Este é o seu afilhado(a)!</p>
+
+                <p>Este(a) é UNKNOWN, tem apenas XX anos de idade e mora em CIDADE/UF!</p>
+
+                <p>Estuda na escola UNKNOWN, gosta de XXXXX e ama XXXX!</p>
+            </div>
+        </div>
+
         <div style="justify-content: flex-end;height:300px;display: flex;">
             <div id="addAfilhado" style="display: flex;flex-direction: column;">
                 <button style="background-color: #DCAA2A; border-radius: 50px;width: 200px !important;margin:10px;" id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Informações</button>
