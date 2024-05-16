@@ -4,144 +4,228 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<!--Titulo da página + botão voltar-->
 
-<h4>Person</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit" enctype="multipart/form-data">
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsAnonimous" /> @Html.DisplayNameFor(model => model.IsAnonimous)
-                </label>
-            </div>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            @if (Model.Type == Padrinly.Domain.Enums.TypePerson.Institution)
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6" id="TituloPagina">
+            editar informações
+        </div>
+        <div class="col">
+            @if (User.IsInRole("Patron"))
             {
-                <div class="form-group">
-                    <label class="control-label">Data da Fundação</label>
-                    <input asp-for="BirthDate" class="form-control" type="date" />
-                    <span asp-validation-for="BirthDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="FirstDocument" class="control-label"></label>
-                    <input asp-for="FirstDocument" class="form-control" />
-                    <span asp-validation-for="FirstDocument" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="SecondDocument" class="control-label"></label>
-                    <input asp-for="SecondDocument" class="form-control" />
-                    <span asp-validation-for="SecondDocument" class="text-danger"></span>
-                </div>
+                <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
             }
             else
             {
-                <div class="form-group">
-                    <label class="control-label">Data de Nascimento</label>
-                    <input asp-for="BirthDate" class="form-control" type="date" />
-                    <span asp-validation-for="BirthDate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label class="control-label">CPF</label>
-                    <input asp-for="FirstDocument" class="form-control" />
-                    <span asp-validation-for="FirstDocument" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label class="control-label">RG Opcional</label>
-                    <input asp-for="SecondDocument" class="form-control" />
-                    <span asp-validation-for="SecondDocument" class="text-danger"></span>
-                </div>
+                <a asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
             }
-            @*             <div class="form-group">
-            <label asp-for="AvatarFileName" class="control-label"></label>
-            <input asp-for="AvatarFileName" class="form-control" />
-            <span asp-validation-for="AvatarFileName" class="text-danger"></span>
-            </div>
-            *@
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Neighborhood" class="control-label"></label>
-                <input asp-for="Neighborhood" class="form-control" />
-                <span asp-validation-for="Neighborhood" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
-                <span asp-validation-for="City" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="State" class="control-label"></label>
-                <input asp-for="State" class="form-control" />
-                <span asp-validation-for="State" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PostalCode" class="control-label"></label>
-                <input asp-for="PostalCode" class="form-control" />
-                <span asp-validation-for="PostalCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Number" class="control-label"></label>
-                <input asp-for="Number" class="form-control" />
-                <span asp-validation-for="Number" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Complement" class="control-label"></label>
-                <input asp-for="Complement" class="form-control" />
-                <span asp-validation-for="Complement" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AvatarFileName" class="control-label"></label>
-                <img src="/images/@{@Model.AvatarFileName}" width="500" />
-                <input type="file" name="avatarFile" class="form-control" />
-                <span asp-validation-for="AvatarFileName" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="IdUser" />
-            <input type="hidden" asp-for="Type" />
-            <input type="hidden" asp-for="IdInstitution" />
-            <input type="hidden" asp-for="IdResponsible" />
-            <input type="hidden" asp-for="AvatarFileName" />
-            <div class="form-group">
-                <input type="submit" value="Save" formnovalidate class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    @if (User.IsInRole("Patron"))
-    {
-        <a asp-controller="Home" asp-action="Index">Back to list</a>
-    }
-    else
-    {
-        <a asp-action="Index">Back to List</a>
-    }
+
+<hr />
+<div class="container" id="Formulario">
+
+        <form asp-action="Edit" enctype="multipart/form-data">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                     </div>
+                    <div class="col-6" id="Avatar">
+
+                        <!-- avatar do afilhado/instituição-->
+
+                        <div class="form-group">
+                            <label asp-for="AvatarFileName" class="control-label"></label>
+                            <img src="/images/@{@Model.AvatarFileName}" width="500" />
+                            <input type="file" name="avatarFile" class="form-control" />
+                            <span asp-validation-for="AvatarFileName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-between" id="Formulario">
+
+                <!--1 de 2-->
+
+                <div class="col-5">
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsAnonimous" /> @Html.DisplayNameFor(model => model.IsAnonimous)
+                        </label>
+                    </div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <!-- Nome do estudante/instituição-->
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <!-- Email do estudante/instituição-->
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Senha do estudante/instituição-->
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    <small id="Help" class="form-text-muted">Deve conter letra maíuscula, minúscula, número e caractere especial (!?#$%).</small>
+                    </div>
+
+                    <!-- telefone do estudante/instituição-->
+
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+  
+
+                    @if (Model.Type == Padrinly.Domain.Enums.TypePerson.Institution)
+                    {
+
+                            <!-- Se usuário = Instituição-->
+
+                        <div class="form-group">
+                            <label class="control-label">Data da Fundação</label>
+                            <input asp-for="BirthDate" class="form-control" type="date" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FirstDocument" class="control-label"></label>
+                            <input asp-for="FirstDocument" class="form-control" />
+                            <span asp-validation-for="FirstDocument" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SecondDocument" class="control-label"></label>
+                            <input asp-for="SecondDocument" class="form-control" />
+                            <span asp-validation-for="SecondDocument" class="text-danger"></span>
+                        </div>
+                    }
+
+                    else
+                    {
+                            <!-- Senão, mostrar dados do afilhado/responsável-->
+                            <!-- data de nascimento do afilhado/responsável-->
+
+                        <div class="form-group">
+                            <label class="control-label">Data de Nascimento</label>
+                            <input asp-for="BirthDate" class="form-control" type="date" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+
+                            <!-- CPF do afilhado/responsável-->
+
+                        <div class="form-group">
+                            <label class="control-label">CPF</label>
+                            <input asp-for="FirstDocument" class="form-control" />
+                            <span asp-validation-for="FirstDocument" class="text-danger"></span>
+                        </div>
+
+                            <!-- RG do afilhado/responsável-->
+
+                        <div class="form-group">
+                            <label class="control-label">RG Opcional</label>
+                            <input asp-for="SecondDocument" class="form-control" />
+                            <span asp-validation-for="SecondDocument" class="text-danger"></span>
+                        </div>
+                    }
+                    @*             <div class="form-group">
+                    <label asp-for="AvatarFileName" class="control-label"></label>
+                    <input asp-for="AvatarFileName" class="form-control" />
+                    <span asp-validation-for="AvatarFileName" class="text-danger"></span>
+                    </div>
+                    *@
+
+                </div>
+
+                <div class="col-5"> 
+
+                            <!-- Endereço do afilhado/responsável-->
+
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Neighborhood" class="control-label"></label>
+                        <input asp-for="Neighborhood" class="form-control" />
+                        <span asp-validation-for="Neighborhood" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="State" class="control-label"></label>
+                        <input asp-for="State" class="form-control" />
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PostalCode" class="control-label"></label>
+                        <input asp-for="PostalCode" class="form-control" />
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Number" class="control-label"></label>
+                        <input asp-for="Number" class="form-control" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Complement" class="control-label"></label>
+                        <input asp-for="Complement" class="form-control" />
+                        <span asp-validation-for="Complement" class="text-danger"></span>
+                    </div>
+
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="IdUser" />
+                    <input type="hidden" asp-for="Type" />
+                    <input type="hidden" asp-for="IdInstitution" />
+                    <input type="hidden" asp-for="IdResponsible" />
+                    <input type="hidden" asp-for="AvatarFileName" />
+
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+          
+                    </div>
+                    <div class="col">
+                    
+                    </div>
+                    <div class="col">
+                    <div class="form-group" id="RightButton">
+                        <input type="submit" value="atualizar" formnovalidate class="btnsettingssmall" />
+                    </div>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 @section Scripts {

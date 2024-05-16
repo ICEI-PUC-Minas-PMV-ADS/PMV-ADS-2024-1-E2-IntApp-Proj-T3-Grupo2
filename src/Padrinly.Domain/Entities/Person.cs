@@ -40,6 +40,7 @@ namespace Padrinly.Domain.Entities
         [DisplayName("É anônimo")]
         public bool IsAnonimous { get; set; } = true;
 
+        [DisplayName("Imagem de perfil")]
         public string? AvatarFileName { get; set; }
 
         public string? AvatarInternalName { get; set; }
