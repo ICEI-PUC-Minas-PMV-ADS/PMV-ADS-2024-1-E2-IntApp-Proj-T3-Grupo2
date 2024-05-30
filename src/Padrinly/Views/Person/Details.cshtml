@@ -1,8 +1,11 @@
 ﻿@model Padrinly.Domain.Entities.Person
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes de registro";
 }
+
+
+
 
 <!--Titulo da página + botão voltar-->
 
@@ -14,18 +17,24 @@
             ver detalhes
         </div>
         <div class="col">
-                <a asp-controller="Home" asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
+            }
+            else
+            {
+                <a asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
+            }
         </div>
+
     </div>
 </div>
 
-    <hr />
+<hr />
 
-<div class="container" id="Formulario">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-
+<div class="container">
+    <div class="row">
+        <div class="col">
             <dl class="row">
                 <dt class="col-12" id="dtAvatar">
                     @Html.DisplayNameFor(model => model.AvatarFileName)
@@ -33,12 +42,7 @@
                 <dd class="col-12" id="ddAvatar">
                     <img src="/images/@{@Model.AvatarFileName}" width="500" />
                 </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.AvatarInternalName)
-                </dt>
-                <dd class="col-8">
-                    @Html.DisplayFor(model => model.AvatarInternalName)
-                </dd>
+                   
                 <dt class = "col-4">
                     @Html.DisplayNameFor(model => model.Name)
                 </dt>
@@ -75,18 +79,7 @@
                     <dd class="col-8">
                     @Html.DisplayFor(model => model.Type)
                 </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Responsible)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Responsible.Address)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Institution)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Institution.Address)
-                </dd>
+                    
                     <dt class="col-4">
                     @Html.DisplayNameFor(model => model.FirstDocument)
                 </dt>
@@ -175,7 +168,32 @@
         </div>
     </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="col-1">
+<a asp-action="Edit" asp-route-id="@Model?.Id"><button type="button" class="btnsettings">editar</button</a>
 </div>
+   
+
+
+<!--
+<dt class="col-4">
+    @Html.DisplayNameFor(model => model.AvatarInternalName)
+</dt>
+<dd class="col-8">
+    @Html.DisplayFor(model => model.AvatarInternalName)
+</dd>
+
+<dt class="col-4">
+    @Html.DisplayNameFor(model => model.Responsible)
+</dt>
+    <dd class="col-8">
+    @Html.DisplayFor(model => model.Responsible.Address)
+</dd>
+    <dt class="col-4">
+    @Html.DisplayNameFor(model => model.Institution)
+</dt>
+    <dd class="col-8">
+    @Html.DisplayFor(model => model.Institution.Address)
+</dd>
+
+--> 

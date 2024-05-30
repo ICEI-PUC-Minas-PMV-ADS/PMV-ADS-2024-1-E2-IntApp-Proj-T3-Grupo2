@@ -1,7 +1,7 @@
 ﻿@model Padrinly.Domain.Entities.Person
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar registro";
 }
 
 <!--Titulo da página + botão voltar-->
@@ -18,9 +18,14 @@
             {
                 <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
             }
-            else
+
+            else @if (User.IsInRole("Admin"))
             {
                 <a asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
+            }
+            else
+            {
+                <a asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
             }
         </div>
     </div>

@@ -16,15 +16,16 @@
             Dados do afilhado
         </div>
         <div class="col">
-            <button type="button" class="btnsettings">voltar</button>
+                <a asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
         </div>
     </div>
 </div>
 
+    <hr />
+
     <!--formulário em duas colunas-->
 
-
-    <div class="container" id="FormularioAfilhado">
+    <div class="container" id="Formulario">
 
         <form asp-action="CreateStudent" enctype="multipart/form-data">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -34,22 +35,6 @@
             <!--1 de 2-->
 
             <div class="col-5">
-
-                    <!-- Foto da criança-->
-
-
-                    <div class="box">
-                        <label class="avatar" for="btn">
-                            <img src="###" alt="">
-                        </label>
-                        <input type="checkbox" id="btn">
-                        <div class="menu">
-                            <a href="#"><i class="upload"> <span>upload</span></i></a>
-                            <br>
-                            <a href="#"><i class="edit"> <span>edite</span></i></a>
-                        </div>
-                    </div>
-
 
                     <!-- Nome do estudante-->
 
@@ -235,13 +220,9 @@
                     <div class="form-group">
                         <input type="submit" value="Cadastrar" class="btn PrincipalButton" />
                     </div>
-
+            </div>
         </form>
     </div>
-    </div>
-
-    <div>
-        <a asp-action="Index">Back to List</a>
     </div>
 
 </main>

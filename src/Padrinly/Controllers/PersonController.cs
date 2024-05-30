@@ -459,7 +459,7 @@ namespace Padrinly.Controllers
 
             if (person.Type == TypePerson.Institution)
             {
-                ViewBag.ConfirmInstitution = "Voce deseja exlcuir todos os registro filiados a essa instituição";
+                ViewBag.ConfirmInstitution = "Tem certeza que deseja excluir o registro abaixo?";
             }
 
             return View(person);

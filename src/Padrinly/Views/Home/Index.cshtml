@@ -1,6 +1,6 @@
 ﻿@using Padrinly.Common.Extensions
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página inicial";
 }
 
 <!DOCTYPE html>
@@ -21,29 +21,124 @@
     <!-- Fonte Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
 </head>
 
 @if (User.IsInRole("Patron") && ViewBag.IsPatron != true)
 {
-    <a asp-controller="Person" asp-action="CreatePatron" class="btn btn-secondary">Finalize seu Registro</a>
-}
-else
-{
-    <div class="junbotron" style="margin-bottom: 100px;">
-        <h1 class="display-2">Padrinly</h1>
-    </div>
+    <body class="ImagemBoasVindas">
+    <div>
+      
+        <div>
+            <h1 class="BoasVindasT">Olá! Damos a você boas-vindas ao Padrin.Ly!</h1>
+            <p class="BoasVindas">
+                <br />
+                <br />
+                Hoje, milhões de crianças e adolescentes no Brasil enfrentam desafios diários devido à falta de acesso a recursos básicos como educação, saúde e alimentação. 
+                A desigualdade social impede que muitos desses jovens alcancem seu pleno potencial, perpetuando um ciclo de pobreza e marginalização.
+                <br />
+                <br />
+                Ao participar do nosso projeto, você estará fazendo mais do que apenas uma doação: 
+                estará investindo no futuro de uma criança, oferecendo-lhe esperança, oportunidades e a chance de alcançar seus sonhos! 
+                Além disso, estará contribuindo para a construção de uma sociedade mais justa, solidária e igualitária!  
+                <br />
+                <br />
+                Para se tornar um padrinho ou madrinha, basta se cadastrar em nossa plataforma e automaticamente lhe atribuiremos uma criança. 
+                Você receberá atualizações regulares sobre seu progresso e desenvolvimento, além de poder interagir com ela e sua família através de nossa plataforma!
+            </p>
+        </div>
 
-    <div class="row">
-        <div class="col-md-2">
-            <h2>Bem vindo</h2>
-            <p>nvfwuioebhnfgiwehnf</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm" id="BoasVindasB">
+                    <a asp-controller="Person" asp-action="CreatePatron" class="LargeButton">finalize seu registro agora!</a>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
         </div>
     </div>
-    if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
-    {
-        <a asp-controller="Person" asp-action="Edit" asp-route-id="@ViewBag.PersonId" class="btn btn-secondary">Editar Perfil</a>
-        <a asp-controller="Person" asp-action="Delete" asp-route-id="@ViewBag.PersonId" class="btn btn-danger">Excluir conta</a>
-    }
+    
+    </body >
 }
+else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
+
+ {
+    <!--Titulo da página + botões-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col" id="TituloPagina">
+                Bem vindo(a)!
+            </div>
+            <div class="col">
+                <a asp-controller="Person" asp-action="Edit" asp-route-id="@ViewBag.PersonId" class="btnsettingssmall">Editar Perfil</a>
+                <a asp-action="/Identity/Account/Logout?returnUrl=%2F" class="btnsettingssmall">SAIR</a>
+                <a asp-controller="Person" asp-action="Delete" asp-route-id="@ViewBag.PersonId" class="btnsettingsdel">Excluir conta</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+ }
+
+
+ else if (User.IsInRole("Institution"))
+
+ {
+    <!--Titulo da página + botão sair-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col" id="TituloPagina">
+                Bem vindo(a)!
+            </div>
+            <div class="col">
+                <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="col" id="BoasVindasB">
+        <a asp-controller="Person" asp-action="Index"><button class="XGButton">registro de afilhados/responsáveis</button></a>
+    </div>
+
+   }
+
+
+ else
+ {
+    <!--Titulo da página + botão sair-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col" id="TituloPagina">
+                Bem vindo(a)!
+            </div>
+            <div class="col">
+                <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="col" id="BoasVindasB">
+        <a asp-controller="Person" asp-action="InstitutionIndex"><button class="XGButton">instituições registradas</button></a>
+    </div>
+   }
+
+

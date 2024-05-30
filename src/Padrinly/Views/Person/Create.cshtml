@@ -5,112 +5,139 @@
     ViewData["Title"] = "Criar Instituição";
 }
 
-<h1>Criar</h1>
+<!--Titulo da página + botão voltar-->
 
-<h4>Instituição</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" type="password" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BirthDate" class="control-label"></label>
-                <input asp-for="BirthDate" class="form-control" type="date" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
-            </div>
-            @*
-            Selecionar tipo de pessoa para criar - Caso não limitar a instituição mudar o controller também
-            <div class="form-group">
-            <label asp-for="Type" class="control-label"></label>
-            <select asp-for="Type" class="form-control">
-            <option value="">Escolha uma opção</option>
-            <option value="@TypePerson.Institution">Instituição</option>
-            <option value="@TypePerson.Patron">Padrinho</option>
-            <option value="@TypePerson.Student">Aluno</option>
-            <option value="@TypePerson.Responsabile">Responsável</option>
-            </select>
-            <span asp-validation-for="Type" class="text-danger"></span>
-            </div>
-            *@            
-            <div class="form-group">
-                <label asp-for="FirstDocument" class="control-label"></label>
-                <input asp-for="FirstDocument" class="form-control" type="number" />
-                <span asp-validation-for="FirstDocument" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SecondDocument" class="control-label"></label>
-                <input asp-for="SecondDocument" class="form-control" />
-                <span asp-validation-for="SecondDocument" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Neighborhood" class="control-label"></label>
-                <input asp-for="Neighborhood" class="form-control" />
-                <span asp-validation-for="Neighborhood" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
-                <span asp-validation-for="City" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="State" class="control-label"></label>
-                <input asp-for="State" class="form-control" />
-                <span asp-validation-for="State" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PostalCode" class="control-label"></label>
-                <input asp-for="PostalCode" class="form-control" />
-                <span asp-validation-for="PostalCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Number" class="control-label"></label>
-                <input asp-for="Number" class="form-control" />
-                <span asp-validation-for="Number" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Complement" class="control-label"></label>
-                <input asp-for="Complement" class="form-control" />
-                <span asp-validation-for="Complement" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AvatarFileName" class="control-label"></label>
-                <input type="file" name="avatarFile" class="form-control" />
-                <span asp-validation-for="AvatarFileName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6" id="TituloPagina">
+            criar instituição
+        </div>
+        <div class="col">
+            <a asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="InstitutionIndex">Back to List</a>
+<hr /
+
+    <!--formulário em duas colunas-->
+
+<div class="container" id="Formulario">
+
+    <form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="row justify-content-between">
+
+            <!--1 de 2-->
+
+            <div class="col-5">
+
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BirthDate" class="control-label"></label>
+                    <input asp-for="BirthDate" class="form-control" type="date" />
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
+                @*
+                Selecionar tipo de pessoa para criar - Caso não limitar a instituição mudar o controller também
+                <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <select asp-for="Type" class="form-control">
+                <option value="">Escolha uma opção</option>
+                <option value="@TypePerson.Institution">Instituição</option>
+                <option value="@TypePerson.Patron">Padrinho</option>
+                <option value="@TypePerson.Student">Aluno</option>
+                <option value="@TypePerson.Responsabile">Responsável</option>
+                </select>
+                <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                *@            
+                <div class="form-group">
+                    <label asp-for="FirstDocument" class="control-label"></label>
+                    <input asp-for="FirstDocument" class="form-control" type="number" />
+                    <span asp-validation-for="FirstDocument" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SecondDocument" class="control-label"></label>
+                    <input asp-for="SecondDocument" class="form-control" />
+                    <span asp-validation-for="SecondDocument" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <!-- 2 de 2 -->
+
+            <div class="col-5">
+
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Neighborhood" class="control-label"></label>
+                    <input asp-for="Neighborhood" class="form-control" />
+                    <span asp-validation-for="Neighborhood" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <input asp-for="State" class="form-control" />
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PostalCode" class="control-label"></label>
+                    <input asp-for="PostalCode" class="form-control" />
+                    <span asp-validation-for="PostalCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Number" class="control-label"></label>
+                    <input asp-for="Number" class="form-control" />
+                    <span asp-validation-for="Number" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Complement" class="control-label"></label>
+                    <input asp-for="Complement" class="form-control" />
+                    <span asp-validation-for="Complement" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AvatarFileName" class="control-label"></label>
+                    <input type="file" name="avatarFile" class="form-control" />
+                    <span asp-validation-for="AvatarFileName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Criar" class="btn PrincipalButton" />
+                </div>
+            </div>
+        </form>
+            
+    </div>
 </div>
 
 @section Scripts {

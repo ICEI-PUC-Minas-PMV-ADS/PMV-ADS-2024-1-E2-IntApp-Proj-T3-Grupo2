@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Padrinly.Domain.Entities.Person>
 
 @{
-    ViewData["Title"] = "InstitutionIndex";
+    ViewData["Title"] = "Instituições cadastradas";
 }
 
 <!--Titulo da página + botão voltar-->
@@ -14,7 +14,7 @@
             instituições cadastradas
         </div>
         <div class="col">
-            <button type="button" class="btnsettings">voltar</button>
+           <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
         </div>
     </div>
 </div>

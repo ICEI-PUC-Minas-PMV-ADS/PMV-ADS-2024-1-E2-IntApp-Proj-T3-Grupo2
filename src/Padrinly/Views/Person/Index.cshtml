@@ -1,13 +1,28 @@
 ﻿@model IEnumerable<Padrinly.Domain.Entities.Person>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "afilhados e responsáveis";
 }
 
-<h1>Index</h1>
+<!--Titulo da página + botão voltar-->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6" id="TituloPagina">
+            afilhados e responsáveis
+        </div>
+        <div class="col">
+            <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
+        </div>
+    </div>
+</div>
+
+<hr />
 
 <p>
-    <a asp-action="CreateStudent">Create New</a>
+    <a asp-action="CreateStudent" class="btnsettingssmall">Criar afilhado/responsável</a>
 </p>
 <table class="table">
     <thead>
@@ -79,9 +94,9 @@
                 @Html.DisplayFor(modelItem => item.PostalCode)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btnsettingssmall">editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btnsettingssmall">detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btnsettingssmall">excluir</a>
             </td>
         </tr>
 }
