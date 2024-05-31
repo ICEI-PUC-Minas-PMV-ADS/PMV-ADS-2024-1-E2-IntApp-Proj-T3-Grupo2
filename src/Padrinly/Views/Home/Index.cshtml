@@ -82,6 +82,11 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                 <a asp-action="/Identity/Account/Logout?returnUrl=%2F" class="btnsettingssmall">SAIR</a>
                 <a asp-controller="Person" asp-action="Delete" asp-route-id="@ViewBag.PersonId" class="btnsettingsdel">Excluir conta</a>
             </div>
+            <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-center">
+                    <a asp-controller="PersonPatron" asp-action="Affiliate" class="btnsettingssmall">Afiliar</a>
+                </div>
+            </div>
         </div>
     </div>
 
