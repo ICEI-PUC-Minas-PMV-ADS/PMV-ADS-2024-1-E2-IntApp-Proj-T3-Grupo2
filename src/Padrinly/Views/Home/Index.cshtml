@@ -105,7 +105,9 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                 <div class="container">
                     <div class="row">
                         <div class="col-sm" style="margin: 10px">
-                             <img src="/images/@{@student.AvatarFileName}" width="500" />
+                            <a asp-controller="Person" asp-action="Details" asp-route-id="@student.Id">
+                                <img src="/images/@{@student.AvatarFileName}" width="500" /> 
+                            </a>
                         </div>
                         <div class="col-sm BoxApresentacao">
                                 Olá! É muito bom te conhecer! 
