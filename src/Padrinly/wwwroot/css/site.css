@@ -314,3 +314,19 @@ dd {
     height: 110px;
     background-color: #DCAA2A;
 }
+
+.BoxAfilhadoHome {
+    border: 4px outset gray;
+    margin-top: 20px;
+    margin: 30px;
+}
+
+.BoxApresentacao {
+    margin: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+}
