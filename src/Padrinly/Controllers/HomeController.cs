@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Padrinly.Common.Extensions;
 using Padrinly.Data;
+using Padrinly.Domain.Enums;
 using Padrinly.Models;
 using System.Diagnostics;
 
@@ -20,17 +21,31 @@ namespace Padrinly.Controllers
         }
 
         [Authorize(Roles = "Institution,Admin,Person,Student,Patron")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var userId = User.GetUserId();
-            var isPatron = _context.Persons.Any(p => p.IdUser == userId);
-            if (isPatron)
+
+            var patron = await _context.Persons
+                .FirstOrDefaultAsync(p => p.IdUser == userId);
+
+            if (patron.Type == TypePerson.Patron)
             {
+                var patronList = await _context.PersonPatrons
+                    .Where(pp => pp.IdPatron == patron.IdUser)
+                    .ToListAsync();
+
                 var person = _context.Persons.FirstOrDefault(p => p.IdUser == userId);
                 ViewBag.IsPatron = true;
                 ViewBag.PersonId = person.Id;
-            }
 
+                var studentIds = patronList.Select(pp => pp.IdStudent).ToList();
+
+                var students = await _context.Persons
+                    .Where(s => studentIds.Contains(s.IdUser.Value))
+                    .ToListAsync();
+
+                ViewBag.PatronList = students;
+            }
 
             return View();
         }

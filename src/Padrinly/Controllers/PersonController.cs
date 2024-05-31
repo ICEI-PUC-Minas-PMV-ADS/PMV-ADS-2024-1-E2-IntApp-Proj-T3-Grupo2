@@ -387,8 +387,8 @@ namespace Padrinly.Controllers
 
                         if (avatarFile.ToString() != person.AvatarFileName)
                         {
-                            System.IO.File.Exists(filePathName);
-                            System.IO.File.Delete(filePathName);
+                            if(System.IO.File.Exists(filePathName))
+                                System.IO.File.Delete(filePathName);
                         }
 
                         var name = SaveFile(avatarFile);

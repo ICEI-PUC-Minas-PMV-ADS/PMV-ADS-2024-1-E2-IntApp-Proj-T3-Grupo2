@@ -35,7 +35,7 @@ namespace Padrinly.Controllers
                 .FirstOrDefaultAsync(p => p.IdUser == userId);
 
             var patronList = await _context.PersonPatrons
-                .Where(pp => pp.IdPatron == patron.Id)
+                .Where(pp => pp.IdPatron == patron.IdUser)
                 .ToListAsync();
 
             while (patronList.Any(pp => pp.IdStudent == randomStudent.Id))
@@ -44,8 +44,8 @@ namespace Padrinly.Controllers
             }
             var personPatron = new PersonPatron
             {
-                IdPatron = patron.Id,
-                IdStudent = randomStudent.Id,
+                IdPatron = patron.IdUser.Value,
+                IdStudent = randomStudent.IdUser.Value,
             };
 
             _context.Add(personPatron);
