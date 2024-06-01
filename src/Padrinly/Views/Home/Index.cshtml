@@ -105,7 +105,7 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                 <div class="container">
                     <div class="row">
                         <div class="col-sm" style="margin: 10px">
-                            <a asp-controller="Person" asp-action="Details" asp-route-id="@student.Id">
+                            <a asp-controller="Person" asp-action="Details" asp-route-id="@student.IdUser">
                                 <img src="/images/@{@student.AvatarFileName}" width="500" /> 
                             </a>
                         </div>
@@ -161,7 +161,7 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
    }
 
 
- else
+ else if(User.IsInRole("Student"))
  {
     <!--Titulo da página + botão sair-->
 
@@ -170,7 +170,7 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
             <div class="col">
             </div>
             <div class="col" id="TituloPagina">
-                Bem vindo(a)!
+                Estudante safado
             </div>
             <div class="col">
                 <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
@@ -181,7 +181,7 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
     <hr />
 
     <div class="col" id="BoasVindasB">
-        <a asp-controller="Person" asp-action="InstitutionIndex"><button class="XGButton">instituições registradas</button></a>
+        <a asp-controller="Person" asp-action="Details" asp-route-id="@ViewBag.UserId"><button class="XGButton">Meu Perfil</button></a>
     </div>
    }
 

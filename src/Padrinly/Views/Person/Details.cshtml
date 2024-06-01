@@ -1,10 +1,11 @@
-﻿@model Padrinly.Domain.Entities.Person
+﻿@using Microsoft.AspNetCore.Components
+@model Padrinly.Domain.Entities.Person
 
 @{
     ViewData["Title"] = "Detalhes de registro";
 }
 
-
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 
 
 <!--Titulo da página + botão voltar-->
@@ -26,7 +27,6 @@
                 <a asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
             }
         </div>
-
     </div>
 </div>
 
@@ -40,160 +40,69 @@
                     @Html.DisplayNameFor(model => model.AvatarFileName)
                 </dt>
                 <dd class="col-12" id="ddAvatar">
-                    <img src="/images/@{@Model.AvatarFileName}" width="500" />
+                    <img src="/images/@Model.AvatarFileName" width="500" />
                 </dd>
                    
-                <dt class = "col-4">
+                <dt class="col-4">
                     @Html.DisplayNameFor(model => model.Name)
                 </dt>
-                <dd class = "col-8">
+                <dd class="col-8">
                     @Html.DisplayFor(model => model.Name)
                 </dd>
-                <dt class = "col-4">
+                <dt class="col-4">
                     @Html.DisplayNameFor(model => model.Email)
                 </dt>
-                    <dd class="col-8">
+                <dd class="col-8">
                     @Html.DisplayFor(model => model.Email)
                 </dd>
-                <dt class = "col-4">
-                    @Html.DisplayNameFor(model => model.PhoneNumber)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.PhoneNumber)
-                </dd>
-                <dt class = "col-4">
-                    @Html.DisplayNameFor(model => model.BirthDate)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.BirthDate)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.IsAnonimous)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.IsAnonimous)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Type)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Type)
-                </dd>
-                    
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.FirstDocument)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.FirstDocument)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.SecondDocument)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.SecondDocument)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.User)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.User.Id)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Address)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Address)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Neighborhood)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Neighborhood)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.City)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.City)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.State)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.State)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.PostalCode)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.PostalCode)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Number)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Number)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.Complement)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.Complement)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.CreatedBy)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.CreatedBy)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.UpdatedBy)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.UpdatedBy)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.CreatedAt)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.CreatedAt)
-                </dd>
-                    <dt class="col-4">
-                    @Html.DisplayNameFor(model => model.UpdatedAt)
-                </dt>
-                    <dd class="col-8">
-                    @Html.DisplayFor(model => model.UpdatedAt)
-                </dd>
+                @if (User.IsInRole("Student"))
+                {
+                    <form id="postForm" method="post" asp-action="CreatedPost">
+                        <div id="editor"></div>
+                        <input type="hidden" name="Content" id="content">
+                        <div class="col-1">
+                            <button type="submit" class="btnsettings">Postar</button>
+                        </div>
+                    </form>
+                }
+                @if(ViewBag.ListPost != null)
+                {
+                    @foreach (var post in ViewBag.ListPost)
+                    {
+                        <div style="margin-bottom: 50px;">
+                            <span>@post.CreatedAt</span>
+                            @Html.Raw(post.Content)
+                        </div>
+                    }
+                }
             </dl>
         </div>
     </div>
 </div>
-
-<div class="col-1">
-<a asp-action="Edit" asp-route-id="@Model?.Id"><button type="button" class="btnsettings">editar</button</a>
-</div>
    
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        const quill = new Quill('#editor', {
+          modules: {
+            toolbar: [
+              [{ header: [1, 2, false] }],
+              ['bold', 'italic', 'underline'],
+              ['image', 'code-block'],
+            ],
+          },
+          placeholder: 'Compose an epic...',
+          theme: 'snow', // or 'bubble'
+        });
 
-<!--
-<dt class="col-4">
-    @Html.DisplayNameFor(model => model.AvatarInternalName)
-</dt>
-<dd class="col-8">
-    @Html.DisplayFor(model => model.AvatarInternalName)
-</dd>
+        document.getElementById('postForm').onsubmit = function() {
+            const content = quill.root.innerHTML;
+            document.getElementById('content').value = content;
+        };
+    </script>
 
-<dt class="col-4">
-    @Html.DisplayNameFor(model => model.Responsible)
-</dt>
-    <dd class="col-8">
-    @Html.DisplayFor(model => model.Responsible.Address)
-</dd>
-    <dt class="col-4">
-    @Html.DisplayNameFor(model => model.Institution)
-</dt>
-    <dd class="col-8">
-    @Html.DisplayFor(model => model.Institution.Address)
-</dd>
-
---> 
+}

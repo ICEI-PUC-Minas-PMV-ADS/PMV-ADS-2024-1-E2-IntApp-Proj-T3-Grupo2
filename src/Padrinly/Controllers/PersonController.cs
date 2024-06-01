@@ -67,12 +67,26 @@ namespace Padrinly.Controllers
                 return NotFound();
             }
 
+            var listPost = await _context.Posts
+                .Where(p => p.IdUser == id)
+                .ToListAsync();
+
+            ViewBag.ListPost = listPost;
+
             var person = await _context.Persons
                 .Include(p => p.Institution)
                 .Include(p => p.Responsible)
                 .Include(p => p.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (person == null)
+                .FirstOrDefaultAsync(m => m.IdUser == id);
+
+            var userId = User.GetUserId();
+
+            if(User.IsInRole("Institution") || User.IsInRole("Patron"))
+            {
+                return View(person);
+            }
+
+            if (person.IdUser != userId)
             {
                 return NotFound();
             }
@@ -570,6 +584,24 @@ namespace Padrinly.Controllers
         private bool PersonExists(int id)
         {
             return _context.Persons.Any(e => e.Id == id);
+        }
+
+        public async Task<IActionResult> CreatedPost(Post model)
+        {
+            var userId = User.GetUserId();
+            
+            var post = new Post 
+            { 
+                IdUser = userId,
+                CreatedAt = DateTime.UtcNow,
+                Content = model.Content,
+                IsFixed = false,
+            };
+
+            _context.Add(post);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

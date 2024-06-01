@@ -25,6 +25,8 @@ namespace Padrinly.Controllers
         {
             var userId = User.GetUserId();
 
+            ViewBag.UserId = userId;
+
             var patron = await _context.Persons
                 .FirstOrDefaultAsync(p => p.IdUser == userId);
 
