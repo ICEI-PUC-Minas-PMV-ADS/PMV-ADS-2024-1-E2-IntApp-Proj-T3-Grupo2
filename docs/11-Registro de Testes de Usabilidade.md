@@ -6,4 +6,11 @@ De acordo com o relato das pessoas que testaram a aplicação até o momento, el
 
  
  No teste realizado todas as funções de cadastros foram bem sucedidas, de fácil entendimento e de forma clara. As demais funções apresenta uma boa resposta deixando o sistema rápido e sem travamentos.
+ 
+na instituição cadastro a instituição devera colocar os dados como : nome da instituição, telefone de contato, cnpj,cep,endereço entre outros.Nos testes realizados todos os campos estão funcionando perfeitamente sem nenhum tipo de erro.
 
+o padrinho interessado na aplicação devera colocar alguns dados pessoais como nome,email,celular, cpf,cep,endereço, e entre outros dados.Nos testes realizados os campos, a pagina estão funcionando perfeitamente sem nenhum tipo de erro.
+
+no login padrinho, o usario deverá colocar o seu email, e sua senha criados na pagina cadastro padrinho.Nos testes realizados, os campos estão funcionando perfeitamente.
+
+na funcionalidade que a instituição tera acesso aos alunos vinculados. Nos testes realizados, a pagina apresenta uma boa fluidez e sem travamentos.
