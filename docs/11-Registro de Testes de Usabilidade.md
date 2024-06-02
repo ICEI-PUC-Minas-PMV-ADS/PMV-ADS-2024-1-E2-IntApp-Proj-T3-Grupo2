@@ -14,3 +14,7 @@ o padrinho interessado na aplicação devera colocar alguns dados pessoais como 
 no login padrinho, o usario deverá colocar o seu email, e sua senha criados na pagina cadastro padrinho.Nos testes realizados, os campos estão funcionando perfeitamente.
 
 na funcionalidade que a instituição tera acesso aos alunos vinculados. Nos testes realizados, a pagina apresenta uma boa fluidez e sem travamentos.
+
+Na funcionalidade o administrador do site deve ter a capacidade de gerenciar as instituições vinculadas. O testes foram realizados com sucesso sem erros e sem travamentos.
+
+
