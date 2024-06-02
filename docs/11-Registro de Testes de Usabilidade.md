@@ -18,3 +18,4 @@ na funcionalidade que a instituição tera acesso aos alunos vinculados. Nos tes
 Na funcionalidade o administrador do site deve ter a capacidade de gerenciar as instituições vinculadas. O testes foram realizados com sucesso sem erros e sem travamentos.
 
 
+
