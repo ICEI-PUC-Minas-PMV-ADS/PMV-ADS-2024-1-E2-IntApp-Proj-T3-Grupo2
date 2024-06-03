@@ -57,24 +57,32 @@
                 </dd>
                 @if (User.IsInRole("Student"))
                 {
+
+                    <p class="BoasVindas"> 
+                        <br />
+                        Gostaria de deixar uma mensagem para o seu padrinho? Faça um post abaixo!</p>
+
                     <form id="postForm" method="post" asp-action="CreatedPost">
                         <div id="editor"></div>
                         <input type="hidden" name="Content" id="content">
                         <div class="col-1">
-                            <button type="submit" class="btnsettings">Postar</button>
+                            <button type="submit" style="padding 20px" class="btnsettingsleft">Postar</button>
                         </div>
                     </form>
+
                 }
                 @if(ViewBag.ListPost != null)
                 {
                     @foreach (var post in ViewBag.ListPost)
                     {
-                        <div style="margin-bottom: 50px;">
+                        <div class="ViewPost col-10">
                             <span>@post.CreatedAt</span>
                             @Html.Raw(post.Content)
                         </div>
                     }
+
                 }
+
             </dl>
         </div>
     </div>

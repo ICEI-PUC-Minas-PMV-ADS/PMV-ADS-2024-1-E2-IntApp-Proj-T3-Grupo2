@@ -330,3 +330,40 @@ dd {
     font-size: 18px;
     text-align: center;
 }
+
+#postForm {
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ViewPost {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 70px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin-left: 15%
+}
+
+.btnsettingsleft {
+    margin-top: 20px;
+    margin-left: 35%;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    background-color: #DCAA2A;
+    margin-left: 1000%;
+}
