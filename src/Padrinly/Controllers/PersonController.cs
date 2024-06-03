@@ -534,15 +534,15 @@ namespace Padrinly.Controllers
 
             if (user != null)
             {
+                string filePath = _filePath + "\\images\\" + person.AvatarFileName;
+                if (System.IO.File.Exists(filePath))
+                    System.IO.File.Delete(filePath);
+
                 _context.Persons.Remove(person);
                 _context.Users.Remove(user);
             }
             else
             {
-                string filePath = _filePath + "\\images\\" + person.AvatarFileName;
-                if (System.IO.File.Exists(filePath))
-                    System.IO.File.Delete(filePath);
-
                 _context.Persons.Remove(person);
             }
 

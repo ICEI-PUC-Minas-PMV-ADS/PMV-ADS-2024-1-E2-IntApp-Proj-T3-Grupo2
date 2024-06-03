@@ -30,23 +30,26 @@ namespace Padrinly.Controllers
             var patron = await _context.Persons
                 .FirstOrDefaultAsync(p => p.IdUser == userId);
 
-            if (patron.Type == TypePerson.Patron)
+            if(patron != null) 
             {
-                var patronList = await _context.PersonPatrons
-                    .Where(pp => pp.IdPatron == patron.IdUser)
-                    .ToListAsync();
+                if (patron.Type == TypePerson.Patron)
+                {
+                    var patronList = await _context.PersonPatrons
+                        .Where(pp => pp.IdPatron == patron.IdUser)
+                        .ToListAsync();
 
-                var person = _context.Persons.FirstOrDefault(p => p.IdUser == userId);
-                ViewBag.IsPatron = true;
-                ViewBag.PersonId = person.Id;
+                    var person = _context.Persons.FirstOrDefault(p => p.IdUser == userId);
+                    ViewBag.IsPatron = true;
+                    ViewBag.PersonId = person.Id;
 
-                var studentIds = patronList.Select(pp => pp.IdStudent).ToList();
+                    var studentIds = patronList.Select(pp => pp.IdStudent).ToList();
 
-                var students = await _context.Persons
-                    .Where(s => studentIds.Contains(s.IdUser.Value))
-                    .ToListAsync();
+                    var students = await _context.Persons
+                        .Where(s => studentIds.Contains(s.IdUser.Value))
+                        .ToListAsync();
 
-                ViewBag.PatronList = students;
+                    ViewBag.PatronList = students;
+                }
             }
 
             return View();
