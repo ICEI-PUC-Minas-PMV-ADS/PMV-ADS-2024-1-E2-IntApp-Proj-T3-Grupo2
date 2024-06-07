@@ -16,6 +16,8 @@ As Funcionalidades produzidas até o momento **(ETAPA 4 - 09/06/2024)** foram:
 |RF-008| Os usuários irão interagir uns com os outros através do envio de mensagens | atualizar |
 |RF-009|Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema	 | atualizar |
 
+RNF-001|RNF-001	Os usuários "pessoa" devem ser anônimos por padrão até que assinem os termos de responsabilidade e possam interagir com o apadrinhado| Create.cshtml |
+
 
 
 
