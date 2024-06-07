@@ -11,6 +11,9 @@ As Funcionalidades produzidas até o momento **(ETAPA 4 - 09/06/2024)** foram:
 |RF-004| O usuário irá efetuar login no site   | ExternalLogins.cshtml  |
 |RF-005| As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas | InstitutionIndex.cshtml
 |RF-006| O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas | InstitutionIndex.cshtml |
+|RF-007| O usuário aluno ira publicar textos e/ou imagens em seu mural | InstitutionIndex.cshtml |
+
+
 
 
 # Instruções de acesso
