@@ -11,6 +11,14 @@ Serão feitos pelo computador.
 - Quem serão os usuários (público-alvo) - serão adultos ou crianças?
 Serão crianças.
 
+  *Critérios de seleção de participantes*:
+
+■ Usuários pais ou  responsaveis de crienças em situaçâo de pobreza.
+
+■ Instituições/escolas interessadas no projeto.
+
+■ Usuário interessado em ser apadrinhador de alguma criança.
+   
 #### Detalhamento dos objetivos: 
 
 1° Objetivo: Nesse objetivo o usuário vai estar na primeira página do site https://https://padrin.ly//src/index.html,que será para preencher os primeiros dados como nome, Email, celular, e CPF para iniciar seu cadastro como apadrinhador.
@@ -24,16 +32,18 @@ Serão crianças.
 5° objetivo: Usuário administrador cadastrará instituição. Nesse objetivo as escolas ou instituições interessadas deverão acessar o site https://https://padrin.ly//src/index.html preencher os dados como Email, e senha. Seguir para o espaço da instituição., aonde a mesma poderá ter acesso a todos os afilhados, entrar em contato com o desenvolvedor, e também adicionar um novo afilhado e o cadastrá-lo.
 
 6° Objetivo: Nesse objetivo os usuários do sistema poderão entrar em contato com os desenvolvedores do site padrinho.ly para possível solução de algum erro.
-7° Objetivo: usuário aluno ira publicar textos e/ou imagens em seu mural
-8° Objetivo: Os usuários irão interagir uns com os outros através do envio de mensagens
+
+7° Objetivo: usuário aluno ira publicar textos e/ou imagens em seu mural.
+
+8° Objetivo: Os usuários irão interagir uns com os outros através do envio de mensagens.
 
 Recursos demandados:
 
-Computadores com acesso a internet.
+■ Computadores com acesso a internet.
 
-Um lugar calmo, e  sem muito barulho para não haver distrações.
+■ Um lugar calmo, e  sem muito barulho para não haver distrações.
 
-Ferramentas necessarias para video conferencia como os testes serão remotamente será necessário uma webcam e um microfone, para que os testes sejam executados da melhor maneira possível. 
+■ Ferramentas necessarias para video conferencia como os testes serão remotamente será necessário uma webcam e um microfone, para que os testes sejam executados da melhor maneira possível. 
 
 #### Métricas para a avaliação:
 
@@ -50,5 +60,5 @@ Ferramentas necessarias para video conferencia como os testes serão remotamente
 ■ Número de comentários negativos ou positivos: 
 
 ■ Satisfação – como a pessoa se sentiu a respeito das tarefas concluídas? Estava confiante, estressada, desconfiada?
-estava confiante.
+
 
