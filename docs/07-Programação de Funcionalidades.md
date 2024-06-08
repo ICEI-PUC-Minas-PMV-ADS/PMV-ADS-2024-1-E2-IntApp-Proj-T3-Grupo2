@@ -104,5 +104,10 @@ senha: _123@Mudar_ <br>
 
 ### Visão da tela de mensagem:
 
-Envio de mensagens entre os usuários dentro da plataforma os usuários irão interagir uns com os outros através do envio de mensagens.
+Essas funcionalidade garante uma comunicação eficiente e segura entre os usuários da plataforma.
+
+
+
+
+
 
