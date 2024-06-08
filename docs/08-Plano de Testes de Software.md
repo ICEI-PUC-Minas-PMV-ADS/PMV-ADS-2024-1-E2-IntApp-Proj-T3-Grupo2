@@ -51,14 +51,14 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Ver Perfil" <br> - Clicar no botão "Postar" <br> |
 |Critério de Êxito | - Foi possível publicar um texto ou imagem. |
 |  	|  	|
-| **Caso de Teste** 	| CT-09 – Envio de mensagens entre os usuários dentro da plataforma. 	|
-|	Requisito Associado 	| RF-009 - Os usuários irão interagir uns com os outros através do envio de mensagens |
+| **Caso de Teste** 	| CT-08 – Envio de mensagens entre os usuários dentro da plataforma. 	|
+|	Requisito Associado 	| RF-008 - Os usuários irão interagir uns com os outros através do envio de mensagens |
 | Objetivo do Teste 	| Garantir que os usuários possam interagir uns com os outros de forma eficaz e segura por meio do envio de mensagens. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Visualizar perfil do usuário" <br> - Clicar no botão "Enviar mensagem" <br> |
 |Critério de Êxito | - Foi possível enviar uma mensagem ao usuário. 
 |  	|  	|
-| **Caso de Teste** 	| CT-10 – Aceitar os termos de compromisso e responsabilidade	|
-|	Requisito Associado 	| RF-010 - Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema |
+| **Caso de Teste** 	| CT-09 – Aceitar os termos de compromisso e responsabilidade	|
+|	Requisito Associado 	| RF-009 - Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema |
 | Objetivo do Teste 	| Assegurar que os usuários possam aceitar os termos de compromisso e responsabilidades de forma correta e eficiente antes de interagir no sistema. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Aceitar os termos" <br> - Clicar no botão "Sim" <br> |
 |Critério de Êxito | - Foi possível aceitar os termos. |
