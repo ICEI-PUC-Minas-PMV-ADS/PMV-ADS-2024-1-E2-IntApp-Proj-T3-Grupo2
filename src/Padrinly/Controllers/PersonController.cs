@@ -81,7 +81,7 @@ namespace Padrinly.Controllers
 
             var userId = User.GetUserId();
 
-            if(User.IsInRole("Institution") || User.IsInRole("Patron"))
+            if(User.IsInRole("Institution") || User.IsInRole("Patron") || User.IsInRole("Admin"))
             {
                 return View(person);
             }
