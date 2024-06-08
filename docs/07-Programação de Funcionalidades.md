@@ -12,7 +12,7 @@ As Funcionalidades produzidas até o momento **(ETAPA 4 - 09/06/2024)** foram:
 |RF-005| As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas | InstitutionIndex.cshtml
 |RF-006| O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas | InstitutionIndex.cshtml |
 |RF-007| O usuário aluno ira publicar textos e/ou imagens em seu mural | Person/Details.cshtml |
-|RF-008| Os usuários irão interagir uns com os outros através do envio de mensagens | atualizar |
+
 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
@@ -102,10 +102,7 @@ senha: _123@Mudar_ <br>
 
 
 
-### Visão da tela de mensagem:
 
-Essa funcionalidade foi criada para garantir uma comunicação eficiente e segura entre os usuários da plataforma.
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/144849420/fcd74709-a705-4c04-891a-c98c22b3884a)
 
 
 
