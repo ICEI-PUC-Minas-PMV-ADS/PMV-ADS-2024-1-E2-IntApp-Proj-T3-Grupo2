@@ -17,9 +17,8 @@ As Funcionalidades produzidas até o momento **(ETAPA 4 - 09/06/2024)** foram:
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-RNF-001| Os usuários "pessoa" devem ser anônimos por padrão até que assinem os termos de responsabilidade e possam interagir com o apadrinhado| atualizar |
-RNF-002|	Garantir que o sistema seja rápido e responsivo, mesmo durante períodos de alto tráfego ou carga intensiva de dados. | atualizar |
-RNF-003|Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço.| atualizar |
+RNF-001|	Garantir que o sistema seja rápido e responsivo, mesmo durante períodos de alto tráfego ou carga intensiva de dados. | atualizar |
+RNF-002|Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço.| atualizar |
 
 
 # Instruções de acesso
