@@ -80,7 +80,6 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
             </div>
             <div class="col">
                 <a asp-controller="Person" asp-action="Edit" asp-route-id="@ViewBag.PersonId" class="btnsettingssmall">Editar Perfil</a>
-                <a asp-action="/Identity/Account/Logout?returnUrl=%2F" class="btnsettingssmall">SAIR</a>
                 <a asp-controller="Person" asp-action="Delete" asp-route-id="@ViewBag.PersonId" class="btnsettingsdel">Excluir conta</a>
             </div>
         </div>
@@ -110,19 +109,19 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                             </a>
                         </div>
                         <div class="col-sm BoxApresentacao">
+                                <br />
+                                <br />
+                                <br />
                                 Olá! É muito bom te conhecer! 
                                 <br />
                                 <br />
-                                Sou @student.Name e tenho ... anos de idade!
+                                Meu nome é @student.Name!
                                 <br />
                                 <br />
-                                Moro em @student.City e estou aqui pela instituição @student.IdInstitution!
+                                Moro em @student.City!
                                 <br />
                                 <br />
-                                Um pouco mais sobre mim:
-                                <br />
-                                <br />
-
+                                Clique em minha foto para você conhecer mais sobre mim!
                         </div>
                     </div>
                 </div>
@@ -147,15 +146,29 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                 Bem vindo(a)!
             </div>
             <div class="col">
-                <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
             </div>
         </div>
     </div>
 
     <hr />
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm DescribeOptions">
+                Este é o espaço para os afilhados e responsáveis da sua instituição
+                <br />
+                <br />
+                Espaço para cadastrar, editar e excluir dados de afilhados e responsáveis
+            </div>
+            <div class="col-sm" id="BoasVindasB">
+                <a asp-controller="Person" asp-action="Index"><button class="XGButton">registro de afilhados/responsáveis</button></a>
+            </div>
+        </div>
+    </div>
+    <hr />
+
     <div class="col" id="BoasVindasB">
-        <a asp-controller="Person" asp-action="Index"><button class="XGButton">registro de afilhados/responsáveis</button></a>
+       
     </div>
 
    }
@@ -173,7 +186,6 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
                 Bem vindo(a)!
             </div>
             <div class="col">
-                <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
             </div>
         </div>
     </div>
@@ -194,13 +206,7 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
             </div>
         </div>
     </div>
-
-
-
-    <div class="col" id="BoasVindasB">
-       
-        
-    </div>
+    <hr />
    }
 
 
@@ -223,7 +229,16 @@ else if (User.IsInRole("Admin"))
 
     <hr />
 
-    <div class="col" id="BoasVindasB">
-        <a asp-controller="Person" asp-action="InstitutionIndex" asp-route-id="@ViewBag.UserId"><button class="XGButton">ver instituições cadastradas</button></a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm DescribeOptions">
+                Espaço destinado para cadastro das instituições no programa
+            </div>
+            <div class="col-sm" id="BoasVindasB">
+                <a asp-controller="Person" asp-action="InstitutionIndex" asp-route-id="@ViewBag.UserId"><button class="XGButton">ver instituições cadastradas</button></a>
+            </div>
+        </div>
     </div>
+    <hr />
 }
