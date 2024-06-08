@@ -51,12 +51,7 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Ver Perfil" <br> - Clicar no botão "Postar" <br> |
 |Critério de Êxito | - Foi possível publicar um texto ou imagem. |
 |  	|  	|
-| **Caso de Teste** 	| CT-08 – Envio de mensagens entre os usuários dentro da plataforma. 	|
-|	Requisito Associado 	| RF-008 - Os usuários irão interagir uns com os outros através do envio de mensagens |
-| Objetivo do Teste 	| Garantir que os usuários possam interagir uns com os outros de forma eficaz e segura por meio do envio de mensagens. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Visualizar perfil do usuário" <br> - Clicar no botão "Enviar mensagem" <br> |
-|Critério de Êxito | - Foi possível enviar uma mensagem ao usuário. 
-|  	|  	|
+
 
 
 > **Links Úteis**:
