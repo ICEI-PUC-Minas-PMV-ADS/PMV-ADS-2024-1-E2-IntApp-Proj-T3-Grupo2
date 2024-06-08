@@ -104,7 +104,7 @@ senha: _123@Mudar_ <br>
 
 ### Visão da tela de mensagem:
 
-Essas funcionalidade garante uma comunicação eficiente e segura entre os usuários da plataforma.
+Essa funcionalidade foi criada para garantir uma comunicação eficiente e segura entre os usuários da plataforma.
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/144849420/fcd74709-a705-4c04-891a-c98c22b3884a)
 
 
