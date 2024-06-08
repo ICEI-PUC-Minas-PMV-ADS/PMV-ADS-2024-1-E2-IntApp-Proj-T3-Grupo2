@@ -57,11 +57,7 @@ Por exemplo:
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Visualizar perfil do usuário" <br> - Clicar no botão "Enviar mensagem" <br> |
 |Critério de Êxito | - Foi possível enviar uma mensagem ao usuário. 
 |  	|  	|
-| **Caso de Teste** 	| CT-09 – Aceitar os termos de compromisso e responsabilidade	|
-|	Requisito Associado 	| RF-009 - Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema |
-| Objetivo do Teste 	| Assegurar que os usuários possam aceitar os termos de compromisso e responsabilidades de forma correta e eficiente antes de interagir no sistema. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Aceitar os termos" <br> - Clicar no botão "Sim" <br> |
-|Critério de Êxito | - Foi possível aceitar os termos. |
+
 
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
