@@ -28,6 +28,7 @@ Serão crianças.
 8° Objetivo: Os usuários irão interagir uns com os outros através do envio de mensagens
 
 Recursos demandados:
+
 Computadores com acesso a internet.
 Um lugar calmo, e  sem muito barulho para não haver distrações.
 Ferramentas necessarias para video conferencia como os testes serão remotamente será necessário uma webcam e um microfone, para que os testes sejam executados da melhor maneira possível. 
@@ -35,11 +36,17 @@ Ferramentas necessarias para video conferencia como os testes serão remotamente
 #### Métricas para a avaliação:
 
 ■ Número de tarefas realizadas de maneira satisfatória: 
+
 ■ Precisão – Quantos enganos as pessoas cometem, seu grau de importância, se foram facilmente corrigidos: 
-■ Tempo de conclusão de uma tarefa: 
+
+■ Tempo de conclusão de uma tarefa:
+
 ■ Número de elementos da interface selecionados incorretamente:
+
 ■ Número de elementos da barra de navegação selecionados incorretamente: 
+
 ■ Número de comentários negativos ou positivos: 
+
 ■ Satisfação – como a pessoa se sentiu a respeito das tarefas concluídas? Estava confiante, estressada, desconfiada?
 estava confiante.
 
