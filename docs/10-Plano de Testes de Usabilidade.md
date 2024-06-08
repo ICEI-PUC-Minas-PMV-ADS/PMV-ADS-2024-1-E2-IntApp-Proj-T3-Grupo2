@@ -18,7 +18,7 @@ Serão crianças.
 ■ Instituições/escolas interessadas no projeto.
 
 ■ Usuário interessado em ser apadrinhador de alguma criança.
-   
+
 #### Detalhamento dos objetivos: 
 
 1° Objetivo: Nesse objetivo o usuário vai estar na primeira página do site https://https://padrin.ly//src/index.html,que será para preencher os primeiros dados como nome, Email, celular, e CPF para iniciar seu cadastro como apadrinhador.
@@ -36,6 +36,18 @@ Serão crianças.
 7° Objetivo: usuário aluno ira publicar textos e/ou imagens em seu mural.
 
 8° Objetivo: Os usuários irão interagir uns com os outros através do envio de mensagens.
+
+###### Perguntas de avaliação:
+
+■ Em  escala de 1 a 10, Aplicação atendeu suas necessidades ?
+
+■ A aplicação apresenta fluidez ? sim ou não.
+
+■ como você achou as telas de cadastros: ruim, bom, ou otimo.
+
+■ O espaço da instituição apresenta um bom desempenho: sim ou nâo.
+
+■  O espaço do apadrinhador aprensenta uma boa usabilidade ? Em escala de 1 a 10 avalie.
 
 #### Recursos demandados:
 
