@@ -48,14 +48,8 @@ Por exemplo:
 | **Caso de Teste** 	| CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma. 	|
 |	Requisito Associado 	| RF-007 - O usuário aluno irá publicar textos e/ou imagens em seu mural |
 | Objetivo do Teste 	| Assegurar que o usuário aluno consiga publicar textos e/ou imagens no seu mural de forma correta e eficiente. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Publicar texto" <br> - Clicar no botão "Publicar uma imagem" <br> |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Ver Perfil" <br> - Clicar no botão "Postar" <br> |
 |Critério de Êxito | - Foi possível publicar um texto ou imagem. |
-|  	|  	|
-| **Caso de Teste** 	| CT-08 – Fixar postagem dos alunos no mural. 	|
-|	Requisito Associado 	| RF-008 - O usuário aluno poderá fixar postagens em seu mural |
-| Objetivo do Teste 	| Assegurar que o usuário aluno consiga fixar e desafixar postagens no seu mural de forma correta e eficiente. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://https://padrin.ly//src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" <br> - Clicar no botão "Publicar texto" <br> - Clicar no botão "Publicar uma imagem" <br> - Clicar em no botão "Fixar essa postagem" <br> |
-|Critério de Êxito | - Foi possível fixar uma postagem |
 |  	|  	|
 | **Caso de Teste** 	| CT-09 – Envio de mensagens entre os usuários dentro da plataforma. 	|
 |	Requisito Associado 	| RF-009 - Os usuários irão interagir uns com os outros através do envio de mensagens |
