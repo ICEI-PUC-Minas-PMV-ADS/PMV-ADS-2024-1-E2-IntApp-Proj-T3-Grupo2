@@ -11,7 +11,7 @@ Serão feitos pelo computador.
 - Quem serão os usuários (público-alvo) - serão adultos ou crianças?
 Serão crianças.
 
-  ## Critérios de seleção de participantes*:
+  ### Critérios de seleção de participantes:
 
 ■ Usuários pais ou  responsaveis de crienças em situaçâo de pobreza.
 
