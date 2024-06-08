@@ -30,7 +30,9 @@ Serão crianças.
 Recursos demandados:
 
 Computadores com acesso a internet.
+
 Um lugar calmo, e  sem muito barulho para não haver distrações.
+
 Ferramentas necessarias para video conferencia como os testes serão remotamente será necessário uma webcam e um microfone, para que os testes sejam executados da melhor maneira possível. 
 
 #### Métricas para a avaliação:
