@@ -131,19 +131,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005| As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas  | ALTA |
 |RF-006| O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas | ALTA |
 |RF-007| O usuário aluno ira publicar textos e/ou imagens em seu mural   | MÉDIA |
-|RF-007| O usuário aluno poderá fixar postagens em seu mural  | BAIXA |
 |RF-008| Os usuários irão interagir uns com os outros através do envio de mensagens   | BAIXA |
-|RF-009| Os usuários devem aceitar termos de compromisso e responsabilidades para interagir no sistema   | ALTA |
+
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Os usuários "pessoa" devem ser anônimos por padrão até que assinem os termos de responsabilidade e possam interagir com o apadrinhado. | ALTA | 
-|RNF-002| Garantir que o sistema seja rápido e responsivo, mesmo durante períodos de alto tráfego ou carga intensiva de dados. | ALTA | 
-|RNF-003| Certificar-se de que o sistema funcione corretamente em uma variedade de navegadores web e dispositivos, incluindo desktops, tablets e smartphones. | MÉDIA | 
-|RNF-004| Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço. | BAIXA | 
+|RNF-001| Garantir que o sistema seja rápido e responsivo, mesmo durante períodos de alto tráfego ou carga intensiva de dados. | ALTA |1
+|RNF-002| Certificar-se de que o sistema funcione corretamente em uma variedade de navegadores web e dispositivos, incluindo desktops, tablets e smartphones. | MÉDIA | 
+|RNF-003| Projetar o sistema de forma modular e fácil de manter, permitindo atualizações e correções de bugs sem interrupções significativas no serviço. | BAIXA | 
 
 
 ## Diagrama de Casos de Uso
