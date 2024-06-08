@@ -349,7 +349,7 @@ dd {
     border-radius: 20px;
     background-color: antiquewhite;
     padding: 20px;
-    margin-left: 15%
+    
 }
 
 .btnsettingsleft {
@@ -366,4 +366,24 @@ dd {
     padding: 10px;
     background-color: #DCAA2A;
     margin-left: 1000%;
+}
+
+.Links {
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.DescribeOptions {
+    margin-top: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
 }

@@ -22,9 +22,13 @@
             {
                 <a asp-action="InstitutionIndex"><button type="button" class="btnsettings">voltar</button></a>
             }
-            else
+            else if (User.IsInRole("Student"))
             {
-                <a asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
+                <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
+            }
+            else if (User.IsInRole("Patron"))
+            {
+                <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
             }
         </div>
     </div>
@@ -66,7 +70,7 @@
                         <div id="editor"></div>
                         <input type="hidden" name="Content" id="content">
                         <div class="col-1">
-                            <button type="submit" style="padding 20px" class="btnsettingsleft">Postar</button>
+                            <button type="submit" style="padding: 20px" class="btnsettingsleft">Postar</button>
                         </div>
                     </form>
 
@@ -75,7 +79,7 @@
                 {
                     @foreach (var post in ViewBag.ListPost)
                     {
-                        <div class="ViewPost col-10">
+                        <div class="ViewPost">
                             <span>@post.CreatedAt</span>
                             @Html.Raw(post.Content)
                         </div>

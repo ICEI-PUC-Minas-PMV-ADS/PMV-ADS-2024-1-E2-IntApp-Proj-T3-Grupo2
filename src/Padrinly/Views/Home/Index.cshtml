@@ -170,7 +170,50 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
             <div class="col">
             </div>
             <div class="col" id="TituloPagina">
-                Estudante safado
+                Bem vindo(a)!
+            </div>
+            <div class="col">
+                <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm DescribeOptions">
+                Veja seu perfil e crie posts para seu padrinho!
+                <br/>
+                <br/>
+                Use e abuse da criatividade! Escreva suas conquistas, o que gosta ou algo que te deixa feliz!
+            </div>
+            <div class="col-sm" id="BoasVindasB">
+                <a asp-controller="Person" asp-action="Details" asp-route-id="@ViewBag.UserId"><button class="XGButton">Meu Perfil</button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col" id="BoasVindasB">
+       
+        
+    </div>
+   }
+
+
+else if (User.IsInRole("Admin"))
+{
+    <!--Titulo da página + botão sair-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col" id="TituloPagina">
+                bem-vindo(a)!
             </div>
             <div class="col">
                 <a asp-controller="Home" asp-action="Index" class="btnsettingssmall">SAIR</a>
@@ -181,8 +224,6 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
     <hr />
 
     <div class="col" id="BoasVindasB">
-        <a asp-controller="Person" asp-action="Details" asp-route-id="@ViewBag.UserId"><button class="XGButton">Meu Perfil</button></a>
+        <a asp-controller="Person" asp-action="InstitutionIndex" asp-route-id="@ViewBag.UserId"><button class="XGButton">ver instituições cadastradas</button></a>
     </div>
-   }
-
-
+}
