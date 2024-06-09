@@ -7,7 +7,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-01 –  Cadastro de Instituição (Pessoa jurídica)** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de instituições para que essas consigam criar e gerenciar seus perfis. |
-|Registro de evidência | www.teste.com.br/drive/ct-01 |
+|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337983707-95bfb79d-11fd-445e-ad64-9b7cc11500bf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDY5NTIsIm5iZiI6MTcxNzk0NjY1MiwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgzNzA3LTk1YmZiNzlkLTExZmQtNDQ1ZS1hZDY0LTliN2NjMTE1MDBiZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTI0MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NTRjYjYxMDlmNTFiNzI5YTA1MTAxYzU0OWRmODkzMmVhOTQzYzkxZmY2MDBjMGNjODNhNGVmZDBkM2Q0ZjE2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.fsq7tjywsvIYf7NBoD9n-_WTE9DFtww5SL-4oSd3Z7c |
 
 | **Caso de Teste** 	| **CT-02 – Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos.** 	|
 |:---:	|:---:	|
