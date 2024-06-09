@@ -17,7 +17,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-03 – Cadastro de Apadrinhadores (Pessoa física).**	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-003 - O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site. |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência | https://private-user-images.githubusercontent.com/110932147/337982033-d224d590-90a9-4bb9-98f9-8a9dc1bf34fa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDc5NjgsIm5iZiI6MTcxNzk0NzY2OCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgyMDMzLWQyMjRkNTkwLTkwYTktNGJiOS05OGY5LThhOWRjMWJmMzRmYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQxMDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNzU0YjQyM2I2MzEzMDY3NjZkNzY3MTY3NzBmMDY2NTIyM2RjN2E3ZTAwNjJiZDdjOTIxOGRmODQwOTM5YTc5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.S__uDwRldUsrdKUXuZCpqomzRjMTUbIHPbOx5-C4x1U|
 
 | **Caso de Teste** 	| **CT-04 – Realizar login** 	|
 |:---:	|:---:	|
