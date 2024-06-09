@@ -7,37 +7,38 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-01 –  Cadastro de Instituição (Pessoa jurídica)** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de instituições para que essas consigam criar e gerenciar seus perfis. |
-|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337983707-95bfb79d-11fd-445e-ad64-9b7cc11500bf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDY5NTIsIm5iZiI6MTcxNzk0NjY1MiwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgzNzA3LTk1YmZiNzlkLTExZmQtNDQ1ZS1hZDY0LTliN2NjMTE1MDBiZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTI0MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NTRjYjYxMDlmNTFiNzI5YTA1MTAxYzU0OWRmODkzMmVhOTQzYzkxZmY2MDBjMGNjODNhNGVmZDBkM2Q0ZjE2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.fsq7tjywsvIYf7NBoD9n-_WTE9DFtww5SL-4oSd3Z7c |
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/9027c2cb-a99b-443e-8996-03e8a9da6362) ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/0bb0d9bb-c3b1-43e2-8225-98c7c3e20ba6)|
 
 | **Caso de Teste** 	| **CT-02 – Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-002 - Verificar se após logar, a instituição consegue realizar o cadastro de seus alunos. |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/ebe0d1aa-76de-4f6f-b48e-71ddd2b4dd51) |
 
 | **Caso de Teste** 	| **CT-03 – Cadastro de Apadrinhadores (Pessoa física).**	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-003 - O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site. |
-|Registro de evidência | https://private-user-images.githubusercontent.com/110932147/337982033-d224d590-90a9-4bb9-98f9-8a9dc1bf34fa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDc5NjgsIm5iZiI6MTcxNzk0NzY2OCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgyMDMzLWQyMjRkNTkwLTkwYTktNGJiOS05OGY5LThhOWRjMWJmMzRmYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQxMDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNzU0YjQyM2I2MzEzMDY3NjZkNzY3MTY3NzBmMDY2NTIyM2RjN2E3ZTAwNjJiZDdjOTIxOGRmODQwOTM5YTc5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.S__uDwRldUsrdKUXuZCpqomzRjMTUbIHPbOx5-C4x1U|
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/767e7ec7-0068-4581-9f26-d9de627a7f49) ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/d224d590-90a9-4bb9-98f9-8a9dc1bf34fa)
+|
 
 | **Caso de Teste** 	| **CT-04 – Realizar login** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004 - O usuário irá efetuar login no site. |
-|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337981154-1d8e2619-9608-4d33-859d-dc682e3d3530.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDczOTIsIm5iZiI6MTcxNzk0NzA5MiwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgxMTU0LTFkOGUyNjE5LTk2MDgtNGQzMy04NTlkLWRjNjgyZTNkMzUzMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTMxMzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lODMwODg4ZDkyNDRiY2Y5MTY1NzljOTU1MDMyMmMyNWZiNjg1NmM5YTExY2U5NGQ5ODU1MDc2MDI0NTA5MGVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.KdoCGaWYlRCoy9V1ezRSSP7frGnx_objVWh5wlEw_uA |
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/70ff244f-8a02-42d5-bfad-dce40beceb19) |
 
 | **Caso de Teste** 	| **CT-05 – Gerenciar Alunos Vinculados** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	|  RF-005 - As instituições cadastradas devem ter a capacidade de gerenciar alunos vinculados a elas.|
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/ebe0d1aa-76de-4f6f-b48e-71ddd2b4dd51) |
 
 | **Caso de Teste** 	| **CT-06  – Administrador do site deve conseguir gerenciar as Insituições.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	|RF-006 - O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas |
-|Registro de evidência| https://private-user-images.githubusercontent.com/110932147/337981257-0bb0d9bb-c3b1-43e2-8225-98c7c3e20ba6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDgxNjgsIm5iZiI6MTcxNzk0Nzg2OCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgxMjU3LTBiYjBkOWJiLWMzYjEtNDNlMi04MjI1LTk4YzdjM2UyMGJhNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQ0MjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNzkzNGQ5NzkzYzUyYzM3NGMxYjJmNGRkYWFmODA0NTBjZDZkNGQyYmRmZjhhZTM0MzU1NmRmMzgwMTc2ZjA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.MQRnwrjkFSS36B_4ayvMMkFAhuDorz7g_pu0ZPVq5_Q |
+|Registro de evidência| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/0bb0d9bb-c3b1-43e2-8225-98c7c3e20ba6) |
 
 | **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	|RF-007 - O usuário aluno irá publicar textos e/ou imagens em seu mural |
-|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337983530-b66b9264-6a32-4b83-ad6d-913b7f1f069e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDgzMjQsIm5iZiI6MTcxNzk0ODAyNCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgzNTMwLWI2NmI5MjY0LTZhMzItNGI4My1hZDZkLTkxM2I3ZjFmMDY5ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQ3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xZmYwMTFhNmY4MjdjNTFjNmM0ZDk5OTQxOGFhYjU0NDBiYWU2N2E4Y2EyOGU0ZjVmZDU5Njg5ZTZjYmNmODczJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.KLXblL6rR4ulvTxkwE6tX70kYSdhD86OTxNFeMIV3WE |
+|Registro de evidência | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/assets/110932147/550ed4ae-7f7c-4a1e-abf5-1cce21f9cefe) |
 
 ## Avaliação
 
