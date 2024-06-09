@@ -47,6 +47,8 @@ Serão crianças.
 
 ■  O espaço do apadrinhador aprensenta uma boa usabilidade ? Em escala de 1 a 10 avalie.
 
+■ A aplicacão atendeu todas as suas necessidades ? sim ou não.
+
 #### Recursos demandados:
 
 ■ Computadores com acesso a internet.
