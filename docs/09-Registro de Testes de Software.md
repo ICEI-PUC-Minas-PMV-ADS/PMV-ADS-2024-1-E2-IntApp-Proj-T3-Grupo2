@@ -34,7 +34,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
-| **Caso de Teste** 	| **CT-07 – Realizar login** 	|
+| **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
