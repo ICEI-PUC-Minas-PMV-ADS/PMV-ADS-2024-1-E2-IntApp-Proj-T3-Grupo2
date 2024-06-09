@@ -69,6 +69,8 @@ Portanto, nossa aplicaçâo apresenta bons resultado , visando atenter crianças
  ##### considerações  finais:
 
 Os usuários gostaram da nossa aplicação porque segundo eles o site apresenta  uma boa usabilidade com cores bem definidas, uma boa fluidez, e também disseram que com a nossa aplicação as crianças viveram melhores, e com esse incentivo seriam educados e se tornarem pessoas do bem.
+
+
  
  
 
