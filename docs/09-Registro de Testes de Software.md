@@ -22,7 +22,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-04 – Realizar login** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004 - O usuário irá efetuar login no site. |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337981154-1d8e2619-9608-4d33-859d-dc682e3d3530.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDczOTIsIm5iZiI6MTcxNzk0NzA5MiwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgxMTU0LTFkOGUyNjE5LTk2MDgtNGQzMy04NTlkLWRjNjgyZTNkMzUzMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTMxMzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lODMwODg4ZDkyNDRiY2Y5MTY1NzljOTU1MDMyMmMyNWZiNjg1NmM5YTExY2U5NGQ5ODU1MDc2MDI0NTA5MGVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.KdoCGaWYlRCoy9V1ezRSSP7frGnx_objVWh5wlEw_uA |
 
 | **Caso de Teste** 	| **CT-05 – Gerenciar Alunos Vinculados** 	|
 |:---:	|:---:	|
