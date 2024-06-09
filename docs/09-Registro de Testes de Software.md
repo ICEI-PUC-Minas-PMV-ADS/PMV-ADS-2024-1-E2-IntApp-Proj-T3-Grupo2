@@ -31,7 +31,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | **Caso de Teste** 	| **CT-06  – Administrador do site deve conseguir gerenciar as Insituições.** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	|RF-006 - O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
 | **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
