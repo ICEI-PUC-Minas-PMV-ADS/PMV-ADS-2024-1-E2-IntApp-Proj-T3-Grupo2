@@ -1,7 +1,7 @@
 # Registro de Testes de Usabilidade
 #### Introdução:
 
-O relatório de teste de usabilidade apresenta os resultados do teste de usabilidade da aplicaçâo padrin.ly, realizados com os tres principais participantes que é a instituição, o apadrinhador, e os pais/responsaveis das crianças.O nosso objetivo com esse relatório é buscar corrigir alguns erros e também buscar uma melhora em nossa aplicacâo.A aplicação ainda está em desenvolvimento, na fase inicial, e as funcionalidades estão sendo disponibilizadas aos poucos.
+O relatório de teste de usabilidade apresenta os resultados do teste de usabilidade da aplicaçâo padrin.ly, realizados com os tres principais participantes que é a instituição, o apadrinhador, os pais/responsaveis das crianças, e as crianças cadastradas pelos responsaveis. O nosso objetivo com esse relatório é buscar corrigir alguns erros e também buscar uma melhora em nossa aplicacâo. A aplicação ainda está em desenvolvimento, na fase inicial, e as funcionalidades estão sendo disponibilizadas aos poucos.
 
 ##### Metodologia:
 
@@ -9,13 +9,22 @@ O nosso teste foi feito de forma remota, feito pelo teams. Nós instruímos os p
 
 ###### Perrfil de usuarios:
 
-usuário 1: Pai/responsável, 38 anos, sexo masculino, 2 filhos, busca ajuda para as crianças.
+■ usuário 1: Pai/responsável, 38 anos, sexo masculino, 2 filhos, busca ajuda para as crianças.
 
-Usuário 2: Instituição a mais de 20 anos, busca vincular crianças em situações de vulnerabilidade.
+■ Usuário 2: Instituição a mais de 20 anos, busca vincular crianças em situações de vulnerabilidade.
 
-Usuário 3: padrinho 45 anos, sexo masculino, consegue apadrinhar até duas crianças .
+■ Usuário 3: padrinho 45 anos, sexo masculino, consegue apadrinhar até duas crianças .
+
+■ Usuario 4: aluno 16 anos, sexo feminino, busca um melhor aprendizado com as doações.
 
 #### Objetivos testados:
+
+■ Cadastro padrinho.
+■  Página padrinho.
+■ Página de login.
+■ Cadastro instituição .
+■  Entrar em contato com os desenvolvedores.
+■ Página do aluno.
 
 ###### Resultados:
 
