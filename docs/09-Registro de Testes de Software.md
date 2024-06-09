@@ -32,7 +32,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-06  – Administrador do site deve conseguir gerenciar as Insituições.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	|RF-006 - O administrador do site deve ter a capacidade de gerenciar as instituições vinculadas |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência| https://private-user-images.githubusercontent.com/110932147/337981257-0bb0d9bb-c3b1-43e2-8225-98c7c3e20ba6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDgxNjgsIm5iZiI6MTcxNzk0Nzg2OCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgxMjU3LTBiYjBkOWJiLWMzYjEtNDNlMi04MjI1LTk4YzdjM2UyMGJhNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQ0MjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNzkzNGQ5NzkzYzUyYzM3NGMxYjJmNGRkYWFmODA0NTBjZDZkNGQyYmRmZjhhZTM0MzU1NmRmMzgwMTc2ZjA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.MQRnwrjkFSS36B_4ayvMMkFAhuDorz7g_pu0ZPVq5_Q |
 
 | **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
 |:---:	|:---:	|
