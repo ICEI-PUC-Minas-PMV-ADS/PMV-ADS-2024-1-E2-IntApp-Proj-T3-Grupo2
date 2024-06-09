@@ -5,7 +5,7 @@ O relatório de teste de usabilidade apresenta os resultados do teste de usabili
 
 ##### Metodologia:
 
-O nosso teste foi feito de forma remota, feito pelo teams. Nós instruímos os participantes para que os testes ficassem da melhor maneira possível. As perguntas foram entregues a eles e eles avaliaram a aplicação de forma geral com as perguntas propostas no teste de usabilidade.
+O nosso teste foi feito de forma remota, feito pelo teams. Nos instruímos os participantes para que os testes ficassem da melhor maneira possível. As perguntas foram entregues a eles e eles avaliaram a aplicação de forma geral com as perguntas propostas no teste de usabilidade.
 
 ###### Perrfil de usuarios:
 
