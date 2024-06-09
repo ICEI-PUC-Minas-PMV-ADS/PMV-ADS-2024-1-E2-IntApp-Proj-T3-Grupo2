@@ -35,8 +35,6 @@ Serão crianças.
 
 7° Objetivo: usuário aluno ira publicar textos e/ou imagens em seu mural.
 
-8° Objetivo: Os usuários irão interagir uns com os outros através do envio de mensagens.
-
 ##### Perguntas de avaliação:
 
 ■ Em  escala de 1 a 10, Aplicação atendeu suas necessidades ?
