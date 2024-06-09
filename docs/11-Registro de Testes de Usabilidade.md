@@ -63,7 +63,8 @@ Métricas para a avaliação:
 
 ■ O espaço criança apresenta facil usabilidade ? sim ou nâo. (sim).
 
-
+##### Conclusâo:
+Portanto, nossa aplicaçâo apresenta bons resultado , visando atenter crianças em condiçoes de extrema pobresa, buscando uma vida melhor para elas e um futuro mais digno. Buscamos  atender boa parte das crianças do Brasil, e tambem futuralmente implementar mais funcôes para que  nosso sitema fique cada vez melhor.
 
  ##### considerações  finais:
 
