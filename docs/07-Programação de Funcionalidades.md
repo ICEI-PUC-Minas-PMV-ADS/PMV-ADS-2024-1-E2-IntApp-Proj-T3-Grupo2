@@ -104,7 +104,7 @@ senha: _123@Mudar_ <br>
 
 Permite ao afilhado interagir com a plataforma e realizar postagens para seu padrinho e compartilhar o que decidir ser interessante.
 
-login: _lucassilva@email.com_ <br>
+login: _joaosilva@email.com_ <br>
 senha: _123@Mudar_ <br>
 ("M" maiúsculo)
 
