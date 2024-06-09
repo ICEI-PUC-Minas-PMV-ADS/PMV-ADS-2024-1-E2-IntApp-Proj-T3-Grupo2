@@ -20,10 +20,15 @@ O nosso teste foi feito de forma remota, feito pelo teams. Nós instruímos os p
 #### Objetivos testados:
 
 ■ Cadastro padrinho.
+
 ■  Página padrinho.
+
 ■ Página de login.
+
 ■ Cadastro instituição .
+
 ■  Entrar em contato com os desenvolvedores.
+
 ■ Página do aluno.
 
 ###### Resultados:
