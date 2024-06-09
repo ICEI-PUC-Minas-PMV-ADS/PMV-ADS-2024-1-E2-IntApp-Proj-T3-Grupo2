@@ -37,7 +37,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	|RF-007 - O usuário aluno irá publicar textos e/ou imagens em seu mural |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência |https://private-user-images.githubusercontent.com/110932147/337983530-b66b9264-6a32-4b83-ad6d-913b7f1f069e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDgzMjQsIm5iZiI6MTcxNzk0ODAyNCwicGF0aCI6Ii8xMTA5MzIxNDcvMzM3OTgzNTMwLWI2NmI5MjY0LTZhMzItNGI4My1hZDZkLTkxM2I3ZjFmMDY5ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYwOVQxNTQ3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xZmYwMTFhNmY4MjdjNTFjNmM0ZDk5OTQxOGFhYjU0NDBiYWU2N2E4Y2EyOGU0ZjVmZDU5Njg5ZTZjYmNmODczJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.KLXblL6rR4ulvTxkwE6tX70kYSdhD86OTxNFeMIV3WE |
 
 ## Avaliação
 
