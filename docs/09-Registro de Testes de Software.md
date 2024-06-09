@@ -36,7 +36,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | **Caso de Teste** 	| **CT-07 – CT-07 – Usuário aluno deve conseguir postar textos e imagens na plataforma.** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	|RF-007 - O usuário aluno irá publicar textos e/ou imagens em seu mural |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
 ## Avaliação
