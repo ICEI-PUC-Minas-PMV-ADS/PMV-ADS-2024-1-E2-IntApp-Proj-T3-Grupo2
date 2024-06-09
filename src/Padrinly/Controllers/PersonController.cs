@@ -482,12 +482,6 @@ namespace Padrinly.Controllers
                 ViewBag.ConfirmInstitution = "Tem certeza que deseja excluir o registro abaixo?";
             }
 
-            if (User.IsInRole("Admin"))
-            {
-                return RedirectToAction(nameof(InstitutionIndex));
-            }
-
-
             return View(person);
         }
 
@@ -570,6 +564,12 @@ namespace Padrinly.Controllers
                     await _signInManager.SignOutAsync();
                 }
             }
+
+            if (User.IsInRole("Admin"))
+            {
+                return RedirectToAction(nameof(InstitutionIndex));
+            }
+
             return RedirectToAction(nameof(Index));
         }
 
