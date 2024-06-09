@@ -33,7 +33,23 @@ O nosso teste foi feito de forma remota, feito pelo teams. Nós instruímos os p
 
 ###### Resultados:
 
-Resposta da avaliação:
+Métricas para a avaliação:
+
+■ Número de tarefas realizadas de maneira satisfatória: 6
+
+■ Precisão – Quantos enganos as pessoas cometem, seu grau de importância, se foram facilmente corrigidos:3
+
+■ Tempo de conclusão de uma tarefa: 10 segundos
+
+■ Número de elementos da interface selecionados incorretamente: 2
+
+■ Número de elementos da barra de navegação selecionados incorretamente: 1
+
+■ Número de comentários negativos ou positivos: 3
+
+■ Satisfação – como a pessoa se sentiu a respeito das tarefas concluídas? Estava confiante, estressada, desconfiada? estava confiante.
+
+###### Resposta da avaliação:
 
 ■ Em escala de 1 a 10, Aplicação atendeu suas necessidades ? 10
 
