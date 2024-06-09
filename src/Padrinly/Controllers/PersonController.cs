@@ -440,10 +440,16 @@ namespace Padrinly.Controllers
                         throw;
                     }
                 }
+
                 if (person.Type == TypePerson.Patron)
                 {
                     return RedirectToAction("Index", "Home");
                 }
+
+                if (User.IsInRole("Admin"))
+                {
+                    return RedirectToAction(nameof(InstitutionIndex));
+                } 
 
                 return RedirectToAction(nameof(Index));
             }
@@ -475,6 +481,12 @@ namespace Padrinly.Controllers
             {
                 ViewBag.ConfirmInstitution = "Tem certeza que deseja excluir o registro abaixo?";
             }
+
+            if (User.IsInRole("Admin"))
+            {
+                return RedirectToAction(nameof(InstitutionIndex));
+            }
+
 
             return View(person);
         }
