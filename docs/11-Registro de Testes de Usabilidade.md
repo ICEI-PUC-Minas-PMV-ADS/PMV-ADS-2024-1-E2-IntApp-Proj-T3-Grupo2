@@ -15,11 +15,25 @@ Usuário 2: Instituição a mais de 20 anos, busca vincular crianças em situaç
 
 Usuário 3: padrinho 45 anos, sexo masculino, consegue apadrinhar até duas crianças .
 
+#### Objetivos testados:
+
 ###### Resultados:
-De acordo com o relato das pessoas que testaram a aplicação até o momento, elas se sentiram à vontade com a cores bem definidas, uma experiencia agradável. AInda disseram que a aplicação tem um proposito muito bom, pois vai ajudar muitas crianças carentes e tambem um incentivo a mais para elas estudarem ,buscar uma vida melhor e mais saudavel com as doações e  também serem pessoas do bem.
+
+Resposta da avaliação:
+■ Em escala de 1 a 10, Aplicação atendeu suas necessidades ? 10
+
+■ A aplicação apresenta fluidez ? sim ou não. (sim)
+
+■ como você achou as telas de cadastros: ruim, bom, ou otimo.(otimo)
+
+■ O espaço da instituição apresenta um bom desempenho: sim ou nâo. (sim)
+
+■ O espaço do apadrinhador aprensenta uma boa usabilidade ? Em escala de 1 a 10 avalie. (9)
 
 
+ ##### considerações  finais:
 
+Os usuários gostaram da nossa aplicação porque segundo eles o site apresenta  uma boa usabilidade com cores bem definidas, uma boa fluidez, e também disseram que com a nossa aplicação as crianças viveram melhores, e com esse incentivo seriam educados e se tornarem pessoas do bem.
  
  
 
