@@ -19,6 +19,8 @@ Serão crianças.
 
 ■ Usuário interessado em ser apadrinhador de alguma criança.
 
+■ usuário criança cadastradas.
+
 #### Detalhamento dos objetivos: 
 
 1° Objetivo: Nesse objetivo o usuário vai estar na primeira página do site https://https://padrin.ly//src/index.html,que será para preencher os primeiros dados como nome, Email, celular, e CPF para iniciar seu cadastro como apadrinhador.
