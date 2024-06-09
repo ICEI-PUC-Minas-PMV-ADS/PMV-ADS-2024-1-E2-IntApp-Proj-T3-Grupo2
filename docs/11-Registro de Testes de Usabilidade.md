@@ -34,6 +34,7 @@ O nosso teste foi feito de forma remota, feito pelo teams. Nós instruímos os p
 ###### Resultados:
 
 Resposta da avaliação:
+
 ■ Em escala de 1 a 10, Aplicação atendeu suas necessidades ? 10
 
 ■ A aplicação apresenta fluidez ? sim ou não. (sim)
