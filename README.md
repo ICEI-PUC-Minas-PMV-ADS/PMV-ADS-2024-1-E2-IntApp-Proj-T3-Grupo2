@@ -23,11 +23,9 @@ O objetivo deste trabalho é desenvolver uma aplicação interativa para apadrin
 
 ## Instruções de utilização
 
-Informações nesta página:
+Informações/instruções nesta página:
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/blob/main/docs/07-Programa%C3%A7%C3%A3o%20de%20Funcionalidades.md
-
-Instru
 
 # Documentação
 
