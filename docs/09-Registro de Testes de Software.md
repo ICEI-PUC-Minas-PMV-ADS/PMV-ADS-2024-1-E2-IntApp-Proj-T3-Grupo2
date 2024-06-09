@@ -41,7 +41,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+os teste foram todos executados com sucesso vizando que todos os campos està funcionando da melhor maneira possivel,erros tivemos no inicio, ao longo do processo conseguimos corrigir todos e a aplicação fico rodando de forma rapida e sem erros.
 
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
