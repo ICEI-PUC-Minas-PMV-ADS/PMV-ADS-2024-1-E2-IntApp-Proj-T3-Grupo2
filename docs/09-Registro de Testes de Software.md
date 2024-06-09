@@ -16,7 +16,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | **Caso de Teste** 	| **CT-03 – Cadastro de Apadrinhadores (Pessoa física).**	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	| RF-003 - O usuário doador/apadrinhador (pessoa fisica) se cadastrará no site. |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
 | **Caso de Teste** 	| **CT-04 – Realizar login** 	|
