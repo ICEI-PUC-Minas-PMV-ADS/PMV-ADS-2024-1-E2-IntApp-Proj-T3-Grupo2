@@ -4,11 +4,13 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Identity.Client;
 using NuGet.Protocol;
 using Padrinly.Common.Extensions;
 using Padrinly.Data;
@@ -57,6 +59,24 @@ namespace Padrinly.Controllers
                 .ToList();
 
             return View(allUsers);
+        }
+
+        [Authorize(Roles = "Student")]
+        public async Task<IActionResult> PatronIndex(int id)
+        {
+            var patrons = await _context.PersonPatrons
+                .Where(pp => pp.IdStudent == id)
+                .ToListAsync();
+
+            var patronList = new List<Person>();
+
+            foreach(var patron in patrons)
+            {
+                var selectPatron = await _context.Persons.FirstOrDefaultAsync(p => p.IdUser == patron.IdPatron);
+                patronList.Add(selectPatron);
+            }
+
+            return View(patronList);
         }
 
         // GET: Person/Details/5
@@ -605,7 +625,7 @@ namespace Padrinly.Controllers
             var post = new Post 
             { 
                 IdUser = userId,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.UtcNow.AddHours(-3),
                 Content = model.Content,
                 IsFixed = false,
             };

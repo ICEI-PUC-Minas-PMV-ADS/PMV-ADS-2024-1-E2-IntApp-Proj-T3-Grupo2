@@ -27,15 +27,15 @@ namespace Padrinly.Controllers
 
             ViewBag.UserId = userId;
 
-            var patron = await _context.Persons
+            var user = await _context.Persons
                 .FirstOrDefaultAsync(p => p.IdUser == userId);
 
-            if(patron != null) 
+            if(user != null) 
             {
-                if (patron.Type == TypePerson.Patron)
+                if (user.Type == TypePerson.Patron)
                 {
                     var patronList = await _context.PersonPatrons
-                        .Where(pp => pp.IdPatron == patron.IdUser)
+                        .Where(pp => pp.IdPatron == user.IdUser)
                         .ToListAsync();
 
                     var person = _context.Persons.FirstOrDefault(p => p.IdUser == userId);

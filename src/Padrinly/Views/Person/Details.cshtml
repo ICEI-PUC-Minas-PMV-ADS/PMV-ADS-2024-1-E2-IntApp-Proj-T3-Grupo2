@@ -25,6 +25,7 @@
             else if (User.IsInRole("Student"))
             {
                 <a asp-controller="Home" asp-action="Index"><button type="button" class="btnsettings">voltar</button></a>
+                <a asp-action="PatronIndex" asp-route-id="@Model.IdUser"><button type="button" class="btnsettings">Padrinhos</button></a>
             }
             else if (User.IsInRole("Patron"))
             {
