@@ -76,6 +76,8 @@ namespace Padrinly.Controllers
                 patronList.Add(selectPatron);
             }
 
+            ViewBag.PatronList = patronList;
+
             return View(patronList);
         }
 
