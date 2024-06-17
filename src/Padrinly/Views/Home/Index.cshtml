@@ -98,10 +98,11 @@ else if (User.IsInRole("Patron") && ViewBag.IsPatron == true)
     </div>
 
     <div class="BoxAfilhadoHome">
-   
+        <p id="TituloPagina">Meus afilhados</p>
+            <hr />
             @foreach (var student in @ViewBag.PatronList)
             {
-                <div class="container">
+            <div class="container BoxAfilhadoHome">
                     <div class="row">
                         <div class="col-sm" style="margin: 10px">
                             <a asp-controller="Person" asp-action="Details" asp-route-id="@student.IdUser">

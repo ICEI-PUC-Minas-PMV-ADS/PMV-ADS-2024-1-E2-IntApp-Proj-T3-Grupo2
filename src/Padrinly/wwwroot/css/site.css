@@ -319,6 +319,7 @@ dd {
     border: 4px outset gray;
     margin-top: 20px;
     margin: 30px;
+    padding: 20px;
 }
 
 .BoxApresentacao {
@@ -329,6 +330,8 @@ dd {
     font-style: normal;
     font-size: 18px;
     text-align: center;
+}
+
 }
 
 #postForm {
