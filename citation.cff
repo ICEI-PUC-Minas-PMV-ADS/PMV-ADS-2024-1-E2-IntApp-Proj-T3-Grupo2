@@ -1,0 +1,28 @@
+message: Please cite this software using these metadata.
+title: PADRIN.LY
+authors:
+  - family-names: Van Oorschot Gamarra
+    given-names: Felipe 
+  - family-names: Laudiene Diniz Corrêa
+    given-names: Germanio
+  - family-names: da Costa Resende
+    given-names: José Henrique 
+  - family-names: Carlisson Petuba Magalhães
+    given-names: Kelveng
+  - family-names:Viana Goulart De Almeida 
+    given-names: Lidia 
+  - family-names:Viana Goulart de Almeida
+    given-names: Phelipe 
+ - family-names: Rodrigues Gomes
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names:José 
+    given-names: Wilson da Costa 
+keywords:
+  - Padrinho
+  - Apadrinhar 
+  - Instituição
+
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-1-E2-IntApp-Proj-T3-Grupo2-Padrin.ly/tree/main
+version: Version 1.0.0
+date-released: 2024-06-23
