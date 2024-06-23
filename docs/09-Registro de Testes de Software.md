@@ -42,7 +42,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 ## Avaliação
 
-os testes foram todos executados com sucesso vizando que todos os campos estam funcionando da melhor maneira possivel,erros tivemos no inicio, ao longo do processo conseguimos corrigir todos e a aplicação fico rodando de forma rapida e sem erros.
+os testes foram todos executados com sucesso vizando que todos os campos estam funcionando da melhor maneira possivel,erros tivemos no inicio, ao longo do processo conseguimos corrigir todos e a aplicação fico rodando de forma rapida e sem erros.Todos os usuarios falaram que o site apresenta boa fluidez nos testes e uma boa precisâo dos cadastros e na pagina de cada usuário, bem construido e com boa fluidez no sistema apresenta poucos erros.
 
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
